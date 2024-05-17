@@ -71,6 +71,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -90,6 +91,18 @@
     <Folder Include="Views\Pengepul\" />
     <Folder Include="Views\Petani\" />
     <Folder Include="Views\Pusat\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Role.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Component 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20240409_152023 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Masuk.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
