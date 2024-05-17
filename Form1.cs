@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ngupy_NgulakKopy.Views.Petani;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,5 +23,20 @@ namespace Ngupy_NgulakKopy
 
         }
 
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            GetStarted getStarted = new GetStarted();
+
+        }
+
+        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
