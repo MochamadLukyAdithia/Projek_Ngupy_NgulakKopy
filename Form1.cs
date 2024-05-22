@@ -1,4 +1,5 @@
-﻿using Ngupy_NgulakKopy.Views.Petani;
+﻿using Ngupy_NgulakKopy.Views.Pengepul;
+using Ngupy_NgulakKopy.Views.Petani;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,7 +31,25 @@ namespace Ngupy_NgulakKopy
 
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
-            GetStarted getStarted = new GetStarted();
+            if(guna2ComboBox1.SelectedItem.ToString() == "Petani")
+            {
+                this.Hide();
+                LoginPetani lp = new LoginPetani();
+                lp.ShowDialog();
+            }
+            else if (guna2ComboBox1.SelectedItem.ToString() == "Pengepul")
+            {
+                this.Hide();
+                MasukPengepul mp = new MasukPengepul();
+                mp.ShowDialog();
+            }
+            else if (guna2ComboBox1.SelectedItem.ToString() == "Pusat")
+            {
+                this.Hide();
+                Views.Pusat.MasukPusat mp = new Views.Pusat.MasukPusat();
+                mp.ShowDialog();
+            }
+
 
         }
 

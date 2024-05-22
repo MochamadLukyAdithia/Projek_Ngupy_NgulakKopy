@@ -39,6 +39,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
@@ -60,11 +61,83 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\Petani\GetStarted.cs">
+    <Compile Include="Views\Pengepul\Dashboard\DashboardPengepul.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Petani\GetStarted.Designer.cs">
+    <Compile Include="Views\Pengepul\Dashboard\DashboardPengepul.Designer.cs">
+      <DependentUpon>DashboardPengepul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pengepul\Dashboard\Riwayat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Pengepul\Dashboard\Riwayat.Designer.cs">
+      <DependentUpon>Riwayat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pengepul\loginpengepulf\DaftarPengepul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Pengepul\loginpengepulf\DaftarPengepul.Designer.cs">
+      <DependentUpon>DaftarPengepul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pengepul\loginpengepulf\GetstartedPengepul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Pengepul\loginpengepulf\GetstartedPengepul.Designer.cs">
+      <DependentUpon>GetstartedPengepul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pengepul\loginpengepulf\MasukPengepul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Pengepul\loginpengepulf\MasukPengepul.Designer.cs">
+      <DependentUpon>MasukPengepul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Petani\Dashboard\DashboardPetani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Petani\Dashboard\DashboardPetani.Designer.cs">
+      <DependentUpon>DashboardPetani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Petani\loginpetanif\DatarPetani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Petani\loginpetanif\DatarPetani.Designer.cs">
+      <DependentUpon>DatarPetani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Petani\loginpetanif\GetStarted.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Petani\loginpetanif\GetStarted.Designer.cs">
       <DependentUpon>GetStarted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Petani\loginpetanif\LoginPetani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Petani\loginpetanif\LoginPetani.Designer.cs">
+      <DependentUpon>LoginPetani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pusat\Dashboard\DashboardPusat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Pusat\Dashboard\DashboardPusat.Designer.cs">
+      <DependentUpon>DashboardPusat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pusat\loginpusatf\DaftarPusat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Pusat\loginpusatf\DaftarPusat.Designer.cs">
+      <DependentUpon>DaftarPusat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pusat\loginpusatf\GetstartedPusat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Pusat\loginpusatf\GetstartedPusat.Designer.cs">
+      <DependentUpon>GetstartedPusat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pusat\loginpusatf\MasukPusat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Pusat\loginpusatf\MasukPusat.Designer.cs">
+      <DependentUpon>MasukPusat.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -79,8 +152,44 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Views\Petani\GetStarted.resx">
+    <EmbeddedResource Include="Views\Pengepul\Dashboard\DashboardPengepul.resx">
+      <DependentUpon>DashboardPengepul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pengepul\Dashboard\Riwayat.resx">
+      <DependentUpon>Riwayat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pengepul\loginpengepulf\DaftarPengepul.resx">
+      <DependentUpon>DaftarPengepul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pengepul\loginpengepulf\GetstartedPengepul.resx">
+      <DependentUpon>GetstartedPengepul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pengepul\loginpengepulf\MasukPengepul.resx">
+      <DependentUpon>MasukPengepul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Petani\Dashboard\DashboardPetani.resx">
+      <DependentUpon>DashboardPetani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Petani\loginpetanif\DatarPetani.resx">
+      <DependentUpon>DatarPetani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Petani\loginpetanif\GetStarted.resx">
       <DependentUpon>GetStarted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Petani\loginpetanif\LoginPetani.resx">
+      <DependentUpon>LoginPetani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pusat\Dashboard\DashboardPusat.resx">
+      <DependentUpon>DashboardPusat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pusat\loginpusatf\DaftarPusat.resx">
+      <DependentUpon>DaftarPusat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pusat\loginpusatf\GetstartedPusat.resx">
+      <DependentUpon>GetstartedPusat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pusat\loginpusatf\MasukPusat.resx">
+      <DependentUpon>MasukPusat.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -97,8 +206,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\Pengepul\" />
-    <Folder Include="Views\Pusat\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Role.png" />
@@ -114,6 +222,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\image 8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\belum memiliki akun_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Daftar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Component 9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\material-symbols_dashboard-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu item.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tdesign_money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
