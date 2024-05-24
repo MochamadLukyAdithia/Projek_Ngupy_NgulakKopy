@@ -15,17 +15,19 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
         public DashboardPengepul()
         {
             InitializeComponent();
+            
         }
+       
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            
-            pnlHarga.Show();
-            pnlKapasitas.Show();
-            pnlPenjemptan.Show();
+            brndpngpl1.Show();
+            hargaPengepul1.Hide();
+            transaksiPengpul1.Hide();
+
             pnlBeranda.BackColor = Color.FromArgb(182, 137, 81);
             pnlsideHarga.BackColor = Color.FromArgb(255, 243, 233);
-            pnlUpdateHarga.Hide();
+            
             pnlSideTransaksi.BackColor = Color.FromArgb(255, 243, 233);
             pnlSideRiwayat.BackColor = Color.FromArgb(255, 243, 233);
             
@@ -34,22 +36,24 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
         private void DashboardPengepul_Load(object sender, EventArgs e)
         {
             this.AutoScroll = true;
-            pnlUpdateHarga.Hide();
-            lblTransaksi.Hide();
-           
+            brndpngpl1.Show();
+            hargaPengepul1.Hide();
+            transaksiPengpul1.Hide();
+            
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            this.ActiveControl = guna2TextBox1;
-            pnlHarga.Hide();
-            pnlKapasitas.Hide();
-            pnlPenjemptan.Hide();
+            brndpngpl1.Hide();
+            hargaPengepul1.Show();
+            transaksiPengpul1.Hide();
+
+
             pnlBeranda.BackColor = Color.FromArgb(255, 243, 233);
             pnlsideHarga.BackColor = Color.FromArgb(182, 137, 81);
-            pnlUpdateHarga.Show();
+           
             pnlSideTransaksi.BackColor = Color.FromArgb(255, 243, 233);
-            pnlTransaksi.Hide() ;
+           
             pnlSideRiwayat.BackColor = Color.FromArgb(255, 243, 233);
           
         }
@@ -146,12 +150,15 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            pnlTransaksi.Show();
+            brndpngpl1.Hide();
+            hargaPengepul1.Hide();
+            transaksiPengpul1.Show();
+
             pnlBeranda.BackColor = Color.FromArgb(255,243,233) ;
             pnlsideHarga.BackColor = Color.FromArgb(255, 243, 233);
             pnlSideTransaksi.BackColor = Color.FromArgb(182, 137, 81);
             pnlSideRiwayat.BackColor = Color.FromArgb(255, 243, 233);
-            pnlRiwayat.Hide();
+            
 
         }
 
@@ -173,17 +180,14 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
         private void btnRiwayat_Click(object sender, EventArgs e)
         {
             
-            pnlUpdateHarga.Hide();
-            pnlTransaksi.Hide();
-            pnlHarga.Hide();
-            pnlKapasitas.Hide();
-            pnlPenjemptan.Hide();
+            
+       
             pnlBeranda.BackColor = Color.FromArgb(255, 243, 233);
             pnlsideHarga.BackColor = Color.FromArgb(255, 243, 233);
             pnlSideTransaksi.BackColor = Color.FromArgb(255, 243, 233);
             pnlSideRiwayat.BackColor = Color.FromArgb(182, 137, 81);
-            Riwayat r = new Riwayat();
-            r.Show();
+            
+            
         }
 
         private void guna2PictureBox5_Click(object sender, EventArgs e)

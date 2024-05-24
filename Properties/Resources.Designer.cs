@@ -133,6 +133,16 @@ namespace Ngupy_NgulakKopy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LOGO {
+            get {
+                object obj = ResourceManager.GetObject("LOGO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Masuk {
             get {
                 object obj = ResourceManager.GetObject("Masuk", resourceCulture);
@@ -146,6 +156,16 @@ namespace Ngupy_NgulakKopy.Properties {
         internal static System.Drawing.Bitmap material_symbols_dashboard_outline {
             get {
                 object obj = ResourceManager.GetObject("material-symbols_dashboard-outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mdi_truck_outline {
+            get {
+                object obj = ResourceManager.GetObject("mdi_truck-outline", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

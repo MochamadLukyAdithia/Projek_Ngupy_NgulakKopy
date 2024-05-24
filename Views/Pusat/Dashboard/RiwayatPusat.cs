@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
+namespace Ngupy_NgulakKopy.Views.Pusat.Dashboard
 {
-    public partial class Riwayat : Form
+    public partial class RiwayatPusat : UserControl
     {
-        public Riwayat()
+        public RiwayatPusat()
         {
             InitializeComponent();
         }

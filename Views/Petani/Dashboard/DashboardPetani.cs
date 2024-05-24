@@ -16,5 +16,64 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
         {
             InitializeComponent();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            berandaPetani1.Show();
+            penjemputanPetani1.Hide();
+            transaksiPetani1.Hide();
+            riwayatPetani1.Hide();
+            pnlBeranda.BackColor = Color.FromArgb(182, 137, 81);
+            pnlsideHarga.BackColor = Color.FromArgb(255, 243, 233);
+
+            pnlSideTransaksi.BackColor = Color.FromArgb(255, 243, 233);
+            pnlSideRiwayat.BackColor = Color.FromArgb(255, 243, 233);
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            berandaPetani1.Hide();
+            penjemputanPetani1.Show();
+            transaksiPetani1.Hide();
+            riwayatPetani1.Hide();
+            pnlBeranda.BackColor = Color.FromArgb(255, 243, 233);
+            pnlsideHarga.BackColor = Color.FromArgb(182, 137, 81);
+
+            pnlSideTransaksi.BackColor = Color.FromArgb(255, 243, 233);
+
+            pnlSideRiwayat.BackColor = Color.FromArgb(255, 243, 233);
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            berandaPetani1.Hide();
+            penjemputanPetani1.Hide();
+            transaksiPetani1.Show();
+            riwayatPetani1.Hide();
+            pnlBeranda.BackColor = Color.FromArgb(255, 243, 233);
+            pnlsideHarga.BackColor = Color.FromArgb(255, 243, 233);
+            pnlSideTransaksi.BackColor = Color.FromArgb(182, 137, 81);
+            pnlSideRiwayat.BackColor = Color.FromArgb(255, 243, 233);
+        }
+
+        private void btnRiwayat_Click(object sender, EventArgs e)
+        {
+            berandaPetani1.Hide();
+            penjemputanPetani1.Hide();
+            transaksiPetani1.Hide();
+            riwayatPetani1.Show();
+            pnlBeranda.BackColor = Color.FromArgb(255, 243, 233);
+            pnlsideHarga.BackColor = Color.FromArgb(255, 243, 233);
+            pnlSideTransaksi.BackColor = Color.FromArgb(255, 243, 233);
+            pnlSideRiwayat.BackColor = Color.FromArgb(182, 137, 81);
+        }
+
+        private void DashboardPetani_Load(object sender, EventArgs e)
+        {
+            berandaPetani1.Show();
+            penjemputanPetani1.Hide();
+            transaksiPetani1.Hide();
+            riwayatPetani1.Hide();
+        }
     }
 }
