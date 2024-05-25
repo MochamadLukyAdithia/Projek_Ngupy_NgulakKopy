@@ -34,5 +34,12 @@ namespace Ngupy_NgulakKopy.Views.Petani
             GetStarted getStarted = new GetStarted();
             getStarted.ShowDialog();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DaftarPetani dp = new DaftarPetani();
+            dp.ShowDialog();
+        }
     }
 }
