@@ -350,8 +350,9 @@
             this.brndpngpl1.Location = new System.Drawing.Point(195, 62);
             this.brndpngpl1.Margin = new System.Windows.Forms.Padding(1);
             this.brndpngpl1.Name = "brndpngpl1";
-            this.brndpngpl1.Size = new System.Drawing.Size(729, 433);
+            this.brndpngpl1.Size = new System.Drawing.Size(755, 433);
             this.brndpngpl1.TabIndex = 4;
+            this.brndpngpl1.Load += new System.EventHandler(this.brndpngpl1_Load);
             // 
             // hargaPengepul1
             // 
@@ -378,7 +379,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(233)))));
-            this.ClientSize = new System.Drawing.Size(863, 503);
+            this.ClientSize = new System.Drawing.Size(863, 520);
             this.Controls.Add(this.brndpngpl1);
             this.Controls.Add(this.hargaPengepul1);
             this.Controls.Add(this.transaksiPengpul1);

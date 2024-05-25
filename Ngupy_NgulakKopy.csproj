@@ -36,11 +36,60 @@
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=8.0.3.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>packages\Npgsql.8.0.3\lib\netstandard2.0\Npgsql.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Collections.Immutable.8.0.0\lib\net462\System.Collections.Immutable.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.8.0.0\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.8.0.0\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Channels, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Channels.8.0.0\lib\net462\System.Threading.Channels.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -61,17 +110,42 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\Connection.cs" />
+    <Compile Include="Views\Pengepul\Dashboard\BerandaPengepul.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Pengepul\Dashboard\BerandaPengepul.Designer.cs">
+      <DependentUpon>BerandaPengepul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pengepul\Dashboard\brndpngpl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Pengepul\Dashboard\brndpngpl.Designer.cs">
+      <DependentUpon>brndpngpl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pengepul\Dashboard\HargaPengepul.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Pengepul\Dashboard\HargaPengepul.Designer.cs">
+      <DependentUpon>HargaPengepul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pengepul\Dashboard\RiwayatPengepul.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Pengepul\Dashboard\RiwayatPengepul.Designer.cs">
+      <DependentUpon>RiwayatPengepul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pengepul\Dashboard\TransaksiPengpul.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Pengepul\Dashboard\TransaksiPengpul.Designer.cs">
+      <DependentUpon>TransaksiPengpul.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Pengepul\Dashboard\DashboardPengepul.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Pengepul\Dashboard\DashboardPengepul.Designer.cs">
       <DependentUpon>DashboardPengepul.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Pengepul\Dashboard\Riwayat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Pengepul\Dashboard\Riwayat.Designer.cs">
-      <DependentUpon>Riwayat.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Pengepul\loginpengepulf\DaftarPengepul.cs">
       <SubType>Form</SubType>
@@ -91,11 +165,35 @@
     <Compile Include="Views\Pengepul\loginpengepulf\MasukPengepul.Designer.cs">
       <DependentUpon>MasukPengepul.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Petani\Dashboard\BerandaPetani.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Petani\Dashboard\BerandaPetani.Designer.cs">
+      <DependentUpon>BerandaPetani.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Petani\Dashboard\DashboardPetani.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Petani\Dashboard\DashboardPetani.Designer.cs">
       <DependentUpon>DashboardPetani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Petani\Dashboard\PenjemputanPetani.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Petani\Dashboard\PenjemputanPetani.Designer.cs">
+      <DependentUpon>PenjemputanPetani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Petani\Dashboard\RiwayatPetani.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Petani\Dashboard\RiwayatPetani.Designer.cs">
+      <DependentUpon>RiwayatPetani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Petani\Dashboard\TransaksiPetani.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Petani\Dashboard\TransaksiPetani.Designer.cs">
+      <DependentUpon>TransaksiPetani.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Petani\loginpetanif\DatarPetani.cs">
       <SubType>Form</SubType>
@@ -115,11 +213,35 @@
     <Compile Include="Views\Petani\loginpetanif\LoginPetani.Designer.cs">
       <DependentUpon>LoginPetani.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Pusat\Dashboard\BerandaPusat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Pusat\Dashboard\BerandaPusat.Designer.cs">
+      <DependentUpon>BerandaPusat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Pusat\Dashboard\DashboardPusat.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Pusat\Dashboard\DashboardPusat.Designer.cs">
       <DependentUpon>DashboardPusat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pusat\Dashboard\RiwayatPusat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Pusat\Dashboard\RiwayatPusat.Designer.cs">
+      <DependentUpon>RiwayatPusat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pusat\Dashboard\TransaksiPusat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Pusat\Dashboard\TransaksiPusat.Designer.cs">
+      <DependentUpon>TransaksiPusat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pusat\Dashboard\UpdateHargaPusat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Pusat\Dashboard\UpdateHargaPusat.Designer.cs">
+      <DependentUpon>UpdateHargaPusat.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Pusat\loginpusatf\DaftarPusat.cs">
       <SubType>Form</SubType>
@@ -152,11 +274,23 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\Pengepul\Dashboard\BerandaPengepul.resx">
+      <DependentUpon>BerandaPengepul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pengepul\Dashboard\brndpngpl.resx">
+      <DependentUpon>brndpngpl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pengepul\Dashboard\HargaPengepul.resx">
+      <DependentUpon>HargaPengepul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pengepul\Dashboard\RiwayatPengepul.resx">
+      <DependentUpon>RiwayatPengepul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pengepul\Dashboard\TransaksiPengpul.resx">
+      <DependentUpon>TransaksiPengpul.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Pengepul\Dashboard\DashboardPengepul.resx">
       <DependentUpon>DashboardPengepul.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Pengepul\Dashboard\Riwayat.resx">
-      <DependentUpon>Riwayat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Pengepul\loginpengepulf\DaftarPengepul.resx">
       <DependentUpon>DaftarPengepul.cs</DependentUpon>
@@ -167,8 +301,20 @@
     <EmbeddedResource Include="Views\Pengepul\loginpengepulf\MasukPengepul.resx">
       <DependentUpon>MasukPengepul.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Petani\Dashboard\BerandaPetani.resx">
+      <DependentUpon>BerandaPetani.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Petani\Dashboard\DashboardPetani.resx">
       <DependentUpon>DashboardPetani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Petani\Dashboard\PenjemputanPetani.resx">
+      <DependentUpon>PenjemputanPetani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Petani\Dashboard\RiwayatPetani.resx">
+      <DependentUpon>RiwayatPetani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Petani\Dashboard\TransaksiPetani.resx">
+      <DependentUpon>TransaksiPetani.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Petani\loginpetanif\DatarPetani.resx">
       <DependentUpon>DatarPetani.cs</DependentUpon>
@@ -179,8 +325,20 @@
     <EmbeddedResource Include="Views\Petani\loginpetanif\LoginPetani.resx">
       <DependentUpon>LoginPetani.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pusat\Dashboard\BerandaPusat.resx">
+      <DependentUpon>BerandaPusat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Pusat\Dashboard\DashboardPusat.resx">
       <DependentUpon>DashboardPusat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pusat\Dashboard\RiwayatPusat.resx">
+      <DependentUpon>RiwayatPusat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pusat\Dashboard\TransaksiPusat.resx">
+      <DependentUpon>TransaksiPusat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pusat\Dashboard\UpdateHargaPusat.resx">
+      <DependentUpon>UpdateHargaPusat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Pusat\loginpusatf\DaftarPusat.resx">
       <DependentUpon>DaftarPusat.cs</DependentUpon>
@@ -255,6 +413,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Vector.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mdi_truck-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Daftar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Daftar2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

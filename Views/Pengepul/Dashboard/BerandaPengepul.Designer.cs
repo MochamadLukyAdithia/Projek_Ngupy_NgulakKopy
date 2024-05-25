@@ -51,7 +51,7 @@
             this.pnlKapasitas.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
             this.pnlKapasitas.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(70)))), ((int)(((byte)(43)))));
             this.pnlKapasitas.Location = new System.Drawing.Point(438, 204);
-            this.pnlKapasitas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlKapasitas.Margin = new System.Windows.Forms.Padding(2);
             this.pnlKapasitas.Name = "pnlKapasitas";
             this.pnlKapasitas.Size = new System.Drawing.Size(162, 213);
             this.pnlKapasitas.TabIndex = 8;
@@ -66,7 +66,7 @@
             this.pnlPenjemptan.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(51)))), ((int)(((byte)(38)))));
             this.pnlPenjemptan.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(51)))), ((int)(((byte)(38)))));
             this.pnlPenjemptan.Location = new System.Drawing.Point(2, 204);
-            this.pnlPenjemptan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlPenjemptan.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPenjemptan.Name = "pnlPenjemptan";
             this.pnlPenjemptan.Size = new System.Drawing.Size(421, 213);
             this.pnlPenjemptan.TabIndex = 7;
@@ -98,7 +98,7 @@
             this.pnlHarga.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
             this.pnlHarga.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(70)))), ((int)(((byte)(43)))));
             this.pnlHarga.Location = new System.Drawing.Point(2, 2);
-            this.pnlHarga.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlHarga.Margin = new System.Windows.Forms.Padding(2);
             this.pnlHarga.Name = "pnlHarga";
             this.pnlHarga.Size = new System.Drawing.Size(598, 186);
             this.pnlHarga.TabIndex = 6;
@@ -184,9 +184,9 @@
             this.Controls.Add(this.pnlKapasitas);
             this.Controls.Add(this.pnlPenjemptan);
             this.Controls.Add(this.pnlHarga);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "BerandaPengepul";
-            this.Size = new System.Drawing.Size(610, 421);
+            this.Size = new System.Drawing.Size(655, 444);
             this.Load += new System.EventHandler(this.BerandaPengepul_Load);
             this.pnlPenjemptan.ResumeLayout(false);
             this.pnlPenjemptan.PerformLayout();

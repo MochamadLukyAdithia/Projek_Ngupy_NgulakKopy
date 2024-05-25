@@ -113,6 +113,26 @@ namespace Ngupy_NgulakKopy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Daftar1 {
+            get {
+                object obj = ResourceManager.GetObject("Daftar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Daftar2 {
+            get {
+                object obj = ResourceManager.GetObject("Daftar2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap image_3 {
             get {
                 object obj = ResourceManager.GetObject("image 3", resourceCulture);

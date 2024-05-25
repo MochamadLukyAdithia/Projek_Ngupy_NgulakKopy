@@ -349,5 +349,10 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
         {
 
         }
+
+        private void brndpngpl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

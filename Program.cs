@@ -17,7 +17,7 @@ namespace Ngupy_NgulakKopy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Views.Pengepul.Dashboard.DashboardPengepul());
+            Application.Run(new Form1());
         }
     }
 }

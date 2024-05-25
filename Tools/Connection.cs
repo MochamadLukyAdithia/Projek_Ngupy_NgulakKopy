@@ -11,6 +11,8 @@ namespace Ngupy_NgulakKopy.Tools
     {
         public Connection()
         {
+           
+            
         }
         
     }
