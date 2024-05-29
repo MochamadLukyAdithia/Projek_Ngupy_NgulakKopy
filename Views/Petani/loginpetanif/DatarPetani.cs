@@ -47,7 +47,7 @@ namespace Ngupy_NgulakKopy.Views.Petani
                     string uname = pick_uname[0].ToString();
                     conn.Close();
                     if (username == uname)
-                    {
+                    { 
                         MessageBox.Show($"Username sudah ada!");
                     }
                 }
