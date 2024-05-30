@@ -28,21 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AturProfil));
             this.usernameP = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.nohpP = new Guna.UI2.WinForms.Guna2TextBox();
             this.norekP = new Guna.UI2.WinForms.Guna2TextBox();
             this.desaP = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.Ubah = new Guna.UI2.WinForms.Guna2Button();
+            this.UbahProfilPetani = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.back = new Guna.UI2.WinForms.Guna2ImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // usernameP
             // 
             this.usernameP.AcceptsTab = true;
-            this.usernameP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.usernameP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.usernameP.BorderRadius = 20;
             this.usernameP.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.usernameP.DefaultText = "";
             this.usernameP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -59,7 +63,7 @@
             this.usernameP.PasswordChar = '\0';
             this.usernameP.PlaceholderText = "Username";
             this.usernameP.SelectedText = "";
-            this.usernameP.Size = new System.Drawing.Size(942, 40);
+            this.usernameP.Size = new System.Drawing.Size(887, 40);
             this.usernameP.TabIndex = 0;
             this.usernameP.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
@@ -80,8 +84,9 @@
             // 
             // nohpP
             // 
-            this.nohpP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.nohpP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.nohpP.BorderRadius = 20;
             this.nohpP.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nohpP.DefaultText = "";
             this.nohpP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -98,13 +103,14 @@
             this.nohpP.PasswordChar = '\0';
             this.nohpP.PlaceholderText = "No.Telepon";
             this.nohpP.SelectedText = "";
-            this.nohpP.Size = new System.Drawing.Size(942, 40);
+            this.nohpP.Size = new System.Drawing.Size(887, 40);
             this.nohpP.TabIndex = 2;
             // 
             // norekP
             // 
-            this.norekP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.norekP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.norekP.BorderRadius = 20;
             this.norekP.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.norekP.DefaultText = "";
             this.norekP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -121,14 +127,15 @@
             this.norekP.PasswordChar = '\0';
             this.norekP.PlaceholderText = "No Rekening";
             this.norekP.SelectedText = "";
-            this.norekP.Size = new System.Drawing.Size(942, 40);
+            this.norekP.Size = new System.Drawing.Size(887, 40);
             this.norekP.TabIndex = 4;
             // 
             // desaP
             // 
-            this.desaP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.desaP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.desaP.BackColor = System.Drawing.Color.Transparent;
+            this.desaP.BorderRadius = 20;
             this.desaP.Cursor = System.Windows.Forms.Cursors.PanSE;
             this.desaP.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.desaP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -162,48 +169,79 @@
             "Panti"});
             this.desaP.Location = new System.Drawing.Point(116, 265);
             this.desaP.Name = "desaP";
-            this.desaP.Size = new System.Drawing.Size(942, 36);
+            this.desaP.Size = new System.Drawing.Size(887, 36);
             this.desaP.TabIndex = 5;
             this.desaP.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
             // 
-            // Ubah
+            // UbahProfilPetani
             // 
-            this.Ubah.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.UbahProfilPetani.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Ubah.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Ubah.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Ubah.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Ubah.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Ubah.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Ubah.ForeColor = System.Drawing.Color.White;
-            this.Ubah.Location = new System.Drawing.Point(940, 582);
-            this.Ubah.Name = "Ubah";
-            this.Ubah.Size = new System.Drawing.Size(180, 45);
-            this.Ubah.TabIndex = 6;
-            this.Ubah.Text = "Ubah";
-            this.Ubah.Click += new System.EventHandler(this.Ubah_Click);
+            this.UbahProfilPetani.BorderRadius = 20;
+            this.UbahProfilPetani.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.UbahProfilPetani.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.UbahProfilPetani.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.UbahProfilPetani.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.UbahProfilPetani.FillColor = System.Drawing.Color.Black;
+            this.UbahProfilPetani.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.UbahProfilPetani.ForeColor = System.Drawing.Color.White;
+            this.UbahProfilPetani.Location = new System.Drawing.Point(488, 490);
+            this.UbahProfilPetani.Name = "UbahProfilPetani";
+            this.UbahProfilPetani.Size = new System.Drawing.Size(125, 45);
+            this.UbahProfilPetani.TabIndex = 10;
+            this.UbahProfilPetani.Text = "Ubah";
+            this.UbahProfilPetani.Click += new System.EventHandler(this.UbahProfilPetani_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.78626F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(88, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(191, 42);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Atur Profil";
             // 
             // guna2PictureBox1
             // 
-            this.guna2PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.guna2PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Black;
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Black;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(-5, -2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(1185, 78);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(1130, 78);
             this.guna2PictureBox1.TabIndex = 7;
             this.guna2PictureBox1.TabStop = false;
+            // 
+            // back
+            // 
+            this.back.BackColor = System.Drawing.Color.Black;
+            this.back.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.back.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.back.Image = ((System.Drawing.Image)(resources.GetObject("back.Image")));
+            this.back.ImageOffset = new System.Drawing.Point(0, 0);
+            this.back.ImageRotate = 0F;
+            this.back.Location = new System.Drawing.Point(18, 12);
+            this.back.Name = "back";
+            this.back.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.back.Size = new System.Drawing.Size(64, 54);
+            this.back.TabIndex = 14;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // AturProfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(233)))));
-            this.ClientSize = new System.Drawing.Size(1183, 671);
+            this.ClientSize = new System.Drawing.Size(1128, 592);
+            this.Controls.Add(this.back);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.UbahProfilPetani);
             this.Controls.Add(this.guna2PictureBox1);
-            this.Controls.Add(this.Ubah);
             this.Controls.Add(this.desaP);
             this.Controls.Add(this.norekP);
             this.Controls.Add(this.nohpP);
@@ -212,6 +250,7 @@
             this.Text = "AturProfil";
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -222,7 +261,9 @@
         private Guna.UI2.WinForms.Guna2TextBox nohpP;
         private Guna.UI2.WinForms.Guna2TextBox norekP;
         private Guna.UI2.WinForms.Guna2ComboBox desaP;
-        private Guna.UI2.WinForms.Guna2Button Ubah;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2Button UbahProfilPetani;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2ImageButton back;
     }
 }
