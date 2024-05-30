@@ -38,6 +38,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.back = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.Kecamatan = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Jalan = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,13 +59,13 @@
             this.usernameP.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.usernameP.ForeColor = System.Drawing.Color.Black;
             this.usernameP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.usernameP.Location = new System.Drawing.Point(116, 124);
+            this.usernameP.Location = new System.Drawing.Point(424, 124);
             this.usernameP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.usernameP.Name = "usernameP";
             this.usernameP.PasswordChar = '\0';
             this.usernameP.PlaceholderText = "Username";
             this.usernameP.SelectedText = "";
-            this.usernameP.Size = new System.Drawing.Size(887, 40);
+            this.usernameP.Size = new System.Drawing.Size(579, 40);
             this.usernameP.TabIndex = 0;
             this.usernameP.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
@@ -97,13 +99,13 @@
             this.nohpP.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.nohpP.ForeColor = System.Drawing.Color.Black;
             this.nohpP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.nohpP.Location = new System.Drawing.Point(116, 193);
+            this.nohpP.Location = new System.Drawing.Point(424, 182);
             this.nohpP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nohpP.Name = "nohpP";
             this.nohpP.PasswordChar = '\0';
             this.nohpP.PlaceholderText = "No.Telepon";
             this.nohpP.SelectedText = "";
-            this.nohpP.Size = new System.Drawing.Size(887, 40);
+            this.nohpP.Size = new System.Drawing.Size(579, 40);
             this.nohpP.TabIndex = 2;
             // 
             // norekP
@@ -121,14 +123,15 @@
             this.norekP.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.norekP.ForeColor = System.Drawing.Color.Black;
             this.norekP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.norekP.Location = new System.Drawing.Point(116, 336);
+            this.norekP.Location = new System.Drawing.Point(424, 361);
             this.norekP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.norekP.Name = "norekP";
             this.norekP.PasswordChar = '\0';
             this.norekP.PlaceholderText = "No Rekening";
             this.norekP.SelectedText = "";
-            this.norekP.Size = new System.Drawing.Size(887, 40);
+            this.norekP.Size = new System.Drawing.Size(579, 40);
             this.norekP.TabIndex = 4;
+            this.norekP.TextChanged += new System.EventHandler(this.norekP_TextChanged);
             // 
             // desaP
             // 
@@ -167,9 +170,9 @@
             "pakem",
             "",
             "Panti"});
-            this.desaP.Location = new System.Drawing.Point(116, 265);
+            this.desaP.Location = new System.Drawing.Point(424, 305);
             this.desaP.Name = "desaP";
-            this.desaP.Size = new System.Drawing.Size(887, 36);
+            this.desaP.Size = new System.Drawing.Size(287, 36);
             this.desaP.TabIndex = 5;
             this.desaP.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
             // 
@@ -232,12 +235,80 @@
             this.back.TabIndex = 14;
             this.back.Click += new System.EventHandler(this.back_Click);
             // 
+            // Kecamatan
+            // 
+            this.Kecamatan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Kecamatan.BackColor = System.Drawing.Color.Transparent;
+            this.Kecamatan.BorderRadius = 20;
+            this.Kecamatan.Cursor = System.Windows.Forms.Cursors.PanSE;
+            this.Kecamatan.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Kecamatan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Kecamatan.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Kecamatan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Kecamatan.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Kecamatan.ForeColor = System.Drawing.Color.Black;
+            this.Kecamatan.ItemHeight = 30;
+            this.Kecamatan.Items.AddRange(new object[] {
+            "Ajung",
+            "",
+            "Garahan",
+            "",
+            "Jelbuk",
+            "",
+            "Ledok Ombo",
+            "",
+            "Sumber Jati",
+            "",
+            "Sepuran",
+            "",
+            "Sumber Kejayan",
+            "",
+            "Sumber Salak",
+            "",
+            "Seputih",
+            "",
+            "Sumber",
+            "pakem",
+            "",
+            "Panti"});
+            this.Kecamatan.Location = new System.Drawing.Point(717, 305);
+            this.Kecamatan.Name = "Kecamatan";
+            this.Kecamatan.Size = new System.Drawing.Size(286, 36);
+            this.Kecamatan.TabIndex = 15;
+            // 
+            // Jalan
+            // 
+            this.Jalan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Jalan.BorderRadius = 20;
+            this.Jalan.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Jalan.DefaultText = "";
+            this.Jalan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Jalan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Jalan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Jalan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Jalan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Jalan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Jalan.ForeColor = System.Drawing.Color.Black;
+            this.Jalan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Jalan.Location = new System.Drawing.Point(424, 241);
+            this.Jalan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Jalan.Name = "Jalan";
+            this.Jalan.PasswordChar = '\0';
+            this.Jalan.PlaceholderText = "Jalan";
+            this.Jalan.SelectedText = "";
+            this.Jalan.Size = new System.Drawing.Size(579, 40);
+            this.Jalan.TabIndex = 16;
+            // 
             // AturProfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(233)))));
             this.ClientSize = new System.Drawing.Size(1128, 592);
+            this.Controls.Add(this.Jalan);
+            this.Controls.Add(this.Kecamatan);
             this.Controls.Add(this.back);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.UbahProfilPetani);
@@ -265,5 +336,7 @@
         private Guna.UI2.WinForms.Guna2Button UbahProfilPetani;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ImageButton back;
+        private Guna.UI2.WinForms.Guna2ComboBox Kecamatan;
+        private Guna.UI2.WinForms.Guna2TextBox Jalan;
     }
 }

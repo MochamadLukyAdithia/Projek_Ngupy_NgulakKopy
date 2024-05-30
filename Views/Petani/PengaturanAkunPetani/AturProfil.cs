@@ -86,5 +86,10 @@ namespace Ngupy_NgulakKopy.Views.Petani.ProfilPetani
             profil.Show();
             this.Hide();
         }
+
+        private void norekP_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

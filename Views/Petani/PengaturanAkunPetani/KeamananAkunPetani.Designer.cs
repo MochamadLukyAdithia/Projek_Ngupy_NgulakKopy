@@ -35,6 +35,7 @@
             this.ConfirmPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.NewPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.SandiSebelum = new Guna.UI2.WinForms.Guna2TextBox();
+            this.UbahProfilPetani = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,6 +128,7 @@
             this.NewPassword.SelectedText = "";
             this.NewPassword.Size = new System.Drawing.Size(887, 40);
             this.NewPassword.TabIndex = 18;
+            this.NewPassword.TextChanged += new System.EventHandler(this.NewPassword_TextChanged);
             // 
             // SandiSebelum
             // 
@@ -149,6 +151,26 @@
             this.SandiSebelum.SelectedText = "";
             this.SandiSebelum.Size = new System.Drawing.Size(887, 40);
             this.SandiSebelum.TabIndex = 19;
+            this.SandiSebelum.TextChanged += new System.EventHandler(this.SandiSebelum_TextChanged);
+            // 
+            // UbahProfilPetani
+            // 
+            this.UbahProfilPetani.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.UbahProfilPetani.BorderRadius = 20;
+            this.UbahProfilPetani.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.UbahProfilPetani.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.UbahProfilPetani.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.UbahProfilPetani.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.UbahProfilPetani.FillColor = System.Drawing.Color.Black;
+            this.UbahProfilPetani.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.UbahProfilPetani.ForeColor = System.Drawing.Color.White;
+            this.UbahProfilPetani.Location = new System.Drawing.Point(485, 488);
+            this.UbahProfilPetani.Name = "UbahProfilPetani";
+            this.UbahProfilPetani.Size = new System.Drawing.Size(125, 45);
+            this.UbahProfilPetani.TabIndex = 20;
+            this.UbahProfilPetani.Text = "Ubah";
+            this.UbahProfilPetani.Click += new System.EventHandler(this.UbahProfilPetani_Click);
             // 
             // KeamananAkunPetani
             // 
@@ -156,6 +178,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(233)))));
             this.ClientSize = new System.Drawing.Size(1128, 592);
+            this.Controls.Add(this.UbahProfilPetani);
             this.Controls.Add(this.SandiSebelum);
             this.Controls.Add(this.NewPassword);
             this.Controls.Add(this.ConfirmPass);
@@ -163,7 +186,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2PictureBox1);
             this.Name = "KeamananAkunPetani";
-            this.Text = "KeamananAkunPetani";
+            this.Text = "git";
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -178,5 +201,6 @@
         private Guna.UI2.WinForms.Guna2TextBox ConfirmPass;
         private Guna.UI2.WinForms.Guna2TextBox NewPassword;
         private Guna.UI2.WinForms.Guna2TextBox SandiSebelum;
+        private Guna.UI2.WinForms.Guna2Button UbahProfilPetani;
     }
 }
