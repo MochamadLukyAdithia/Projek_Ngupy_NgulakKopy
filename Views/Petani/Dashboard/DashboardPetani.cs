@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Ngupy_NgulakKopy.Views.Petani.Dashboard.PengaturanProfilPetani;
+using Ngupy_NgulakKopy.Views.Petani.ProfilPetani;
+
 
 namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
 {
@@ -74,6 +77,13 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
             penjemputanPetani1.Hide();
             transaksiPetani1.Hide();
             riwayatPetani1.Hide();
+        }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            PengaturanPetani profil = new PengaturanPetani();
+            profil.Show();
+            this.Hide();
         }
     }
 }
