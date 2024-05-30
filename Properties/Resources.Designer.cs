@@ -203,9 +203,29 @@ namespace Ngupy_NgulakKopy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Rectangle_25 {
+            get {
+                object obj = ResourceManager.GetObject("Rectangle 25", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Role {
             get {
                 object obj = ResourceManager.GetObject("Role", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Subtract {
+            get {
+                object obj = ResourceManager.GetObject("Subtract", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

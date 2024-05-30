@@ -6,6 +6,7 @@ using System.Data;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +15,7 @@ namespace Ngupy_NgulakKopy.Views.Petani
 {
     public partial class LoginPetani : Form
     {
+        static public string username;
         public LoginPetani()
         {
             InitializeComponent();
@@ -32,7 +34,7 @@ namespace Ngupy_NgulakKopy.Views.Petani
 
         private void btnLoginPetani_Click(object sender, EventArgs e)
         {
-            string database = "Host=localhost;Username=postgres;Password=Harsa_05;Database=Ngupy_Database";
+            string database = "Host=localhost;Username=postgres;Password=c4peKBgt!;Database=Ngupy";
             NpgsqlConnection conn = new NpgsqlConnection(database);
             string query_username = $"SELECT Username, Password FROM \"User\" Where Username ilike '{txtUsername.Text}' and id_peran = 1";
             conn.Open();
@@ -47,6 +49,7 @@ namespace Ngupy_NgulakKopy.Views.Petani
                 if (reader.GetString(1) == txtPassword.Text)
                 {
                     MessageBox.Show($"Berhasil login, Selamat datang, {txtUsername.Text}", "Success");
+                    username = txtUsername.Text;
                     conn.Close();
                     this.Hide();
                     GetStarted getStarted = new GetStarted();

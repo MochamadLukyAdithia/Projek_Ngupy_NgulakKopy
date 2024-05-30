@@ -213,6 +213,18 @@
     <Compile Include="Views\Petani\loginpetanif\LoginPetani.Designer.cs">
       <DependentUpon>LoginPetani.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Petani\PengaturanAkunPetani\AturProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Petani\PengaturanAkunPetani\AturProfil.Designer.cs">
+      <DependentUpon>AturProfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Petani\PengaturanAkunPetani\PengaturanPetani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Petani\PengaturanAkunPetani\PengaturanPetani.Designer.cs">
+      <DependentUpon>PengaturanPetani.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Pusat\Dashboard\BerandaPusat.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -425,6 +437,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Daftar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Rectangle 25.png" />
+    <None Include="Resources\Rectangle 251.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

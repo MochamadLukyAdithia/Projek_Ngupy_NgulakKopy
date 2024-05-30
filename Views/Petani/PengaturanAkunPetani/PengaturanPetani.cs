@@ -40,9 +40,9 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard.PengaturanProfilPetani
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             AturProfil profil = new AturProfil();
             profil.ShowDialog();
-            this.Hide();
         }
     }
 }
