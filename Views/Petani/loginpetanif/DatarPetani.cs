@@ -68,7 +68,7 @@ namespace Ngupy_NgulakKopy.Views.Petani
                     int ID = reader.GetInt32(0);
                     conn.Close();
                     conn.Open();
-                    string queryuser = $"insert into \"User\"(nama,nomor_telepon,username,password,id_peran,id_alamat,id_kualitas_kopi) values ('{nama}','{NomorHp}','{username}','{password}','1',{ID},1)";
+                    string queryuser = $"insert into \"User\"(nama,nomor_telepon,username,password,id_peran,id_alamat,id_kualitas_kopi) values ('{nama}','{NomorHp}','{username}','{password}','3',{ID},1)";
                     NpgsqlCommand insertuser = new NpgsqlCommand(queryuser, conn);
                     insertuser.Parameters.AddWithValue("desa_id_desa", ID);
                     insertuser.ExecuteNonQuery();

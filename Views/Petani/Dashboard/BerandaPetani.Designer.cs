@@ -51,7 +51,7 @@
             this.pnlKapasitas.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
             this.pnlKapasitas.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
             this.pnlKapasitas.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(70)))), ((int)(((byte)(43)))));
-            this.pnlKapasitas.Location = new System.Drawing.Point(509, 281);
+            this.pnlKapasitas.Location = new System.Drawing.Point(577, 281);
             this.pnlKapasitas.Margin = new System.Windows.Forms.Padding(2);
             this.pnlKapasitas.Name = "pnlKapasitas";
             this.pnlKapasitas.Size = new System.Drawing.Size(139, 217);
@@ -76,7 +76,7 @@
             this.pnlHarga.Location = new System.Drawing.Point(17, 79);
             this.pnlHarga.Margin = new System.Windows.Forms.Padding(2);
             this.pnlHarga.Name = "pnlHarga";
-            this.pnlHarga.Size = new System.Drawing.Size(641, 190);
+            this.pnlHarga.Size = new System.Drawing.Size(709, 190);
             this.pnlHarga.TabIndex = 18;
             // 
             // lblTanggal
@@ -165,7 +165,7 @@
             this.pnlPenjemptan.Location = new System.Drawing.Point(17, 281);
             this.pnlPenjemptan.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPenjemptan.Name = "pnlPenjemptan";
-            this.pnlPenjemptan.Size = new System.Drawing.Size(475, 217);
+            this.pnlPenjemptan.Size = new System.Drawing.Size(543, 217);
             this.pnlPenjemptan.TabIndex = 19;
             // 
             // label7
@@ -189,7 +189,7 @@
             this.Controls.Add(this.pnlHarga);
             this.Controls.Add(this.pnlPenjemptan);
             this.Name = "BerandaPetani";
-            this.Size = new System.Drawing.Size(674, 576);
+            this.Size = new System.Drawing.Size(742, 576);
             this.pnlHarga.ResumeLayout(false);
             this.pnlHarga.PerformLayout();
             this.pnlPenjemptan.ResumeLayout(false);

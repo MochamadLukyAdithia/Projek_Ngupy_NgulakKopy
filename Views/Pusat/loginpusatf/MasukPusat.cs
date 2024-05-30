@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ngupy_NgulakKopy.Views.Petani;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,6 +34,13 @@ namespace Ngupy_NgulakKopy.Views.Pusat
         private void btnLoginPetani_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DaftarPusat dp = new DaftarPusat();
+            dp.ShowDialog();
         }
     }
 }

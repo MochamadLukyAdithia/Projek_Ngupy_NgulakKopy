@@ -36,6 +36,7 @@
             this.btnLoginPetani = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -46,10 +47,10 @@
             this.guna2PictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox5.Image = global::Ngupy_NgulakKopy.Properties.Resources._20240409_152023_1;
             this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(2, 1);
-            this.guna2PictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2PictureBox5.Location = new System.Drawing.Point(1, 1);
+            this.guna2PictureBox5.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.guna2PictureBox5.Name = "guna2PictureBox5";
-            this.guna2PictureBox5.Size = new System.Drawing.Size(145, 61);
+            this.guna2PictureBox5.Size = new System.Drawing.Size(97, 40);
             this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox5.TabIndex = 30;
             this.guna2PictureBox5.TabStop = false;
@@ -69,13 +70,12 @@
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPassword.ForeColor = System.Drawing.Color.Transparent;
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.Location = new System.Drawing.Point(489, 366);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPassword.Location = new System.Drawing.Point(326, 238);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '\0';
             this.txtPassword.PlaceholderText = "Password";
             this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(303, 49);
+            this.txtPassword.Size = new System.Drawing.Size(202, 32);
             this.txtPassword.TabIndex = 38;
             // 
             // txtUsername
@@ -92,13 +92,12 @@
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUsername.ForeColor = System.Drawing.Color.Transparent;
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.Location = new System.Drawing.Point(489, 298);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtUsername.Location = new System.Drawing.Point(326, 194);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderText = "Username";
             this.txtUsername.SelectedText = "";
-            this.txtUsername.Size = new System.Drawing.Size(303, 49);
+            this.txtUsername.Size = new System.Drawing.Size(202, 32);
             this.txtUsername.TabIndex = 39;
             // 
             // btnLoginPetani
@@ -107,7 +106,7 @@
             this.btnLoginPetani.Animated = true;
             this.btnLoginPetani.AutoRoundedCorners = true;
             this.btnLoginPetani.BackColor = System.Drawing.Color.Transparent;
-            this.btnLoginPetani.BorderRadius = 20;
+            this.btnLoginPetani.BorderRadius = 12;
             this.btnLoginPetani.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnLoginPetani.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnLoginPetani.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -117,10 +116,10 @@
             this.btnLoginPetani.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btnLoginPetani.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnLoginPetani.ForeColor = System.Drawing.Color.White;
-            this.btnLoginPetani.Location = new System.Drawing.Point(524, 466);
-            this.btnLoginPetani.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLoginPetani.Location = new System.Drawing.Point(349, 303);
+            this.btnLoginPetani.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnLoginPetani.Name = "btnLoginPetani";
-            this.btnLoginPetani.Size = new System.Drawing.Size(230, 42);
+            this.btnLoginPetani.Size = new System.Drawing.Size(153, 27);
             this.btnLoginPetani.TabIndex = 37;
             this.btnLoginPetani.Text = "Login";
             this.btnLoginPetani.UseTransparentBackground = true;
@@ -132,10 +131,10 @@
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = global::Ngupy_NgulakKopy.Properties.Resources.Masuk;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(564, 199);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(376, 129);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(150, 46);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(100, 30);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 36;
             this.guna2PictureBox1.TabStop = false;
@@ -146,21 +145,43 @@
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Ngupy_NgulakKopy.Properties.Resources.Component_2;
-            this.pictureBox1.Location = new System.Drawing.Point(444, 169);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(296, 110);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(381, 402);
+            this.pictureBox1.Size = new System.Drawing.Size(254, 261);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 35;
             this.pictureBox1.TabStop = false;
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Animated = true;
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderRadius = 9;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.Lime;
+            this.guna2Button1.Location = new System.Drawing.Point(459, 334);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(69, 21);
+            this.guna2Button1.TabIndex = 40;
+            this.guna2Button1.Text = "Daftar";
+            this.guna2Button1.UseTransparentBackground = true;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // MasukPusat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Ngupy_NgulakKopy.Properties.Resources.Role;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1269, 740);
+            this.ClientSize = new System.Drawing.Size(846, 481);
+            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnLoginPetani);
@@ -168,6 +189,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.guna2PictureBox5);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MasukPusat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MasukPusat";
@@ -186,5 +208,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnLoginPetani;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

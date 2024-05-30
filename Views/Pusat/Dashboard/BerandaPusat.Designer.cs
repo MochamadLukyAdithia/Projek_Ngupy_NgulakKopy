@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label7 = new System.Windows.Forms.Label();
             this.pnlKapasitas = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.pnlPenjemptan = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.pnlHarga = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.lblTanggal = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -38,50 +36,27 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pnlPenjemptan.SuspendLayout();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pnlKapasitas.SuspendLayout();
             this.pnlHarga.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(17, 9);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(280, 37);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Jadwal penjemputan";
             // 
             // pnlKapasitas
             // 
             this.pnlKapasitas.BackColor = System.Drawing.Color.Transparent;
             this.pnlKapasitas.BorderRadius = 20;
+            this.pnlKapasitas.Controls.Add(this.label3);
+            this.pnlKapasitas.Controls.Add(this.label7);
             this.pnlKapasitas.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
             this.pnlKapasitas.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
             this.pnlKapasitas.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
             this.pnlKapasitas.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(70)))), ((int)(((byte)(43)))));
-            this.pnlKapasitas.Location = new System.Drawing.Point(540, 297);
+            this.pnlKapasitas.Location = new System.Drawing.Point(104, 297);
             this.pnlKapasitas.Margin = new System.Windows.Forms.Padding(2);
             this.pnlKapasitas.Name = "pnlKapasitas";
-            this.pnlKapasitas.Size = new System.Drawing.Size(162, 213);
+            this.pnlKapasitas.Size = new System.Drawing.Size(598, 213);
             this.pnlKapasitas.TabIndex = 11;
-            // 
-            // pnlPenjemptan
-            // 
-            this.pnlPenjemptan.BackColor = System.Drawing.Color.Transparent;
-            this.pnlPenjemptan.BorderRadius = 20;
-            this.pnlPenjemptan.Controls.Add(this.label7);
-            this.pnlPenjemptan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(51)))), ((int)(((byte)(38)))));
-            this.pnlPenjemptan.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(51)))), ((int)(((byte)(38)))));
-            this.pnlPenjemptan.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(51)))), ((int)(((byte)(38)))));
-            this.pnlPenjemptan.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(51)))), ((int)(((byte)(38)))));
-            this.pnlPenjemptan.Location = new System.Drawing.Point(104, 297);
-            this.pnlPenjemptan.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlPenjemptan.Name = "pnlPenjemptan";
-            this.pnlPenjemptan.Size = new System.Drawing.Size(421, 213);
-            this.pnlPenjemptan.TabIndex = 10;
             // 
             // pnlHarga
             // 
@@ -175,18 +150,42 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Harga Kopi";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(17, 27);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(167, 45);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Kapasitas";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(21, 72);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(141, 21);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Gudang Pengepul";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
             // BerandaPusat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.pnlKapasitas);
-            this.Controls.Add(this.pnlPenjemptan);
             this.Controls.Add(this.pnlHarga);
             this.Name = "BerandaPusat";
             this.Size = new System.Drawing.Size(806, 605);
-            this.pnlPenjemptan.ResumeLayout(false);
-            this.pnlPenjemptan.PerformLayout();
+            this.pnlKapasitas.ResumeLayout(false);
+            this.pnlKapasitas.PerformLayout();
             this.pnlHarga.ResumeLayout(false);
             this.pnlHarga.PerformLayout();
             this.ResumeLayout(false);
@@ -194,10 +193,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel pnlKapasitas;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel pnlPenjemptan;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel pnlHarga;
         private System.Windows.Forms.Label lblTanggal;
         private System.Windows.Forms.Label label6;
@@ -205,5 +201,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label7;
     }
 }

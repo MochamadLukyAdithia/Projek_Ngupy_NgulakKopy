@@ -48,9 +48,9 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.berandaPusat1 = new Ngupy_NgulakKopy.Views.Pusat.Dashboard.BerandaPusat();
-            this.transaksiPusat1 = new Ngupy_NgulakKopy.Views.Pusat.Dashboard.TransaksiPusat();
             this.updateHargaPusat1 = new Ngupy_NgulakKopy.Views.Pusat.Dashboard.UpdateHargaPusat();
+            this.transaksiPusat1 = new Ngupy_NgulakKopy.Views.Pusat.Dashboard.TransaksiPusat();
+            this.berandaPusat1 = new Ngupy_NgulakKopy.Views.Pusat.Dashboard.BerandaPusat();
             this.riwayatPusat1 = new Ngupy_NgulakKopy.Views.Pusat.Dashboard.RiwayatPusat();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             this.pnlSideRiwayat.SuspendLayout();
@@ -327,6 +327,22 @@
             this.panel1.Size = new System.Drawing.Size(1118, 45);
             this.panel1.TabIndex = 6;
             // 
+            // updateHargaPusat1
+            // 
+            this.updateHargaPusat1.BackColor = System.Drawing.Color.Transparent;
+            this.updateHargaPusat1.Location = new System.Drawing.Point(210, 65);
+            this.updateHargaPusat1.Name = "updateHargaPusat1";
+            this.updateHargaPusat1.Size = new System.Drawing.Size(806, 580);
+            this.updateHargaPusat1.TabIndex = 9;
+            // 
+            // transaksiPusat1
+            // 
+            this.transaksiPusat1.BackColor = System.Drawing.Color.Transparent;
+            this.transaksiPusat1.Location = new System.Drawing.Point(210, 65);
+            this.transaksiPusat1.Name = "transaksiPusat1";
+            this.transaksiPusat1.Size = new System.Drawing.Size(806, 580);
+            this.transaksiPusat1.TabIndex = 8;
+            // 
             // berandaPusat1
             // 
             this.berandaPusat1.BackColor = System.Drawing.Color.Transparent;
@@ -335,28 +351,12 @@
             this.berandaPusat1.Size = new System.Drawing.Size(806, 605);
             this.berandaPusat1.TabIndex = 7;
             // 
-            // transaksiPusat1
-            // 
-            this.transaksiPusat1.BackColor = System.Drawing.Color.Transparent;
-            this.transaksiPusat1.Location = new System.Drawing.Point(210, 40);
-            this.transaksiPusat1.Name = "transaksiPusat1";
-            this.transaksiPusat1.Size = new System.Drawing.Size(806, 605);
-            this.transaksiPusat1.TabIndex = 8;
-            // 
-            // updateHargaPusat1
-            // 
-            this.updateHargaPusat1.BackColor = System.Drawing.Color.Transparent;
-            this.updateHargaPusat1.Location = new System.Drawing.Point(210, 40);
-            this.updateHargaPusat1.Name = "updateHargaPusat1";
-            this.updateHargaPusat1.Size = new System.Drawing.Size(806, 605);
-            this.updateHargaPusat1.TabIndex = 9;
-            // 
             // riwayatPusat1
             // 
             this.riwayatPusat1.BackColor = System.Drawing.Color.Transparent;
-            this.riwayatPusat1.Location = new System.Drawing.Point(201, 40);
+            this.riwayatPusat1.Location = new System.Drawing.Point(201, 65);
             this.riwayatPusat1.Name = "riwayatPusat1";
-            this.riwayatPusat1.Size = new System.Drawing.Size(905, 605);
+            this.riwayatPusat1.Size = new System.Drawing.Size(905, 580);
             this.riwayatPusat1.TabIndex = 10;
             // 
             // DashboardPusat
@@ -371,7 +371,7 @@
             this.Controls.Add(this.berandaPusat1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DashboardPusat";
             this.Text = "DashboardPusat";
             this.Load += new System.EventHandler(this.DashboardPusat_Load);
