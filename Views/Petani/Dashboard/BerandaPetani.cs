@@ -31,7 +31,7 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
             lblusername.Text = LoginPetani.username;
             try
             {
-                string database = "Host=localhost;Username=postgres;Password=c4peKBgt!;Database=Ngupy";
+                string database = "Host=localhost;Username=postgres;Password=wahyuok234;Database=Ngupy_Database";
                 NpgsqlConnection conn = new NpgsqlConnection(database);
 
                 string selectnow = $"SELECT TO_CHAR(CURRENT_DATE, 'dd/mm/yyyy')";

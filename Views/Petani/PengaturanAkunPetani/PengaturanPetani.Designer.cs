@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PengaturanPetani));
             this.AturProfilPetani = new Guna.UI2.WinForms.Guna2Button();
             this.KeamananAkunPetani = new Guna.UI2.WinForms.Guna2Button();
             this.KebijakanPrivasi = new Guna.UI2.WinForms.Guna2Button();
@@ -100,8 +99,7 @@
             // 
             // LogoutPetani
             // 
-            this.LogoutPetani.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LogoutPetani.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.LogoutPetani.BorderRadius = 20;
             this.LogoutPetani.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.LogoutPetani.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -148,7 +146,7 @@
             this.back.BackColor = System.Drawing.Color.Black;
             this.back.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.back.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.back.Image = ((System.Drawing.Image)(resources.GetObject("back.Image")));
+            this.back.Image = global::Ngupy_NgulakKopy.Properties.Resources.chevron_left;
             this.back.ImageOffset = new System.Drawing.Point(0, 0);
             this.back.ImageRotate = 0F;
             this.back.Location = new System.Drawing.Point(18, 12);

@@ -219,6 +219,12 @@
     <Compile Include="Views\Petani\PengaturanAkunPetani\AturProfil.Designer.cs">
       <DependentUpon>AturProfil.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Petani\PengaturanAkunPetani\KeamananAkunPetani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Petani\PengaturanAkunPetani\KeamananAkunPetani.Designer.cs">
+      <DependentUpon>KeamananAkunPetani.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Petani\PengaturanAkunPetani\PengaturanPetani.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -337,6 +343,15 @@
     <EmbeddedResource Include="Views\Petani\loginpetanif\LoginPetani.resx">
       <DependentUpon>LoginPetani.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Petani\PengaturanAkunPetani\AturProfil.resx">
+      <DependentUpon>AturProfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Petani\PengaturanAkunPetani\KeamananAkunPetani.resx">
+      <DependentUpon>KeamananAkunPetani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Petani\PengaturanAkunPetani\PengaturanPetani.resx">
+      <DependentUpon>PengaturanPetani.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Pusat\Dashboard\BerandaPusat.resx">
       <DependentUpon>BerandaPusat.cs</DependentUpon>
     </EmbeddedResource>
@@ -439,6 +454,7 @@
     <None Include="Resources\Daftar2.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\chevron-left.png" />
     <Content Include="Resources\Rectangle 25.png" />
     <None Include="Resources\Rectangle 251.png" />
   </ItemGroup>

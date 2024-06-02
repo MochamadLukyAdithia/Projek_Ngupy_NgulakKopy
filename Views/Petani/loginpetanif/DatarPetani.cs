@@ -29,7 +29,7 @@ namespace Ngupy_NgulakKopy.Views.Petani
             string Jalan = txtJalan.Text;
             string Kecamatan = txtKecamatan.SelectedItem.ToString();
             string KonfirPassword = txtKonfirmasiPassword.Text;
-            string connect = $"Server=localhost;Username=postgres;Password=c4peKBgt!;Database=Ngupy;Port=5432;Pooling=True;";
+            string connect = $"Server=localhost;Username=postgres;Password=wahyuok234;Database=Ngupy_Database;Port=5432;Pooling=True;";
             string idalamat = $"select id_alamat from alamat where nama_jalan ilike '{Jalan}'";
             string queryalamat = $"insert into alamat(nama_jalan,desa,kecamatan) values('{Jalan}','{Desa}','{Kecamatan}')";
             string queryusername = $"select username from \"User\" where username like '{username}'";
