@@ -12,14 +12,30 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
 {
     public partial class brndpngpl : UserControl
     {
-        public brndpngpl()
+        private Views.Pusat.Dashboard.UpdateHargaPusat UpdateHargaPusat;
+        public brndpngpl(Pusat.Dashboard.UpdateHargaPusat updateHargaPusat)
         {
             InitializeComponent();
+            UpdateHargaPusat = updateHargaPusat;
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pnlHarga_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void brndpngpl_Load(object sender, EventArgs e)
+        {
+            List<string> list = UpdateHargaPusat.GetDataList();
+            foreach (string s in list)
+            {
+                lblhargabrnd.Text = s;
+            }
         }
     }
 }

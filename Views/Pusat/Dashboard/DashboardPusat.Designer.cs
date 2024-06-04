@@ -48,10 +48,10 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.updateHargaPusat1 = new Ngupy_NgulakKopy.Views.Pusat.Dashboard.UpdateHargaPusat();
-            this.transaksiPusat1 = new Ngupy_NgulakKopy.Views.Pusat.Dashboard.TransaksiPusat();
             this.berandaPusat1 = new Ngupy_NgulakKopy.Views.Pusat.Dashboard.BerandaPusat();
+            this.updateHargaPusat1 = new Ngupy_NgulakKopy.Views.Pusat.Dashboard.UpdateHargaPusat();
             this.riwayatPusat1 = new Ngupy_NgulakKopy.Views.Pusat.Dashboard.RiwayatPusat();
+            this.transaksiPusat1 = new Ngupy_NgulakKopy.Views.Pusat.Dashboard.TransaksiPusat();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             this.pnlSideRiwayat.SuspendLayout();
             this.pnlSideTransaksi.SuspendLayout();
@@ -327,37 +327,38 @@
             this.panel1.Size = new System.Drawing.Size(1118, 45);
             this.panel1.TabIndex = 6;
             // 
-            // updateHargaPusat1
-            // 
-            this.updateHargaPusat1.BackColor = System.Drawing.Color.Transparent;
-            this.updateHargaPusat1.Location = new System.Drawing.Point(210, 65);
-            this.updateHargaPusat1.Name = "updateHargaPusat1";
-            this.updateHargaPusat1.Size = new System.Drawing.Size(806, 580);
-            this.updateHargaPusat1.TabIndex = 9;
-            // 
-            // transaksiPusat1
-            // 
-            this.transaksiPusat1.BackColor = System.Drawing.Color.Transparent;
-            this.transaksiPusat1.Location = new System.Drawing.Point(210, 65);
-            this.transaksiPusat1.Name = "transaksiPusat1";
-            this.transaksiPusat1.Size = new System.Drawing.Size(806, 580);
-            this.transaksiPusat1.TabIndex = 8;
-            // 
             // berandaPusat1
             // 
             this.berandaPusat1.BackColor = System.Drawing.Color.Transparent;
-            this.berandaPusat1.Location = new System.Drawing.Point(210, 50);
+            this.berandaPusat1.Location = new System.Drawing.Point(185, 50);
             this.berandaPusat1.Name = "berandaPusat1";
             this.berandaPusat1.Size = new System.Drawing.Size(806, 605);
             this.berandaPusat1.TabIndex = 7;
             // 
+            // updateHargaPusat1
+            // 
+            this.updateHargaPusat1.BackColor = System.Drawing.Color.Transparent;
+            this.updateHargaPusat1.Location = new System.Drawing.Point(196, 50);
+            this.updateHargaPusat1.Name = "updateHargaPusat1";
+            this.updateHargaPusat1.Size = new System.Drawing.Size(806, 605);
+            this.updateHargaPusat1.TabIndex = 8;
+            // 
             // riwayatPusat1
             // 
             this.riwayatPusat1.BackColor = System.Drawing.Color.Transparent;
-            this.riwayatPusat1.Location = new System.Drawing.Point(201, 65);
+            this.riwayatPusat1.Location = new System.Drawing.Point(213, 50);
             this.riwayatPusat1.Name = "riwayatPusat1";
-            this.riwayatPusat1.Size = new System.Drawing.Size(905, 580);
-            this.riwayatPusat1.TabIndex = 10;
+            this.riwayatPusat1.Size = new System.Drawing.Size(905, 605);
+            this.riwayatPusat1.TabIndex = 9;
+            // 
+            // transaksiPusat1
+            // 
+            this.transaksiPusat1.BackColor = System.Drawing.Color.Transparent;
+            this.transaksiPusat1.Location = new System.Drawing.Point(257, 50);
+            this.transaksiPusat1.Name = "transaksiPusat1";
+            this.transaksiPusat1.Size = new System.Drawing.Size(806, 605);
+            this.transaksiPusat1.TabIndex = 10;
+            this.transaksiPusat1.Load += new System.EventHandler(this.transaksiPusat1_Load);
             // 
             // DashboardPusat
             // 
@@ -365,9 +366,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(233)))));
             this.ClientSize = new System.Drawing.Size(1118, 637);
+            this.Controls.Add(this.transaksiPusat1);
             this.Controls.Add(this.riwayatPusat1);
             this.Controls.Add(this.updateHargaPusat1);
-            this.Controls.Add(this.transaksiPusat1);
             this.Controls.Add(this.berandaPusat1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -413,8 +414,8 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Panel panel1;
         private BerandaPusat berandaPusat1;
-        private TransaksiPusat transaksiPusat1;
         private UpdateHargaPusat updateHargaPusat1;
         private RiwayatPusat riwayatPusat1;
+        private TransaksiPusat transaksiPusat1;
     }
 }

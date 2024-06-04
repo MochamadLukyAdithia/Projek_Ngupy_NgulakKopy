@@ -79,5 +79,10 @@ namespace Ngupy_NgulakKopy.Views.Pusat.Dashboard
             updateHargaPusat1.Hide();
             riwayatPusat1.Hide();
         }
+
+        private void transaksiPusat1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

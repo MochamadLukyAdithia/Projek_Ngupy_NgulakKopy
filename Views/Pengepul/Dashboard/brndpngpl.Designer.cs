@@ -50,9 +50,10 @@
             this.pnlKapasitas.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
             this.pnlKapasitas.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
             this.pnlKapasitas.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(70)))), ((int)(((byte)(43)))));
-            this.pnlKapasitas.Location = new System.Drawing.Point(714, 315);
+            this.pnlKapasitas.Location = new System.Drawing.Point(476, 205);
+            this.pnlKapasitas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlKapasitas.Name = "pnlKapasitas";
-            this.pnlKapasitas.Size = new System.Drawing.Size(248, 322);
+            this.pnlKapasitas.Size = new System.Drawing.Size(165, 209);
             this.pnlKapasitas.TabIndex = 11;
             // 
             // pnlPenjemptan
@@ -64,9 +65,10 @@
             this.pnlPenjemptan.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(51)))), ((int)(((byte)(38)))));
             this.pnlPenjemptan.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(51)))), ((int)(((byte)(38)))));
             this.pnlPenjemptan.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(51)))), ((int)(((byte)(38)))));
-            this.pnlPenjemptan.Location = new System.Drawing.Point(19, 315);
+            this.pnlPenjemptan.Location = new System.Drawing.Point(13, 205);
+            this.pnlPenjemptan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlPenjemptan.Name = "pnlPenjemptan";
-            this.pnlPenjemptan.Size = new System.Drawing.Size(678, 322);
+            this.pnlPenjemptan.Size = new System.Drawing.Size(452, 209);
             this.pnlPenjemptan.TabIndex = 10;
             // 
             // label7
@@ -74,9 +76,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(26, 14);
+            this.label7.Location = new System.Drawing.Point(17, 9);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(417, 54);
+            this.label7.Size = new System.Drawing.Size(280, 37);
             this.label7.TabIndex = 0;
             this.label7.Text = "Jadwal penjemputan";
             // 
@@ -94,19 +97,22 @@
             this.pnlHarga.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
             this.pnlHarga.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
             this.pnlHarga.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(70)))), ((int)(((byte)(43)))));
-            this.pnlHarga.Location = new System.Drawing.Point(19, 4);
+            this.pnlHarga.Location = new System.Drawing.Point(13, 3);
+            this.pnlHarga.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlHarga.Name = "pnlHarga";
-            this.pnlHarga.Size = new System.Drawing.Size(943, 293);
+            this.pnlHarga.Size = new System.Drawing.Size(629, 190);
             this.pnlHarga.TabIndex = 9;
+            this.pnlHarga.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlHarga_Paint);
             // 
             // lblTanggal
             // 
             this.lblTanggal.AutoSize = true;
             this.lblTanggal.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTanggal.ForeColor = System.Drawing.Color.White;
-            this.lblTanggal.Location = new System.Drawing.Point(31, 129);
+            this.lblTanggal.Location = new System.Drawing.Point(21, 84);
+            this.lblTanggal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTanggal.Name = "lblTanggal";
-            this.lblTanggal.Size = new System.Drawing.Size(138, 32);
+            this.lblTanggal.Size = new System.Drawing.Size(92, 21);
             this.lblTanggal.TabIndex = 0;
             this.lblTanggal.Text = "20/05/2024";
             // 
@@ -115,9 +121,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(223, 213);
+            this.label6.Location = new System.Drawing.Point(149, 138);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 32);
+            this.label6.Size = new System.Drawing.Size(36, 21);
             this.label6.TabIndex = 0;
             this.label6.Text = "/Kg";
             // 
@@ -126,9 +133,10 @@
             this.lblhargabrnd.AutoSize = true;
             this.lblhargabrnd.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblhargabrnd.ForeColor = System.Drawing.Color.White;
-            this.lblhargabrnd.Location = new System.Drawing.Point(87, 213);
+            this.lblhargabrnd.Location = new System.Drawing.Point(58, 138);
+            this.lblhargabrnd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblhargabrnd.Name = "lblhargabrnd";
-            this.lblhargabrnd.Size = new System.Drawing.Size(84, 32);
+            this.lblhargabrnd.Size = new System.Drawing.Size(55, 21);
             this.lblhargabrnd.TabIndex = 0;
             this.lblhargabrnd.Text = "50000";
             this.lblhargabrnd.Click += new System.EventHandler(this.label5_Click);
@@ -138,9 +146,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(31, 213);
+            this.label4.Location = new System.Drawing.Point(21, 138);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 32);
+            this.label4.Size = new System.Drawing.Size(33, 21);
             this.label4.TabIndex = 0;
             this.label4.Text = "Rp.";
             // 
@@ -149,9 +158,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(31, 89);
+            this.label2.Location = new System.Drawing.Point(21, 58);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 32);
+            this.label2.Size = new System.Drawing.Size(67, 21);
             this.label2.TabIndex = 0;
             this.label2.Text = "Terbaru";
             // 
@@ -160,22 +170,25 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(26, 24);
+            this.label1.Location = new System.Drawing.Point(17, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(283, 65);
+            this.label1.Size = new System.Drawing.Size(191, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "Harga Kopi";
             // 
             // brndpngpl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.pnlKapasitas);
             this.Controls.Add(this.pnlPenjemptan);
             this.Controls.Add(this.pnlHarga);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "brndpngpl";
-            this.Size = new System.Drawing.Size(981, 666);
+            this.Size = new System.Drawing.Size(654, 433);
+            this.Load += new System.EventHandler(this.brndpngpl_Load);
             this.pnlPenjemptan.ResumeLayout(false);
             this.pnlPenjemptan.PerformLayout();
             this.pnlHarga.ResumeLayout(false);

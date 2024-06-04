@@ -28,45 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtharga = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txthargaPusat = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             this.pnlUpdateHarga = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.lblhrgterbaru = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.lbltgl = new System.Windows.Forms.Label();
+            this.lblhrgterbaru = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.pnlUpdateHarga.SuspendLayout();
-            this.guna2CustomGradientPanel3.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
+            this.guna2CustomGradientPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtharga
+            // txthargaPusat
             // 
-            this.txtharga.Animated = true;
-            this.txtharga.AutoRoundedCorners = true;
-            this.txtharga.BorderRadius = 14;
-            this.txtharga.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtharga.DefaultText = "";
-            this.txtharga.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtharga.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtharga.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtharga.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtharga.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtharga.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtharga.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtharga.Location = new System.Drawing.Point(37, 202);
-            this.txtharga.Name = "txtharga";
-            this.txtharga.PasswordChar = '\0';
-            this.txtharga.PlaceholderText = "Rp";
-            this.txtharga.SelectedText = "";
-            this.txtharga.Size = new System.Drawing.Size(211, 31);
-            this.txtharga.TabIndex = 6;
+            this.txthargaPusat.Animated = true;
+            this.txthargaPusat.AutoRoundedCorners = true;
+            this.txthargaPusat.BorderRadius = 14;
+            this.txthargaPusat.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txthargaPusat.DefaultText = "";
+            this.txthargaPusat.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txthargaPusat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txthargaPusat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txthargaPusat.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txthargaPusat.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txthargaPusat.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txthargaPusat.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txthargaPusat.Location = new System.Drawing.Point(37, 202);
+            this.txthargaPusat.Name = "txthargaPusat";
+            this.txthargaPusat.PasswordChar = '\0';
+            this.txthargaPusat.PlaceholderText = "Rp";
+            this.txthargaPusat.SelectedText = "";
+            this.txthargaPusat.Size = new System.Drawing.Size(211, 31);
+            this.txthargaPusat.TabIndex = 6;
             // 
             // label3
             // 
@@ -107,7 +107,7 @@
             this.pnlUpdateHarga.Controls.Add(this.guna2Button6);
             this.pnlUpdateHarga.Controls.Add(this.guna2Button8);
             this.pnlUpdateHarga.Controls.Add(this.label3);
-            this.pnlUpdateHarga.Controls.Add(this.txtharga);
+            this.pnlUpdateHarga.Controls.Add(this.txthargaPusat);
             this.pnlUpdateHarga.Controls.Add(this.guna2CustomGradientPanel2);
             this.pnlUpdateHarga.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
             this.pnlUpdateHarga.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
@@ -118,115 +118,6 @@
             this.pnlUpdateHarga.Name = "pnlUpdateHarga";
             this.pnlUpdateHarga.Size = new System.Drawing.Size(629, 421);
             this.pnlUpdateHarga.TabIndex = 8;
-            // 
-            // guna2CustomGradientPanel3
-            // 
-            this.guna2CustomGradientPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2CustomGradientPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel3.BorderRadius = 20;
-            this.guna2CustomGradientPanel3.Controls.Add(this.label11);
-            this.guna2CustomGradientPanel3.Controls.Add(this.lblhrgterbaru);
-            this.guna2CustomGradientPanel3.Controls.Add(this.label14);
-            this.guna2CustomGradientPanel3.Controls.Add(this.label12);
-            this.guna2CustomGradientPanel3.Controls.Add(this.label10);
-            this.guna2CustomGradientPanel3.Controls.Add(this.label9);
-            this.guna2CustomGradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(154)))));
-            this.guna2CustomGradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(154)))));
-            this.guna2CustomGradientPanel3.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(154)))));
-            this.guna2CustomGradientPanel3.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
-            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(31, 42);
-            this.guna2CustomGradientPanel3.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
-            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(196, 127);
-            this.guna2CustomGradientPanel3.TabIndex = 5;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(14, 10);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(113, 25);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "Harga Kopi";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(14, 35);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 20);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "Terbaru";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(14, 84);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(32, 20);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "Rp.";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(125, 84);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(35, 20);
-            this.label14.TabIndex = 7;
-            this.label14.Text = "/Kg";
-            // 
-            // lblhrgterbaru
-            // 
-            this.lblhrgterbaru.AutoSize = true;
-            this.lblhrgterbaru.Font = new System.Drawing.Font("Segoe UI", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblhrgterbaru.ForeColor = System.Drawing.Color.White;
-            this.lblhrgterbaru.Location = new System.Drawing.Point(49, 84);
-            this.lblhrgterbaru.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblhrgterbaru.Name = "lblhrgterbaru";
-            this.lblhrgterbaru.Size = new System.Drawing.Size(65, 20);
-            this.lblhrgterbaru.TabIndex = 7;
-            this.lblhrgterbaru.Text = "Terbaru";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(14, 56);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(84, 20);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "21/05/2024";
-            // 
-            // guna2CustomGradientPanel2
-            // 
-            this.guna2CustomGradientPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel2.BorderRadius = 20;
-            this.guna2CustomGradientPanel2.Controls.Add(this.guna2CustomGradientPanel3);
-            this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
-            this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
-            this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
-            this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(70)))), ((int)(((byte)(43)))));
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(381, 0);
-            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(250, 421);
-            this.guna2CustomGradientPanel2.TabIndex = 5;
             // 
             // guna2Button6
             // 
@@ -246,6 +137,117 @@
             this.guna2Button6.Size = new System.Drawing.Size(126, 34);
             this.guna2Button6.TabIndex = 11;
             this.guna2Button6.Text = "Konfirmasi";
+            this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
+            // 
+            // guna2CustomGradientPanel2
+            // 
+            this.guna2CustomGradientPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel2.BorderRadius = 20;
+            this.guna2CustomGradientPanel2.Controls.Add(this.guna2CustomGradientPanel3);
+            this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
+            this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
+            this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
+            this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(70)))), ((int)(((byte)(43)))));
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(381, 0);
+            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(250, 421);
+            this.guna2CustomGradientPanel2.TabIndex = 5;
+            // 
+            // guna2CustomGradientPanel3
+            // 
+            this.guna2CustomGradientPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2CustomGradientPanel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel3.BorderRadius = 20;
+            this.guna2CustomGradientPanel3.Controls.Add(this.lbltgl);
+            this.guna2CustomGradientPanel3.Controls.Add(this.lblhrgterbaru);
+            this.guna2CustomGradientPanel3.Controls.Add(this.label14);
+            this.guna2CustomGradientPanel3.Controls.Add(this.label12);
+            this.guna2CustomGradientPanel3.Controls.Add(this.label10);
+            this.guna2CustomGradientPanel3.Controls.Add(this.label9);
+            this.guna2CustomGradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(154)))));
+            this.guna2CustomGradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(154)))));
+            this.guna2CustomGradientPanel3.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(154)))));
+            this.guna2CustomGradientPanel3.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
+            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(31, 42);
+            this.guna2CustomGradientPanel3.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
+            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(196, 127);
+            this.guna2CustomGradientPanel3.TabIndex = 5;
+            // 
+            // lbltgl
+            // 
+            this.lbltgl.AutoSize = true;
+            this.lbltgl.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltgl.ForeColor = System.Drawing.Color.White;
+            this.lbltgl.Location = new System.Drawing.Point(14, 56);
+            this.lbltgl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbltgl.Name = "lbltgl";
+            this.lbltgl.Size = new System.Drawing.Size(84, 20);
+            this.lbltgl.TabIndex = 7;
+            this.lbltgl.Text = "21/05/2024";
+            this.lbltgl.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // lblhrgterbaru
+            // 
+            this.lblhrgterbaru.AutoSize = true;
+            this.lblhrgterbaru.Font = new System.Drawing.Font("Segoe UI", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblhrgterbaru.ForeColor = System.Drawing.Color.White;
+            this.lblhrgterbaru.Location = new System.Drawing.Point(49, 84);
+            this.lblhrgterbaru.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblhrgterbaru.Name = "lblhrgterbaru";
+            this.lblhrgterbaru.Size = new System.Drawing.Size(65, 20);
+            this.lblhrgterbaru.TabIndex = 7;
+            this.lblhrgterbaru.Text = "Terbaru";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(125, 84);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(35, 20);
+            this.label14.TabIndex = 7;
+            this.label14.Text = "/Kg";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(14, 84);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(32, 20);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Rp.";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(14, 35);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 20);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Terbaru";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(14, 10);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(113, 25);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Harga Kopi";
             // 
             // UpdateHargaPusat
             // 
@@ -255,24 +257,25 @@
             this.Controls.Add(this.pnlUpdateHarga);
             this.Name = "UpdateHargaPusat";
             this.Size = new System.Drawing.Size(806, 605);
+            this.Load += new System.EventHandler(this.UpdateHargaPusat_Load);
             this.pnlUpdateHarga.ResumeLayout(false);
             this.pnlUpdateHarga.PerformLayout();
+            this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel3.ResumeLayout(false);
             this.guna2CustomGradientPanel3.PerformLayout();
-            this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2TextBox txtharga;
+        private Guna.UI2.WinForms.Guna2TextBox txthargaPusat;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel pnlUpdateHarga;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lbltgl;
         private System.Windows.Forms.Label lblhrgterbaru;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label12;
