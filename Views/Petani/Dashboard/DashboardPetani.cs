@@ -85,5 +85,15 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
             profil.Show();
             this.Hide();
         }
+
+        private void riwayatPetani1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void berandaPetani1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

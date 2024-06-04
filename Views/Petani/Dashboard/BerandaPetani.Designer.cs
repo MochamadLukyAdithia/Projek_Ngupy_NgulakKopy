@@ -32,8 +32,8 @@
             this.lblketerangan = new System.Windows.Forms.Label();
             this.lblkualitas = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2Shapes1 = new Guna.UI2.WinForms.Guna2Shapes();
             this.label3 = new System.Windows.Forms.Label();
+            this.guna2Shapes1 = new Guna.UI2.WinForms.Guna2Shapes();
             this.lblusername = new System.Windows.Forms.Label();
             this.lbltglpenjemputan = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -83,11 +83,11 @@
             // lblkualitas
             // 
             this.lblkualitas.AutoSize = true;
-            this.lblkualitas.Font = new System.Drawing.Font("Segoe UI", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblkualitas.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblkualitas.ForeColor = System.Drawing.Color.White;
-            this.lblkualitas.Location = new System.Drawing.Point(16, 51);
+            this.lblkualitas.Location = new System.Drawing.Point(16, 61);
             this.lblkualitas.Name = "lblkualitas";
-            this.lblkualitas.Size = new System.Drawing.Size(39, 54);
+            this.lblkualitas.Size = new System.Drawing.Size(23, 31);
             this.lblkualitas.TabIndex = 2;
             this.lblkualitas.Text = "-";
             // 
@@ -95,10 +95,10 @@
             // 
             this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel1.BorderRadius = 20;
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2Shapes1);
-            this.guna2CustomGradientPanel1.Controls.Add(this.lblketerangan);
-            this.guna2CustomGradientPanel1.Controls.Add(this.lblkualitas);
             this.guna2CustomGradientPanel1.Controls.Add(this.label3);
+            this.guna2CustomGradientPanel1.Controls.Add(this.guna2Shapes1);
+            this.guna2CustomGradientPanel1.Controls.Add(this.lblkualitas);
+            this.guna2CustomGradientPanel1.Controls.Add(this.lblketerangan);
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
@@ -108,6 +108,19 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(361, 234);
             this.guna2CustomGradientPanel1.TabIndex = 26;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(16, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(277, 54);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Kualitas Kopi";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // guna2Shapes1
             // 
@@ -125,17 +138,6 @@
             this.guna2Shapes1.UseTransparentBackground = true;
             this.guna2Shapes1.Zoom = 80;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(16, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(277, 54);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Kualitas Kopi";
-            // 
             // lblusername
             // 
             this.lblusername.AutoSize = true;
@@ -147,7 +149,6 @@
             this.lblusername.Size = new System.Drawing.Size(97, 28);
             this.lblusername.TabIndex = 0;
             this.lblusername.Text = "Username";
-            this.lblusername.Click += new System.EventHandler(this.lblusername_Click);
             // 
             // lbltglpenjemputan
             // 
@@ -191,7 +192,6 @@
             this.guna2Button6.Size = new System.Drawing.Size(168, 42);
             this.guna2Button6.TabIndex = 17;
             this.guna2Button6.Text = "Lihat Detail";
-            this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
             // 
             // guna2CustomGradientPanel2
             // 
@@ -269,6 +269,7 @@
             // 
             // lblkapasitas
             // 
+            this.lblkapasitas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblkapasitas.AutoSize = true;
             this.lblkapasitas.Font = new System.Drawing.Font("Segoe UI", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblkapasitas.ForeColor = System.Drawing.Color.White;
@@ -280,6 +281,7 @@
             // 
             // label11
             // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
@@ -291,6 +293,7 @@
             // 
             // label10
             // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
@@ -363,6 +366,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BerandaPetani";
             this.Size = new System.Drawing.Size(899, 709);
+            this.Load += new System.EventHandler(this.BerandaPetani_Load_1);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
             this.guna2CustomGradientPanel2.ResumeLayout(false);
