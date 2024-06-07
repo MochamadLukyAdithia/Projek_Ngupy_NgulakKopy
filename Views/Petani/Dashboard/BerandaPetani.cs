@@ -52,7 +52,7 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
                 string database = "Host=localhost;Username=postgres;Password=c4peKBgt!;Database=Ngupy";
                 NpgsqlConnection conn = new NpgsqlConnection(database);
 
-                string select_harga = "$SELECT ";
+                //string select_harga = "$SELECT ";
 
             }
 

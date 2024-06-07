@@ -12,7 +12,7 @@ namespace Ngupy_NgulakKopy.Models
         public string nomor_telepon { get; set; }
         public string nomor_rekening { get; set; }
         public string username { get; set; }
-        public string password { get; set; }
+        private string password { get; set; }
         public int id_user {  get; set; }
         public int id_peran { get; set; }
         public int id_alamat { get; set; }

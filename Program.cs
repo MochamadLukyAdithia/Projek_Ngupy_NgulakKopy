@@ -1,5 +1,6 @@
 ﻿using Ngupy_NgulakKopy.Views.Petani;
 using Ngupy_NgulakKopy.Views.Petani.Dashboard;
+using Ngupy_NgulakKopy.Views.Pusat.Dashboard;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace Ngupy_NgulakKopy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new  DaftarPusat());
+            Application.Run(new DashboardPusat());
         }
     }
 }
