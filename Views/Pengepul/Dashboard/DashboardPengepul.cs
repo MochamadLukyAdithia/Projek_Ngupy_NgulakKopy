@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
+
 
 namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
 {
@@ -21,9 +23,10 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            brndpngpl1.Show();
+            berandaPengepul1.Show();
             hargaPengepul1.Hide();
             transaksiPengpul1.Hide();
+            riwayatPengepul1.Hide();
 
             pnlBeranda.BackColor = Color.FromArgb(182, 137, 81);
             pnlsideHarga.BackColor = Color.FromArgb(255, 243, 233);
@@ -36,17 +39,21 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
         private void DashboardPengepul_Load(object sender, EventArgs e)
         {
             this.AutoScroll = true;
-            brndpngpl1.Show();
+            berandaPengepul1.Show();
             hargaPengepul1.Hide();
             transaksiPengpul1.Hide();
+            riwayatPengepul1.Hide();
+
             
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            brndpngpl1.Hide();
+            berandaPengepul1.Hide();
             hargaPengepul1.Show();
             transaksiPengpul1.Hide();
+            riwayatPengepul1.Hide();
+            
 
 
             pnlBeranda.BackColor = Color.FromArgb(255, 243, 233);
@@ -150,9 +157,10 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            brndpngpl1.Hide();
+            berandaPengepul1.Hide();
             hargaPengepul1.Hide();
             transaksiPengpul1.Show();
+            riwayatPengepul1.Hide();
 
             pnlBeranda.BackColor = Color.FromArgb(255,243,233) ;
             pnlsideHarga.BackColor = Color.FromArgb(255, 243, 233);
@@ -179,9 +187,12 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
 
         private void btnRiwayat_Click(object sender, EventArgs e)
         {
-            
-            
-       
+
+            berandaPengepul1.Hide();
+            hargaPengepul1.Hide();
+            transaksiPengpul1.Hide();
+            riwayatPengepul1.Show();
+
             pnlBeranda.BackColor = Color.FromArgb(255, 243, 233);
             pnlsideHarga.BackColor = Color.FromArgb(255, 243, 233);
             pnlSideTransaksi.BackColor = Color.FromArgb(255, 243, 233);
@@ -236,11 +247,6 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
         }
 
         private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
         {
 
         }
@@ -315,11 +321,6 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
 
         }
 
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void label11_Click(object sender, EventArgs e)
         {
 
@@ -352,7 +353,34 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
 
         private void brndpngpl1_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        private void berandaPengepul1_Load(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PilihkaryawanPengepul pilihKaryawanpengepul1 = new PilihkaryawanPengepul();
+            pilihKaryawanpengepul1.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PilihkaryawanPengepul pilihKaryawanpengepul1 = new PilihkaryawanPengepul();
+            pilihKaryawanpengepul1.ShowDialog();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PilihkaryawanPengepul pilihKaryawanpengepul1 = new PilihkaryawanPengepul();
+            pilihKaryawanpengepul1.ShowDialog();
         }
     }
 }

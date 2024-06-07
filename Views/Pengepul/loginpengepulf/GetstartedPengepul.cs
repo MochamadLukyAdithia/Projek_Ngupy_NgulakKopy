@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ngupy_NgulakKopy.Views.Pengepul.Dashboard;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,24 @@ namespace Ngupy_NgulakKopy.Views.Pengepul
         public GetstartedPengepul()
         {
             InitializeComponent();
+        }
+
+        private void GetstartedPengepul_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2PictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Dashboard.DashboardPengepul dashboardPengepul = new Dashboard.DashboardPengepul();
+            dashboardPengepul.ShowDialog();
+
         }
     }
 }

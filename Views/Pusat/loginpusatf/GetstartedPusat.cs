@@ -16,5 +16,12 @@ namespace Ngupy_NgulakKopy.Views.Pusat
         {
             InitializeComponent();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Dashboard.DashboardPusat dashboardPusat = new Dashboard.DashboardPusat();
+            dashboardPusat.ShowDialog();
+        }
     }
 }

@@ -50,9 +50,8 @@
             this.guna2Panel1.Controls.Add(this.guna2PictureBox5);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1269, 74);
+            this.guna2Panel1.Size = new System.Drawing.Size(1128, 59);
             this.guna2Panel1.TabIndex = 17;
             // 
             // guna2Button2
@@ -60,7 +59,7 @@
             this.guna2Button2.AutoRoundedCorners = true;
             this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Button2.BorderColor = System.Drawing.Color.White;
-            this.guna2Button2.BorderRadius = 11;
+            this.guna2Button2.BorderRadius = 8;
             this.guna2Button2.BorderThickness = 1;
             this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -69,10 +68,9 @@
             this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 6F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(212, 24);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2Button2.Location = new System.Drawing.Point(188, 19);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(93, 24);
+            this.guna2Button2.Size = new System.Drawing.Size(83, 19);
             this.guna2Button2.TabIndex = 13;
             this.guna2Button2.Tag = "";
             this.guna2Button2.Text = "Pengguna";
@@ -82,10 +80,10 @@
             this.guna2PictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox5.Image = global::Ngupy_NgulakKopy.Properties.Resources._20240409_152023_1;
             this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(49, 2);
+            this.guna2PictureBox5.Location = new System.Drawing.Point(44, 2);
             this.guna2PictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2PictureBox5.Name = "guna2PictureBox5";
-            this.guna2PictureBox5.Size = new System.Drawing.Size(145, 61);
+            this.guna2PictureBox5.Size = new System.Drawing.Size(129, 49);
             this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox5.TabIndex = 13;
             this.guna2PictureBox5.TabStop = false;
@@ -96,7 +94,7 @@
             this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2Button1.AutoRoundedCorners = true;
             this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 21;
+            this.guna2Button1.BorderRadius = 17;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -104,12 +102,12 @@
             this.guna2Button1.FillColor = System.Drawing.Color.Black;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(582, 526);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2Button1.Location = new System.Drawing.Point(517, 421);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(159, 45);
+            this.guna2Button1.Size = new System.Drawing.Size(141, 36);
             this.guna2Button1.TabIndex = 16;
             this.guna2Button1.Text = "Mulai aplikasi";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2PictureBox4
             // 
@@ -119,13 +117,13 @@
             this.guna2PictureBox4.FillColor = System.Drawing.Color.Empty;
             this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
             this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(231, 417);
-            this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2PictureBox4.Location = new System.Drawing.Point(205, 334);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.Size = new System.Drawing.Size(865, 66);
+            this.guna2PictureBox4.Size = new System.Drawing.Size(769, 53);
             this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox4.TabIndex = 15;
             this.guna2PictureBox4.TabStop = false;
+            this.guna2PictureBox4.Click += new System.EventHandler(this.guna2PictureBox4_Click);
             // 
             // guna2PictureBox1
             // 
@@ -133,10 +131,9 @@
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(363, 365);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(323, 292);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(595, 44);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(529, 35);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 14;
             this.guna2PictureBox1.TabStop = false;
@@ -147,10 +144,10 @@
             this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(470, 221);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(418, 177);
             this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(721, 92);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(641, 74);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 13;
             this.guna2PictureBox2.TabStop = false;
@@ -158,20 +155,22 @@
             // 
             // GetstartedPengepul
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Ngupy_NgulakKopy.Properties.Resources.image_8;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1269, 740);
+            this.ClientSize = new System.Drawing.Size(1128, 592);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2PictureBox4);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.guna2PictureBox2);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "GetstartedPengepul";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GetstartedPengepul";
+            this.Load += new System.EventHandler(this.GetstartedPengepul_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();

@@ -21,5 +21,10 @@ namespace Ngupy_NgulakKopy.Views.Pengepul
         {
 
         }
+
+        private void guna2PictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

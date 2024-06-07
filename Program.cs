@@ -1,4 +1,6 @@
-﻿using Ngupy_NgulakKopy.Views.Petani;
+﻿using Ngupy_NgulakKopy.Views.Pengepul;
+using Ngupy_NgulakKopy.Views.Pengepul.Dashboard;
+using Ngupy_NgulakKopy.Views.Petani;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +19,7 @@ namespace Ngupy_NgulakKopy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new GetstartedPengepul());
         }
     }
 }

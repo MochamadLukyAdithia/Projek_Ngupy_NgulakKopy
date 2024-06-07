@@ -21,5 +21,30 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
         {
 
         }
+
+        private void pnlHarga_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnlKapasitas_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void brndpngpl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlPenjemptan_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Component 12.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
@@ -129,6 +132,12 @@
     <Compile Include="Views\Pengepul\Dashboard\HargaPengepul.Designer.cs">
       <DependentUpon>HargaPengepul.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Pengepul\Dashboard\PilihkaryawanPengepul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Pengepul\Dashboard\PilihkaryawanPengepul.Designer.cs">
+      <DependentUpon>PilihkaryawanPengepul.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Pengepul\Dashboard\RiwayatPengepul.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -164,6 +173,18 @@
     </Compile>
     <Compile Include="Views\Pengepul\loginpengepulf\MasukPengepul.Designer.cs">
       <DependentUpon>MasukPengepul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pengepul\Pengaturan Profil\AturProfilPeng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Pengepul\Pengaturan Profil\AturProfilPeng.Designer.cs">
+      <DependentUpon>AturProfilPeng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pengepul\Pengaturan Profil\PengaturanPengepul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Pengepul\Pengaturan Profil\PengaturanPengepul.Designer.cs">
+      <DependentUpon>PengaturanPengepul.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Petani\Dashboard\BerandaPetani.cs">
       <SubType>UserControl</SubType>
@@ -283,6 +304,9 @@
     <EmbeddedResource Include="Views\Pengepul\Dashboard\HargaPengepul.resx">
       <DependentUpon>HargaPengepul.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pengepul\Dashboard\PilihkaryawanPengepul.resx">
+      <DependentUpon>PilihkaryawanPengepul.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Pengepul\Dashboard\RiwayatPengepul.resx">
       <DependentUpon>RiwayatPengepul.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,6 +315,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Pengepul\Dashboard\DashboardPengepul.resx">
       <DependentUpon>DashboardPengepul.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Pengepul\loginpengepulf\DaftarPengepul.resx">
       <DependentUpon>DaftarPengepul.cs</DependentUpon>
@@ -300,6 +325,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Pengepul\loginpengepulf\MasukPengepul.resx">
       <DependentUpon>MasukPengepul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pengepul\Pengaturan Profil\AturProfilPeng.resx">
+      <DependentUpon>AturProfilPeng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pengepul\Pengaturan Profil\PengaturanPengepul.resx">
+      <DependentUpon>PengaturanPengepul.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Petani\Dashboard\BerandaPetani.resx">
       <DependentUpon>BerandaPetani.cs</DependentUpon>
@@ -425,6 +456,35 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Daftar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Symbol menunggu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pengecekan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menunggu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menunggu1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pengecekan1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Symbol menunggu1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pengecekan2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Symbol menunggu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Component 12.ico" />
+    <None Include="Resources\chevron-left1.png" />
+    <None Include="Resources\chevron-left.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

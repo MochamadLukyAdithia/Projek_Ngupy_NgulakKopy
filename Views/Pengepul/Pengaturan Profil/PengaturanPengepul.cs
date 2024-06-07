@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ngupy_NgulakKopy.Views.Pusat.Dashboard
+namespace Ngupy_NgulakKopy.Views.Pengepul.Pengaturan_Profil
 {
-    public partial class BerandaPusat : UserControl
+    public partial class PengaturanPengepul : Form
     {
-        public BerandaPusat()
+        public PengaturanPengepul()
         {
             InitializeComponent();
-        }
-
-        private void pnlHarga_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
