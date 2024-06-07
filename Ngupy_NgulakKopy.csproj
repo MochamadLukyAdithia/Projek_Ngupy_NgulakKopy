@@ -112,6 +112,12 @@
     </Compile>
     <Compile Include="Models\Alamat.cs" />
     <Compile Include="Models\AlamatContext.cs" />
+    <Compile Include="Models\HargaKopi.cs" />
+    <Compile Include="Models\HargaKopiContext.cs" />
+    <Compile Include="Models\KualitasKopi.cs" />
+    <Compile Include="Models\KualitasKopiContext.cs" />
+    <Compile Include="Models\Penjualan.cs" />
+    <Compile Include="Models\PenjualanContext.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserContext.cs" />
     <Compile Include="Program.cs" />
