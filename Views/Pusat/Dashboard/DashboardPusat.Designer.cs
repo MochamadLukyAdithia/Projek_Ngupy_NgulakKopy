@@ -330,7 +330,7 @@
             // transaksiPusat1
             // 
             this.transaksiPusat1.BackColor = System.Drawing.Color.Transparent;
-            this.transaksiPusat1.Location = new System.Drawing.Point(185, 63);
+            this.transaksiPusat1.Location = new System.Drawing.Point(181, 50);
             this.transaksiPusat1.Name = "transaksiPusat1";
             this.transaksiPusat1.Size = new System.Drawing.Size(874, 561);
             this.transaksiPusat1.TabIndex = 10;
@@ -338,14 +338,15 @@
             // riwayatPusat1
             // 
             this.riwayatPusat1.BackColor = System.Drawing.Color.Transparent;
-            this.riwayatPusat1.Location = new System.Drawing.Point(181, 65);
+            this.riwayatPusat1.Location = new System.Drawing.Point(185, 50);
             this.riwayatPusat1.Name = "riwayatPusat1";
             this.riwayatPusat1.Size = new System.Drawing.Size(905, 605);
             this.riwayatPusat1.TabIndex = 9;
             // 
             // berandaPusat1
             // 
-            this.berandaPusat1.BackColor = System.Drawing.Color.Black;
+            this.berandaPusat1.BackColor = System.Drawing.Color.Transparent;
+            this.berandaPusat1.ForeColor = System.Drawing.Color.Transparent;
             this.berandaPusat1.Location = new System.Drawing.Point(215, 63);
             this.berandaPusat1.Name = "berandaPusat1";
             this.berandaPusat1.Size = new System.Drawing.Size(626, 454);

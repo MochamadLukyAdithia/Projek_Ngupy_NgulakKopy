@@ -139,6 +139,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.pnlHarga);
+            this.ForeColor = System.Drawing.Color.Transparent;
             this.Name = "BerandaPusat";
             this.Size = new System.Drawing.Size(626, 454);
             this.Load += new System.EventHandler(this.BerandaPusat_Load);
