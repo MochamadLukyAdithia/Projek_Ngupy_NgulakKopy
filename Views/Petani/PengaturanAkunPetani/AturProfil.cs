@@ -43,40 +43,86 @@ namespace Ngupy_NgulakKopy.Views.Petani.ProfilPetani
 
         private void UbahProfilPetani_Click(object sender, EventArgs e)
         {
+            
+            string username = usernameP.Text;
+            string NomorHp = nohpP.Text;
+            string Jalan = JalanP.Text;
+            string Desa = desaP.Text;
+            string NoRekening = norekP.Text;
+
+        
             string constr = $"Server=localhost;Username=postgres;Password=wahyuok234;Database=Ngupy_Database;Port=5432;Pooling=true;";
             NpgsqlConnection conn = new NpgsqlConnection(constr);
-            string query = $"UPDATE \"User\" SET username = '{usernameP.Text}', nomor_telepon = '{nohpP.Text}', nomor_rekening = '{norekP.Text}' WHERE username = '{LoginPetani.username}'";
-
             conn.Open();
+
+            string Ambilid = $"Select id_alamat from \"User\" where username = '{LoginPetani.username}'";
+            NpgsqlCommand queryid = new NpgsqlCommand(Ambilid, conn);
+            NpgsqlDataReader id = queryid.ExecuteReader();
+            id.Read();
+
+            string id_alamat = id[0].ToString();
+            conn.Close();
+           
+
+            string query = "UPDATE \"User\" SET ";
+
+            if (!string.IsNullOrEmpty(username))
+            {
+                query += $"username = '{username}' WHERE username = '{LoginPetani.username}'";
+            }
+
+            if (!string.IsNullOrEmpty(NomorHp))
+            {
+                conn.Open();
+                string query_nohp = query += $"nomor_telepon = '{NomorHp}' WHERE username = '{LoginPetani.username}'";
+                NpgsqlCommand up_nohp = new NpgsqlCommand (query_nohp, conn);
+                up_nohp.ExecuteNonQuery();
+                conn.Close();
+            }
+    
+            if (!string.IsNullOrEmpty(Jalan))
+
+            {
+                conn.Open();
+                string UpdateJalan = $"Update alamat set nama_jalan = '{Jalan}' where id_alamat = '{id_alamat}'";
+                NpgsqlCommand upjalan = new NpgsqlCommand(UpdateJalan, conn);
+                upjalan.ExecuteNonQuery();
+                conn.Close();
+
+                // Anda mungkin perlu membuat query tambahan untuk mengupdate alamat pengguna
+                // query += $"alamat = '{Jalan}', ";
+            }
+
+            if (!string.IsNullOrEmpty(Desa))
+            {
+                conn.Open();
+                string UpdateDesa = $"Update alamat set desa = '{Desa}' where id_alamat = '{id_alamat}'";
+                NpgsqlCommand updesa = new NpgsqlCommand(UpdateDesa, conn);
+                updesa.ExecuteNonQuery();
+                conn.Close();
+            }
+
+            if (!string.IsNullOrEmpty(NoRekening))
+            {
+                conn.Open();
+                string query_norek = query += $"nomor_rekening = '{NoRekening}' WHERE username = '{LoginPetani.username}'";
+                NpgsqlCommand up_norek = new NpgsqlCommand(query_norek, conn);
+                up_norek.ExecuteNonQuery();
+                conn.Close();
+            }
+
+            // Hapus koma terakhir jika ada
+           
+/*
+            query += $" WHERE username = '{LoginPetani.username}'";
+
             NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
-            NpgsqlDataReader reader;
-            reader = cmd.ExecuteReader();
+            cmd.ExecuteNonQuery();
+            conn.Close();*/
+         
 
-        //    if (reader.HasRows)
-        //    {
-        //        reader.Read();
 
-        //        if (reader.GetString(1) == txtPassword.Text)
-        //        {
-        //            MessageBox.Show($"Berhasil login, Selamat datang, {txtUsername.Text}", "Success");
-        //            username = txtUsername.Text;
-        //            conn.Close();
-        //            this.Hide();
-        //            GetStarted getStarted = new GetStarted();
-        //            getStarted.ShowDialog();
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show($"Password salah", "Warning");
-        //        }
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Username tidak dapat ditemukan", "Error");
-        //    }
-        //}
-
-        MessageBox.Show("Data Berhasil Disimpan!", "Sukses", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            MessageBox.Show("Data Berhasil Disimpan!", "Sukses", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
         }
 
@@ -88,6 +134,11 @@ namespace Ngupy_NgulakKopy.Views.Petani.ProfilPetani
         }
 
         private void norekP_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Jalan_TextChanged(object sender, EventArgs e)
         {
 
         }
