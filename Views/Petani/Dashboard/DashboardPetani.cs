@@ -95,5 +95,10 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
         {
 
         }
+
+        private void transaksiPetani1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

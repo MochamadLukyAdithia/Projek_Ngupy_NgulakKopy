@@ -48,7 +48,7 @@
             this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.brndpngpl1 = new Ngupy_NgulakKopy.Views.Pengepul.Dashboard.brndpngpl();
+            //this.brndpngpl1 = new Ngupy_NgulakKopy.Views.Pengepul.Dashboard.brndpngpl();
             this.hargaPengepul1 = new Ngupy_NgulakKopy.Views.Pengepul.Dashboard.HargaPengepul();
             this.transaksiPengpul1 = new Ngupy_NgulakKopy.Views.Pengepul.Dashboard.TransaksiPengpul();
             this.flowLayoutPanel1.SuspendLayout();
@@ -432,5 +432,5 @@
         private TransaksiPengpul transaksiPengpul1;
         private HargaPengepul hargaPengepul1;
         private brndpngpl brndpngpl1;
-    }
+    } 
 }
