@@ -104,6 +104,10 @@
   <ItemGroup>
     <Compile Include="Controllers\AkunControllers.cs" />
     <Compile Include="Controllers\AlamatControllers.cs" />
+    <Compile Include="Controllers\GudangControllers.cs" />
+    <Compile Include="Controllers\HargaKopiControllers.cs" />
+    <Compile Include="Controllers\KualitasKopiControllers.cs" />
+    <Compile Include="Controllers\PenjemputanControllers.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,10 +116,12 @@
     </Compile>
     <Compile Include="Models\Alamat.cs" />
     <Compile Include="Models\AlamatContext.cs" />
+    <Compile Include="Models\Gudang.cs" />
     <Compile Include="Models\HargaKopi.cs" />
     <Compile Include="Models\HargaKopiContext.cs" />
     <Compile Include="Models\KualitasKopi.cs" />
     <Compile Include="Models\KualitasKopiContext.cs" />
+    <Compile Include="Models\Penjemputan.cs" />
     <Compile Include="Models\Penjualan.cs" />
     <Compile Include="Models\PenjualanContext.cs" />
     <Compile Include="Models\User.cs" />

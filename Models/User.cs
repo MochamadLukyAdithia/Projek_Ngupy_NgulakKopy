@@ -8,6 +8,7 @@ using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Ngupy_NgulakKopy.Tools;
 
 namespace Ngupy_NgulakKopy.Models
 {
@@ -17,21 +18,21 @@ namespace Ngupy_NgulakKopy.Models
         public string nomor_telepon { get; set; }
         public string nomor_rekening { get; set; }
         public string username { get; set; }
-        private string password { get; set; }
+        public string password { get; set; }
         public int id_user {  get; set; }
         public int id_peran { get; set; }
         public int id_alamat { get; set; }
         public int id_kualitas_kopi { get; set; }
 
-        private string koneksi = "Host=localhost;Username=postgres;Password=c4peKBgt!;Database=Ngupy";
+        private string koneksi = Connection.connect;
 
         public (string username, string password)? login(int id_peran)
         {
             using (var con = new NpgsqlConnection(koneksi))
             {
                 con.Open();
-                var cmd = new NpgsqlCommand($"SELECT Username, Password FROM \"User\" Where Username ilike '{this.username}' and id_peran = {id_peran}", con);
-                using (var reader = cmd.ExecuteReader())
+                var select_login = new NpgsqlCommand($"SELECT Username, Password FROM \"User\" Where Username ilike '{this.username}' and id_peran = {id_peran}", con);
+                using (var reader = select_login.ExecuteReader())
                 {
                     if (reader.Read())
                     {
@@ -49,85 +50,14 @@ namespace Ngupy_NgulakKopy.Models
             }
         }
 
-        public (string username, string password)? login_petani()
-        {
-            using (var con =  new NpgsqlConnection(koneksi))
-            {
-                con.Open();
-                var cmd = new NpgsqlCommand($"SELECT Username, Password FROM \"User\" Where Username ilike '{this.username}' and id_peran = 1", con);
-                using (var reader = cmd.ExecuteReader()) 
-                {
-                    if (reader.Read())
-                    {
-                        // Mendapatkan username dan password dari reader
-                        string Username = reader.GetString(0);
-                        string Password = reader.GetString(1);
-                        return (Username, Password);
-                    }
-                    else
-                    {
-                        // jika ga ada username yang sama
-                        return null;
-                    }
-                }
-            }
-        }
-
-        public (string username, string password)? login_pengepul()
-        {
-            using (var con = new NpgsqlConnection(koneksi))
-            {
-                con.Open();
-                var cmd = new NpgsqlCommand($"SELECT Username, Password FROM \"User\" Where Username ilike '{this.username}' and id_peran = 2", con);
-                using (var reader = cmd.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        // Mendapatkan username dan password dari reader
-                        string Username = reader.GetString(0);
-                        string Password = reader.GetString(1);
-                        return (Username, Password);
-                    }
-                    else
-                    {
-                        // jika ga ada username yang sama
-                        return null;
-                    }
-                }
-            }
-        }
-
-        public (string username, string password)? login_pusat()
-        {
-            using (var con = new NpgsqlConnection(koneksi))
-            {
-                con.Open();
-                var cmd = new NpgsqlCommand($"SELECT Username, Password FROM \"User\" Where Username ilike '{this.username}' and id_peran = 3", con);
-                using (var reader = cmd.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        // Mendapatkan username dan password dari reader
-                        string Username = reader.GetString(0);
-                        string Password = reader.GetString(1);
-                        return (Username, Password);
-                    }
-                    else
-                    {
-                        // jika ga ada username yang sama
-                        return null;
-                    }
-                }
-            }
-        }
 
         public bool Cek_Username(string username)
         {
             using (var con = new NpgsqlConnection(koneksi))
             {
                 con.Open();
-                var cmd = new NpgsqlCommand($"SELECT Username From \"User\" Where Username = '{username}'", con);
-                using (var reader = cmd.ExecuteReader())
+                var cek_username = new NpgsqlCommand($"SELECT Username From \"User\" Where Username = '{username}'", con);
+                using (var reader = cek_username.ExecuteReader())
                 {
                     return reader.HasRows;
                 }
@@ -135,13 +65,137 @@ namespace Ngupy_NgulakKopy.Models
             }
         }
 
-        public void Daftar(string nama, string nomor_telepon, string username, string password, int id_peran, int id_alamat, int id_kualitas_kopi )
+        public void Daftar(string nama, string nomor_telepon, string username, string password, int id_peran, int id_alamat)
         {
             using (var con = new NpgsqlConnection(koneksi))
             {
                 con.Open();
-                var cmd = new NpgsqlCommand($"INSERT INTO \"User\" (nama,nomor_telepon,username,password,id_peran,id_alamat,id_kualitas_kopi) VALUES ('{nama}', '{nomor_telepon}', '{username}', '{password}', {id_peran}, {id_alamat}, {id_kualitas_kopi})", con);
-                cmd.ExecuteNonQuery();
+                var insert_user = new NpgsqlCommand($"INSERT INTO \"User\" (nama,nomor_telepon,username,password,id_peran,id_alamat) VALUES ('{nama}', '{nomor_telepon}', '{username}', '{password}', {id_peran}, {id_alamat})", con);
+                insert_user.ExecuteNonQuery();
+            }
+        }        
+        public void Daftar_Petani(string nama, string nomor_telepon, string username, string password, int id_peran, int id_alamat, int id_kualitas_kopi )
+        {
+            using (var con = new NpgsqlConnection(koneksi))
+            {
+                con.Open();
+                var insert_user = new NpgsqlCommand($"INSERT INTO \"User\" (nama,nomor_telepon,username,password,id_peran,id_alamat,id_kualitas_kopi) VALUES ('{nama}', '{nomor_telepon}', '{username}', '{password}', {id_peran}, {id_alamat}, {id_kualitas_kopi})", con);
+                insert_user.ExecuteNonQuery();
+            }
+        }
+
+        public bool ValidateCurrentPassword(string currentPassword, string username)
+        {
+            using (var conn = new NpgsqlConnection(koneksi))
+            {
+                conn.Open();
+                var query = $"SELECT password FROM \"User\" WHERE username = '{username}'";
+                var cmd = new NpgsqlCommand(query, conn);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    return reader.Read() && reader.GetString(0) == currentPassword;
+                }
+            }
+        }
+
+        public bool UpdatePassword(string newPassword,string username)
+        {
+            using (var conn = new NpgsqlConnection(koneksi))
+            {
+                conn.Open();
+                var query = $"UPDATE \"User\" SET password = '{newPassword}' WHERE username = '{username}'";
+                var cmd = new NpgsqlCommand(query, conn);
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+        public string GetAlamatId(string username)
+        {
+            using (var conn = new NpgsqlConnection(koneksi))
+            {
+                conn.Open();
+                var query = $"SELECT id_alamat FROM \"User\" WHERE username = '{username}'";
+                var cmd = new NpgsqlCommand(query, conn);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                    {
+                        reader.Read();
+                        return reader[0].ToString();
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+            }
+        }
+
+        public bool UpdateProfile(string newUsername, string newNomorHp, string newJalan, string newDesa, string newKecamatan, string newNoRekening, string username)
+        {
+            using (var conn = new NpgsqlConnection(koneksi))
+            {
+                conn.Open();
+                using (var transaction = conn.BeginTransaction())
+                {
+                    try
+                    {
+                        if (!string.IsNullOrEmpty(newUsername))
+                        {
+                            var query = $"UPDATE \"User\" SET username = '{newUsername}' WHERE username = '{username}'";
+                            var cmd = new NpgsqlCommand(query, conn);
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        if (!string.IsNullOrEmpty(newNomorHp))
+                        {
+                            var query = $"UPDATE \"User\" SET nomor_telepon = '{newNomorHp}' WHERE username = '{username}'";
+                            var cmd = new NpgsqlCommand(query, conn);
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        var alamatId = GetAlamatId(username);
+                        if (!string.IsNullOrEmpty(alamatId))
+                        {
+                            if (!string.IsNullOrEmpty(newJalan))
+                            {
+                                var query = $"UPDATE alamat SET nama_jalan = '{newJalan}' WHERE id_alamat = {alamatId}";
+                                var cmd = new NpgsqlCommand(query, conn);
+                                cmd.ExecuteNonQuery();
+                            }
+
+                            if (!string.IsNullOrEmpty(newDesa))
+                            {
+                                var query = $"UPDATE alamat SET desa = '{newDesa}' WHERE id_alamat = {alamatId}";
+                                var cmd = new NpgsqlCommand(query, conn);
+                                cmd.ExecuteNonQuery();
+                            }
+
+                            if (!string.IsNullOrEmpty(newKecamatan))
+                            {
+                                var query = $"UPDATE alamat SET kecamatan = @newKecamatan WHERE id_alamat = {alamatId}";
+                                var cmd = new NpgsqlCommand(query, conn);
+                                cmd.ExecuteNonQuery();
+                            }
+                        }
+
+                        if (!string.IsNullOrEmpty(newNoRekening))
+                        {
+                            var query = $"UPDATE \"User\" SET nomor_rekening = @newNoRekening WHERE username = '{username}'";
+                            var cmd = new NpgsqlCommand(query, conn);
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        transaction.Commit();
+                        return true;
+                    }
+                    catch (Exception)
+                    {
+                        transaction.Rollback();
+                        return false;
+                    }
+                }
             }
         }
     }

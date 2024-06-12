@@ -16,11 +16,13 @@ namespace Ngupy_NgulakKopy.Views.Petani
 {
     public partial class LoginPetani : Form
     {
-        static public string username;
+        private AkunControllers akunControllers;
         public LoginPetani()
         {
             InitializeComponent();
             this.ActiveControl = txtUsername;
+            akunControllers = new AkunControllers();
+
         }
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
@@ -37,9 +39,7 @@ namespace Ngupy_NgulakKopy.Views.Petani
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text; 
-
-            AkunControllers akunControllers = new AkunControllers();
-
+                  
             string status_login = akunControllers.login(username, password, 1);
 
             if (status_login == "Login berhasil!")
@@ -47,7 +47,7 @@ namespace Ngupy_NgulakKopy.Views.Petani
                 MessageBox.Show($"Berhasil login, Selamat datang, {txtUsername.Text}", "Success");
                 username = txtUsername.Text;
                 this.Hide();
-                GetStarted getStarted = new GetStarted();
+                GetStarted getStarted = new GetStarted(username);
                 getStarted.ShowDialog();
             }
             else if (status_login == "Password salah.")

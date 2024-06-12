@@ -34,6 +34,7 @@ namespace Ngupy_NgulakKopy.Views.Petani
 
             AkunControllers akunControllers = new AkunControllers();
             AlamatControllers alamatControllers = new AlamatControllers();
+            KualitasKopiControllers kualitaskopicontrollers = new KualitasKopiControllers();
 
             if (password != KonfirPassword )
             {
@@ -57,7 +58,15 @@ namespace Ngupy_NgulakKopy.Views.Petani
                 return;
             }
 
-            akunControllers.Daftar(nama, NomorHp, username, password, 1, Convert.ToInt32(id_alamat), 1);
+            int? id_kualitas_kopi = kualitaskopicontrollers.insert_kualitas();
+
+            if (id_alamat == null)
+            {
+                MessageBox.Show("Gagal menambahkan kualitas kopi");
+                return;
+            }
+
+            akunControllers.Daftar_Petani(nama, NomorHp, username, password, Convert.ToInt32(id_alamat), Convert.ToInt32(id_kualitas_kopi));
 
             MessageBox.Show($"Data anda berhasil ditambahkan");
             this.Hide();

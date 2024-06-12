@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Ngupy_NgulakKopy.Tools;
 
 namespace Ngupy_NgulakKopy.Models
 {
@@ -14,7 +15,7 @@ namespace Ngupy_NgulakKopy.Models
         public string desa { get; set; }
         public string kecamatan { get; set; }
 
-        private string koneksi = "Host=localhost;Username=postgres;Password=c4peKBgt!;Database=Ngupy";
+        private string koneksi = Connection.connect;
 
         public int? insert_alamat(string jalan, string desa, string kecamatan)
         {
@@ -26,13 +27,11 @@ namespace Ngupy_NgulakKopy.Models
                 {
                     if (reader.Read())
                     {
-                        // Mendapatkan username dan password dari reader
                         int ID_alamat = reader.GetInt32(0);
                         return ID_alamat;
                     }
                     else
                     {
-                        // jika ga ada username yang sama
                         return null;
                     }
                 }

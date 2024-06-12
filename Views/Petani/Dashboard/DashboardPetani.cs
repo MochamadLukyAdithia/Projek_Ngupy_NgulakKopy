@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Ngupy_NgulakKopy.Controllers;
 using Ngupy_NgulakKopy.Views.Petani.Dashboard.PengaturanProfilPetani;
 using Ngupy_NgulakKopy.Views.Petani.ProfilPetani;
 
@@ -15,9 +16,11 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
 {
     public partial class DashboardPetani : Form
     {
-        public DashboardPetani()
+        private string username;
+        public DashboardPetani(string username)
         {
             InitializeComponent();
+            this.username = username;
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -74,6 +77,7 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
         private void DashboardPetani_Load(object sender, EventArgs e)
         {
             berandaPetani1.Show();
+            berandaPetani1.SetUsername(username);
             penjemputanPetani1.Hide();
             transaksiPetani1.Hide();
             riwayatPetani1.Hide();
@@ -81,9 +85,9 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
 
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
-            PengaturanPetani profil = new PengaturanPetani();
-            profil.Show();
-            this.Hide();
+            //PengaturanPetani profil = new PengaturanPetani();
+            //profil.Show();
+            //this.Hide();
         }
 
         private void riwayatPetani1_Load(object sender, EventArgs e)

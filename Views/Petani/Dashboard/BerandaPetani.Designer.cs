@@ -49,6 +49,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.pnlKapasitas = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.pnlHarga = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.lblhargaterbaru = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.pnlPenjemptan = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
@@ -62,12 +64,12 @@
             this.lblkaryawan.AutoSize = true;
             this.lblkaryawan.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblkaryawan.ForeColor = System.Drawing.Color.Black;
-            this.lblkaryawan.Location = new System.Drawing.Point(32, 78);
+            this.lblkaryawan.Location = new System.Drawing.Point(22, 70);
             this.lblkaryawan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblkaryawan.Name = "lblkaryawan";
-            this.lblkaryawan.Size = new System.Drawing.Size(57, 23);
+            this.lblkaryawan.Size = new System.Drawing.Size(42, 23);
             this.lblkaryawan.TabIndex = 19;
-            this.lblkaryawan.Text = "1. aaaa";
+            this.lblkaryawan.Text = "aaaa";
             // 
             // lblketerangan
             // 
@@ -167,7 +169,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(25, 43);
+            this.label13.Location = new System.Drawing.Point(21, 43);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(189, 28);
@@ -217,7 +219,7 @@
             this.lblTanggal.AutoSize = true;
             this.lblTanggal.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTanggal.ForeColor = System.Drawing.Color.White;
-            this.lblTanggal.Location = new System.Drawing.Point(28, 103);
+            this.lblTanggal.Location = new System.Drawing.Point(28, 100);
             this.lblTanggal.Name = "lblTanggal";
             this.lblTanggal.Size = new System.Drawing.Size(112, 28);
             this.lblTanggal.TabIndex = 0;
@@ -228,7 +230,7 @@
             this.lblharga.AutoSize = true;
             this.lblharga.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblharga.ForeColor = System.Drawing.Color.White;
-            this.lblharga.Location = new System.Drawing.Point(28, 168);
+            this.lblharga.Location = new System.Drawing.Point(28, 184);
             this.lblharga.Name = "lblharga";
             this.lblharga.Size = new System.Drawing.Size(72, 28);
             this.lblharga.TabIndex = 0;
@@ -239,7 +241,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(28, 71);
+            this.label2.Location = new System.Drawing.Point(28, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 28);
             this.label2.TabIndex = 0;
@@ -250,7 +252,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(23, 20);
+            this.label1.Location = new System.Drawing.Point(24, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(239, 54);
             this.label1.TabIndex = 0;
@@ -324,6 +326,8 @@
             // 
             this.pnlHarga.BackColor = System.Drawing.Color.Transparent;
             this.pnlHarga.BorderRadius = 20;
+            this.pnlHarga.Controls.Add(this.lblhargaterbaru);
+            this.pnlHarga.Controls.Add(this.label4);
             this.pnlHarga.Controls.Add(this.lblTanggal);
             this.pnlHarga.Controls.Add(this.lblharga);
             this.pnlHarga.Controls.Add(this.label2);
@@ -337,6 +341,28 @@
             this.pnlHarga.Name = "pnlHarga";
             this.pnlHarga.Size = new System.Drawing.Size(496, 234);
             this.pnlHarga.TabIndex = 23;
+            // 
+            // lblhargaterbaru
+            // 
+            this.lblhargaterbaru.AutoSize = true;
+            this.lblhargaterbaru.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblhargaterbaru.ForeColor = System.Drawing.Color.White;
+            this.lblhargaterbaru.Location = new System.Drawing.Point(26, 128);
+            this.lblhargaterbaru.Name = "lblhargaterbaru";
+            this.lblhargaterbaru.Size = new System.Drawing.Size(72, 28);
+            this.lblhargaterbaru.TabIndex = 2;
+            this.lblhargaterbaru.Text = "50000";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(28, 156);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(260, 28);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Harga Kualitas Kopi Anda";
             // 
             // pnlPenjemptan
             // 
@@ -405,5 +431,7 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel pnlHarga;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel pnlPenjemptan;
         private Guna.UI2.WinForms.Guna2Shapes guna2Shapes1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblhargaterbaru;
     }
 }
