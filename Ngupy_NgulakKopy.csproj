@@ -116,6 +116,17 @@
     <Compile Include="Models\KualitasKopiContext.cs" />
     <Compile Include="Models\Penjualan.cs" />
     <Compile Include="Models\PenjualanContext.cs" />
+    <Compile Include="Models\DetailPenjemputan.cs" />
+    <Compile Include="Models\DetailPenjemputanContext.cs" />
+    <Compile Include="Models\Gudang.cs" />
+    <Compile Include="Models\GudangContext.cs" />
+    <Compile Include="Models\KualitasKopi.cs" />
+    <Compile Include="Models\Pembelian.cs" />
+    <Compile Include="Models\PembelianContext.cs" />
+    <Compile Include="Models\PetaniPenjemputan.cs" />
+    <Compile Include="Models\PenjemputanPetaniContext.cs" />
+    <Compile Include="Models\TransaksiContext.cs" />
+    <Compile Include="Models\TransaksiModel.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserContext.cs" />
     <Compile Include="Program.cs" />

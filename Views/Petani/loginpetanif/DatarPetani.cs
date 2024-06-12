@@ -29,7 +29,7 @@ namespace Ngupy_NgulakKopy.Views.Petani
             string Jalan = txtJalan.Text;
             string Kecamatan = txtKecamatan.SelectedItem.ToString();
             string KonfirPassword = txtKonfirmasiPassword.Text;
-            string connect = $"Server=localhost;Username=postgres;Password=wahyuok234;Database=Ngupy_Database;Port=5432;Pooling=True;";
+            string connect = $"Server=localhost;Username=postgres;Password=Harsa_05;Database=ngupy_projek;Port=5432;Pooling=True;";
             string idalamat = $"select id_alamat from alamat where nama_jalan ilike '{Jalan}'";
             string queryalamat = $"insert into alamat(nama_jalan,desa,kecamatan) values('{Jalan}','{Desa}','{Kecamatan}')";
             string queryusername = $"select username from \"User\" where username like '{username}'";
@@ -40,7 +40,7 @@ namespace Ngupy_NgulakKopy.Views.Petani
             NpgsqlCommand select_username = new NpgsqlCommand(queryusername, conn);
             NpgsqlDataReader pick_uname = select_username.ExecuteReader();
             
-            if (pick_uname.Read())
+            while (pick_uname.Read())
             {
                 if (KonfirPassword == password)
                 {
@@ -52,7 +52,7 @@ namespace Ngupy_NgulakKopy.Views.Petani
                     }
                 }
             }
-            else
+            
             {
                 conn.Close();
                 conn.Open();
@@ -68,7 +68,7 @@ namespace Ngupy_NgulakKopy.Views.Petani
                     int ID = reader.GetInt32(0);
                     conn.Close();
                     conn.Open();
-                    string queryuser = $"insert into \"User\"(nama,nomor_telepon,username,password,id_peran,id_alamat,id_kualitas_kopi) values ('{nama}','{NomorHp}','{username}','{password}','3',{ID},1)";
+                    string queryuser = $"insert into \"User\"(nama,nomor_telepon,username,password,id_peran,id_alamat,id_kualitas_kopi) values ('{nama}','{NomorHp}','{username}','{password}','1',{ID},1)";
                     NpgsqlCommand insertuser = new NpgsqlCommand(queryuser, conn);
                     insertuser.Parameters.AddWithValue("desa_id_desa", ID);
                     insertuser.ExecuteNonQuery();

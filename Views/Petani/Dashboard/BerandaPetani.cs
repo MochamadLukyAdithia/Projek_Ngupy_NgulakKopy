@@ -10,86 +10,66 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using Ngupy_NgulakKopy.Views.Petani;
+using Ngupy_NgulakKopy.Models;
 
 namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
 {
     public partial class BerandaPetani : UserControl
     {
+        private GudangContext Gcontext;
+        private DetailPenjemputanContext DPcontext;
+        private UserContext Ucontext;
+        private User user;
+        private Gudang gudang;
+
+        private DetailPenjemputan detailpenjemputan;
+
         public BerandaPetani()
         {
             InitializeComponent();
-            readHarga();
+            Getstok_kopi();
+            Getnamauser();
+
+
+            DPcontext = new DetailPenjemputanContext();
+
+
+
         }
 
         private void BerandaPetani_Load(object sender, EventArgs e)
         {
-            readHarga();
+            Getstok_kopi();
+            Getnamauser();
         }
 
-        private void readHarga()
+        private void Getstok_kopi()
         {
-            lblusername.Text = LoginPetani.username;
-            try
-            {
-                string database = "Host=localhost;Username=postgres;Password=wahyuok234;Database=Ngupy_Database";
-                NpgsqlConnection conn = new NpgsqlConnection(database);
+            Ucontext = new UserContext();
+            Gcontext = new GudangContext();
+            detailpenjemputan = new DetailPenjemputan();
+            string username = LoginPetani.username;
+            Gudang gudang = new Gudang();
+            User user = new User();
 
-                string selectnow = $"SELECT TO_CHAR(CURRENT_DATE, 'dd/mm/yyyy')";
-                conn.Open();
-                NpgsqlCommand select_cd = new NpgsqlCommand(selectnow, conn);
-                NpgsqlDataReader cd = select_cd.ExecuteReader();
-                cd.Read();
-                lblTanggal.Text = cd[0].ToString();
-                conn.Close();
-            }
-            catch (Exception ex) 
-            {
-                MessageBox.Show($"Error: {ex.Message}");
-            }
+            user.GetId = Ucontext.Getid(username);
+            int id_user = user.GetId;
+            lblkaryawan.Text = detailpenjemputan.NamapegawaiById(id_user);
+            gudang.get_stokkopi = Gcontext.Getstok_kopi();
+            lblkapasitas.Text = gudang.get_stokkopi.ToString() + "kg/50 Ton";
+        }
 
-            try
-            {
-                string database = "Host=localhost;Username=postgres;Password=c4peKBgt!;Database=Ngupy";
-                NpgsqlConnection conn = new NpgsqlConnection(database);
-
-                //string select_harga = "$SELECT ";
-
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}");
-            }
-
-
-
-            //if (reader.HasRows)
-            //{
-            //    reader.Read();
-
-            //    if (reader.GetString(1) == txtPassword.Text)
-            //    {
-            //        MessageBox.Show($"Berhasil login, Selamat datang, {txtUsername.Text}", "Success");
-            //        username = txtUsername.Text;
-            //        conn.Close();
-            //        this.Hide();
-            //        GetStarted getStarted = new GetStarted();
-            //        getStarted.ShowDialog();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show($"Password salah", "Warning");
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Username tidak dapat ditemukan", "Error");
-            //}
+        private void Getnamauser()
+        {
+            User user = new User();
+            string username = LoginPetani.username;
+            user.Getnama = Ucontext.Getnama(username);
+            lblusername.Text = user.Getnama;
         }
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void lblusername_Click(object sender, EventArgs e)

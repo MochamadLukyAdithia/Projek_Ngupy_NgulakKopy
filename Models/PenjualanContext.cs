@@ -8,6 +8,12 @@ namespace Ngupy_NgulakKopy.Models
     internal class PenjualanContext
     {
         public List<Penjualan> listPenjualan = new List<Penjualan>();
+        private Penjualan penjualan;
+
+        public PenjualanContext()
+        {
+            penjualan = new Penjualan();
+        }
 
         public bool Insert(Penjualan newPenjualan)
         {
@@ -48,46 +54,66 @@ namespace Ngupy_NgulakKopy.Models
         }
 
 
-            public bool ReadPenjualan()
+        public bool ReadPenjualan()
+        {
+            bool isgud = false;
+            try
             {
-                bool isgud = false;
-                try
+                using (NpgsqlConnection con = new NpgsqlConnection(Connection.connect))
                 {
-                    using (NpgsqlConnection con = new NpgsqlConnection(Connection.connect))
-                    {
-                        string sql = "SELECT p.jumlah_kopi, (p.jumlah_kopi * hp.harga) AS Total, hp.harga " +
-                                     "FROM \"Penjualan\" p " +
-                                     "JOIN \"User\" u ON u.id_user = p.id_user " +
-                                     "JOIN harga_kopi hp ON p.id_harga = hp.id_harga " +
-                                     "ORDER BY hp.id_harga DESC LIMIT 1";
+                    string sql = "SELECT p.jumlah_kopi, (p.jumlah_kopi * hp.harga) AS Total, hp.harga " +
 
-                        con.Open();
-                        using (NpgsqlCommand cmd = new NpgsqlCommand(sql, con))
+
+                                 "FROM \"Penjualan\" p " +
+                                 "JOIN \"User\" u ON u.id_user = p.id_user " +
+                                 "JOIN harga_kopi hp ON p.id_harga = hp.id_harga " +
+                                 "ORDER BY hp.id_harga DESC LIMIT 1";
+
+                    con.Open();
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(sql, con))
+                    {
+                        using (NpgsqlDataReader reader = cmd.ExecuteReader())
                         {
-                            using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                            listPenjualan.Clear();
+                            while (reader.Read())
                             {
-                                listPenjualan.Clear();
-                                while (reader.Read())
+                                Penjualan penjualan = new Penjualan
                                 {
-                                    Penjualan penjualan = new Penjualan
-                                    {
-                                        jumlah_kopi = reader.GetInt32(reader.GetOrdinal("jumlah_kopi")),
-                                        total = reader.GetInt32(reader.GetOrdinal("Total")),
-                                        harga = reader.GetInt32(reader.GetOrdinal("harga"))
-                                    };
-                                    listPenjualan.Add(penjualan);
-                                    isgud = true;
-                                }
+                                    jumlah_kopi = reader.GetInt32(reader.GetOrdinal("jumlah_kopi")),
+                                    total = reader.GetInt32(reader.GetOrdinal("Total")),
+                                    harga = reader.GetInt32(reader.GetOrdinal("harga"))
+                                };
+                                listPenjualan.Add(penjualan);
+                                isgud = true;
                             }
                         }
                     }
                 }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Error: {ex.Message}");
-                }
-                return isgud;
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+            return isgud;
+        }
+
+        public void Penjualan_petani()
+        {
+            using(var conn = new NpgsqlConnection(Connection.connect))
+            {
+                conn.Open();
+
+                string sql = "INSERT INTO \"Penjualan\" (jumlah_kopi, id_user, id_harga) VALUES (@jumlah_kopi, @id_user, @id_harga)";
+                using (var cmd = new NpgsqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("jumlah_kopi", penjualan.jumlah_kopi);
+                    cmd.Parameters.AddWithValue("id_user", penjualan.id_user);
+                    cmd.Parameters.AddWithValue("id_harga", penjualan.id_harga);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
         }
     }
 

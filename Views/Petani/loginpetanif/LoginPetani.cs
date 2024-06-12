@@ -34,7 +34,7 @@ namespace Ngupy_NgulakKopy.Views.Petani
 
         private void btnLoginPetani_Click(object sender, EventArgs e)
         {
-            string database = "Host=localhost;Username=postgres;Password=wahyuok234;Database=Ngupy_Database";
+            string database = "Host=localhost;Username=postgres;Password=Harsa_05;Database=ngupy_projek;Port=5432;Pooling=True;";
             NpgsqlConnection conn = new NpgsqlConnection(database);
             string query_username = $"SELECT Username, Password FROM \"User\" Where Username ilike '{txtUsername.Text}' and id_peran = 1";
             conn.Open();
