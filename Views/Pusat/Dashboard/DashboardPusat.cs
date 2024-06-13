@@ -28,6 +28,8 @@ namespace Ngupy_NgulakKopy.Views.Pusat.Dashboard
 
             pnlSideTransaksi.BackColor = Color.FromArgb(255, 243, 233);
             pnlSideRiwayat.BackColor = Color.FromArgb(255, 243, 233);
+            BerandaPusat berandaPusat = new BerandaPusat();
+            berandaPusat.DisplayLatestPrice();
 
         }
 
@@ -78,6 +80,11 @@ namespace Ngupy_NgulakKopy.Views.Pusat.Dashboard
             transaksiPusat1.Hide();
             updateHargaPusat1.Hide();
             riwayatPusat1.Hide();
+        }
+
+        private void transaksiPusat1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

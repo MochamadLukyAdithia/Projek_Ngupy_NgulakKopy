@@ -111,6 +111,16 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Alamat.cs" />
+    <Compile Include="Models\AlamatContext.cs" />
+    <Compile Include="Models\HargaKopi.cs" />
+    <Compile Include="Models\HargaKopiContext.cs" />
+    <Compile Include="Models\KualitasKopi.cs" />
+    <Compile Include="Models\KualitasKopiContext.cs" />
+    <Compile Include="Models\Penjualan.cs" />
+    <Compile Include="Models\PenjualanContext.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tools\Connection.cs" />
@@ -234,6 +244,24 @@
     <Compile Include="Views\Petani\loginpetanif\LoginPetani.Designer.cs">
       <DependentUpon>LoginPetani.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Petani\PengaturanAkunPetani\AturProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Petani\PengaturanAkunPetani\AturProfil.Designer.cs">
+      <DependentUpon>AturProfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Petani\PengaturanAkunPetani\KeamananAkunPetani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Petani\PengaturanAkunPetani\KeamananAkunPetani.Designer.cs">
+      <DependentUpon>KeamananAkunPetani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Petani\PengaturanAkunPetani\PengaturanPetani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Petani\PengaturanAkunPetani\PengaturanPetani.Designer.cs">
+      <DependentUpon>PengaturanPetani.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Pusat\Dashboard\BerandaPusat.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -356,6 +384,15 @@
     <EmbeddedResource Include="Views\Petani\loginpetanif\LoginPetani.resx">
       <DependentUpon>LoginPetani.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Petani\PengaturanAkunPetani\AturProfil.resx">
+      <DependentUpon>AturProfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Petani\PengaturanAkunPetani\KeamananAkunPetani.resx">
+      <DependentUpon>KeamananAkunPetani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Petani\PengaturanAkunPetani\PengaturanPetani.resx">
+      <DependentUpon>PengaturanPetani.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Pusat\Dashboard\BerandaPusat.resx">
       <DependentUpon>BerandaPusat.cs</DependentUpon>
     </EmbeddedResource>
@@ -394,9 +431,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Role.png" />
   </ItemGroup>

@@ -1,6 +1,8 @@
 ﻿using Ngupy_NgulakKopy.Views.Pengepul;
 using Ngupy_NgulakKopy.Views.Pengepul.Dashboard;
 using Ngupy_NgulakKopy.Views.Petani;
+using Ngupy_NgulakKopy.Views.Petani.Dashboard;
+using Ngupy_NgulakKopy.Views.Pusat.Dashboard;
 using System;
 using System.Collections.Generic;
 using System.Linq;
