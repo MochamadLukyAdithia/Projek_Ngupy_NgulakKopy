@@ -97,5 +97,13 @@ namespace Ngupy_NgulakKopy.Views.Petani
         {
 
         }
+
+        private void DaftarPetani_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+
+
+            this.Bounds = Screen.PrimaryScreen.Bounds;
+        }
     }
 }

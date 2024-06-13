@@ -72,5 +72,18 @@ namespace Ngupy_NgulakKopy.Views.Petani
             DaftarPetani dp = new DaftarPetani();
             dp.ShowDialog();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginPetani_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+
+          
+            this.Bounds = Screen.PrimaryScreen.Bounds;
+        }
     }
 }

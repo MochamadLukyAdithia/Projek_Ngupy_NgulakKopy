@@ -121,7 +121,7 @@
   <data name="guna2PictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAq8AAABcCAYAAABA+FwDAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAHE5JREFUeF7tnXmwLGdZxgnJzXoTliRAIAQwLCFWAQoJi6lAaYAQZAl/sAhoWApR
+        EAAACxABrSO9dQAAHE5JREFUeF7tnXmwLGdZxgnJzXoTliRAIAQwLCFWAQoJi6lAaYAQZAl/sAhoWApR
         WRKDIFgaUIyobFUggpReMELYigRBkcgSJIVAKDZBlC3sAgYwgbBD/D09X0965sx0v1/312dmzn1+VU/N
         mf6W7pl7bvVz3n6/97uWiXP11Vfvh26Cjk3vd6Hj0dFov6qTMcYYY4wxqwRjegw6F12KLkcXpuN3Rd9O
         xz6C9qCT0a5qoDHGGGOMMdsFJvTm6K/RVajmp+hxqf3J6Gc62EDtH0MPR7uriYwxxhhjjBkTjOeJ6ENo
@@ -248,7 +248,7 @@
   <data name="guna2PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAqsAAAAwCAYAAAA2JTNYAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAVclJREFUeF7tnfm7bkdV53OH3Dm592aeBzIQwhSSMCMgAoIyCkEBJczakEjAJtBO
+        DgAACw4BQL7hQQAAVclJREFUeF7tnfm7bkdV53OH3Dm592aeBzIQwhSSMCMgAoIyCkEBJczakEjAJtBO
         BJmcIAFpQARBRBkcQBG0tbsTQGQ0QcRW5IcAgeTHkOQPSH8/637Xts4+Vbv2e+7JzSW863nW2e95d9Wq
         VavWVLVr13vIBFxx2mmn3f6yl73sdn2+Xvia+PaQQzYIv3rZZZfd/pSnPCXvPZIbS1jCEg4ovF+IDbbw
         jgRsvtZm4nOFS1jCesCdqedrgT1C9P8K4VOEpwmXcMcAfugy4zIPaQP6WLOdxDtadi0bJn/81ui7xPcJ
@@ -620,7 +620,7 @@
   <data name="guna2PictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA9AAAAA2CAYAAAAvW3HqAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAArs9JREFUeF7tvQn0tldZ3mvI8M3zlJnJtg6ttdVqW21FRVuHVtuqPbVHRUU8oJVC
+        EAAACxABrSO9dQAArs9JREFUeF7tvQn0tldZ3mvI8M3zlJnJtg6ttdVqW21FRVuHVtuqPbVHRUU8oJVC
         yynnHE5FQKEoZTiUCMJilqFUZBJRKpAwL4UkwIpDMQmJKEMIUXBAlHP9rlzXdr/P//1/+RKSEMK717rX
         fvZ873va997Pft738zbh1MOnPvWpbxfcK8lN2IRN2IRN2IRN2IRN2IRN2IRN2IRNWAZtnO8mINxHkNxN
         uDMG8Rdebw5KNmETNmETNmETNmETNmETNuGmgzYPDxf8+yTXhmwyqHen3mhofqcpOk3xswRX6vkupJP3

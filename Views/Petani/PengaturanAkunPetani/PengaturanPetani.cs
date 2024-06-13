@@ -97,5 +97,20 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard.PengaturanProfilPetani
             Dashboard.DashboardPetani dashboardPetani = new Dashboard.DashboardPetani();
             dashboardPetani.ShowDialog();
         }
+
+        private void PengaturanPetani_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+
+
+            this.Bounds = Screen.PrimaryScreen.Bounds;
+        }
+
+        private void KebijakanPrivasi_Click(object sender, EventArgs e)
+        {
+            KebijakanPrivasi kebijakan = new KebijakanPrivasi();
+            kebijakan.Show();
+            this.Hide();
+        }
     }
 }

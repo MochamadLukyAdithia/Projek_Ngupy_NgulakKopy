@@ -72,7 +72,10 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
         }
 
         private void DashboardPetani_Load(object sender, EventArgs e)
+
         {
+            this.WindowState = FormWindowState.Maximized;
+            this.Bounds = Screen.PrimaryScreen.Bounds;
             berandaPetani1.Show();
             penjemputanPetani1.Hide();
             transaksiPetani1.Hide();

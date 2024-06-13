@@ -1,4 +1,5 @@
-﻿using Ngupy_NgulakKopy.Views.Petani.Dashboard.PengaturanProfilPetani;
+﻿
+using Ngupy_NgulakKopy.Views.Petani.Dashboard.PengaturanProfilPetani;
 using Npgsql;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Ngupy_NgulakKopy.Controllers;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Ngupy_NgulakKopy.Views.Petani.PengaturanAkunPetani
@@ -39,60 +41,27 @@ namespace Ngupy_NgulakKopy.Views.Petani.PengaturanAkunPetani
         }
 
         private void UbahProfilPetani_Click(object sender, EventArgs e)
+
         {
-            string database = "Host=localhost;Username=postgres;Password=wahyuok234;Database=Ngupy_Database";
-            NpgsqlConnection conn = new NpgsqlConnection(database);
+            string username = LoginPetani.username;
+            string currentPassword = SandiSebelum.Text;
+            string newPassword = NewPassword.Text;
+            string confirmPassword = ConfirmPass.Text;
 
-            try
-            {
-                conn.Open();
-                string queryCheck = $"SELECT password FROM \"User\" WHERE username = '{LoginPetani.username}'";
-                NpgsqlCommand cmdCheck = new NpgsqlCommand(queryCheck, conn);
-                NpgsqlDataReader reader = cmdCheck.ExecuteReader();
+            var controller = new UserControllers();
+            string result = controller.UbahPassword(username, currentPassword, newPassword, confirmPassword);
 
-                if (reader.HasRows)
-                {
-                    reader.Read();
-
-                    if (reader.GetString(0) == SandiSebelum.Text)
-                    {
-                        reader.Close();
-
-                        if (NewPassword.Text == ConfirmPass.Text)
-                        {
-                            
-                            string queryUpdate = $"UPDATE \"User\" SET password = '{NewPassword.Text}' WHERE username = '{LoginPetani.username}'";
-                            NpgsqlCommand cmdUpdate = new NpgsqlCommand(queryUpdate, conn);
-                            cmdUpdate.ExecuteNonQuery();
-
-                            MessageBox.Show("Kata sandi berhasil diubah", "Sukses");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Kata sandi baru dan konfirmasi tidak cocok", "Warning");
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Password lama salah", "Warning");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Username tidak dapat ditemukan", "Error");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Terjadi kesalahan: {ex.Message}", "Error");
-            }
-            finally
-            {
-                conn.Close();
-            }
+            MessageBox.Show(result, result.Contains("Berhasil") ? "Success" : "Error");
+            
         }
-       
+    
+        private void KeamananAkunPetani_Load(object sender, EventArgs e)
+        {
+
+            this.WindowState = FormWindowState.Maximized;
+
+
+            this.Bounds = Screen.PrimaryScreen.Bounds;
+        }
     }
-    
-    
 }

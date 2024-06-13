@@ -96,5 +96,20 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
         {
 
         }
+
+        private void pnlHarga_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblharga_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblkapasitas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
