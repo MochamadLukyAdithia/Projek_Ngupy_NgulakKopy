@@ -13,7 +13,7 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
 {
     public partial class PilihkaryawanPengepul : Form
     {
-        string constr = $"Server=localhost;Username=postgres;Password=321;Database=Ngupy;Port=5432;Pooling=True";
+        string constr = $"Server=localhost;Username=postgres;Password=jember110605;Database=luky_database;Port=5432;Pooling=True";
         public PilihkaryawanPengepul()
         {
             InitializeComponent();

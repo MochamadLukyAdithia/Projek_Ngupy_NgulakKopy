@@ -105,6 +105,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AkunControllers.cs" />
+    <Compile Include="Controllers\AlamatControllers.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,8 +119,13 @@
     <Compile Include="Models\HargaKopiContext.cs" />
     <Compile Include="Models\KualitasKopi.cs" />
     <Compile Include="Models\KualitasKopiContext.cs" />
+    <Compile Include="Models\Pembelian.cs" />
+    <Compile Include="Models\PembelianContext.cs" />
     <Compile Include="Models\Penjualan.cs" />
     <Compile Include="Models\PenjualanContext.cs" />
+    <Compile Include="Models\TransaksiPengepul.cs" />
+    <Compile Include="Models\UpdateRekening.cs" />
+    <Compile Include="Models\UpdateRekeningContext.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserContext.cs" />
     <Compile Include="Program.cs" />
@@ -189,6 +196,12 @@
     </Compile>
     <Compile Include="Views\Pengepul\Pengaturan Profil\AturProfilPeng.Designer.cs">
       <DependentUpon>AturProfilPeng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pengepul\Pengaturan Profil\LihatPenjemput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Pengepul\Pengaturan Profil\LihatPenjemput.Designer.cs">
+      <DependentUpon>LihatPenjemput.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Pengepul\Pengaturan Profil\PengaturanPengepul.cs">
       <SubType>Form</SubType>
@@ -357,6 +370,9 @@
     <EmbeddedResource Include="Views\Pengepul\Pengaturan Profil\AturProfilPeng.resx">
       <DependentUpon>AturProfilPeng.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pengepul\Pengaturan Profil\LihatPenjemput.resx">
+      <DependentUpon>LihatPenjemput.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Pengepul\Pengaturan Profil\PengaturanPengepul.resx">
       <DependentUpon>PengaturanPengepul.cs</DependentUpon>
     </EmbeddedResource>
@@ -518,6 +534,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Component 12.ico" />
+    <Content Include="Resources\Subtract.png" />
     <None Include="Resources\chevron-left1.png" />
     <None Include="Resources\chevron-left.png" />
   </ItemGroup>

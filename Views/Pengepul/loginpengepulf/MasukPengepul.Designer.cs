@@ -30,10 +30,11 @@
         {
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnLoginPetani = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnLoginPengepul = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnLogin = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
@@ -51,10 +52,10 @@
             this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtPassword.ForeColor = System.Drawing.Color.Transparent;
+            this.txtPassword.ForeColor = System.Drawing.Color.Black;
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.Location = new System.Drawing.Point(435, 293);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Location = new System.Drawing.Point(435, 286);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '\0';
             this.txtPassword.PlaceholderText = "Password";
@@ -74,10 +75,10 @@
             this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtUsername.ForeColor = System.Drawing.Color.Transparent;
+            this.txtUsername.ForeColor = System.Drawing.Color.Black;
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.Location = new System.Drawing.Point(435, 238);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsername.Location = new System.Drawing.Point(435, 228);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderText = "Username";
@@ -85,29 +86,30 @@
             this.txtUsername.Size = new System.Drawing.Size(269, 39);
             this.txtUsername.TabIndex = 24;
             // 
-            // btnLoginPetani
+            // btnLoginPengepul
             // 
-            this.btnLoginPetani.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLoginPetani.Animated = true;
-            this.btnLoginPetani.AutoRoundedCorners = true;
-            this.btnLoginPetani.BackColor = System.Drawing.Color.Transparent;
-            this.btnLoginPetani.BorderRadius = 16;
-            this.btnLoginPetani.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLoginPetani.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLoginPetani.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLoginPetani.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLoginPetani.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLoginPetani.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnLoginPetani.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnLoginPetani.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnLoginPetani.ForeColor = System.Drawing.Color.White;
-            this.btnLoginPetani.Location = new System.Drawing.Point(466, 373);
-            this.btnLoginPetani.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLoginPetani.Name = "btnLoginPetani";
-            this.btnLoginPetani.Size = new System.Drawing.Size(204, 34);
-            this.btnLoginPetani.TabIndex = 22;
-            this.btnLoginPetani.Text = "Login";
-            this.btnLoginPetani.UseTransparentBackground = true;
+            this.btnLoginPengepul.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLoginPengepul.Animated = true;
+            this.btnLoginPengepul.AutoRoundedCorners = true;
+            this.btnLoginPengepul.BackColor = System.Drawing.Color.Transparent;
+            this.btnLoginPengepul.BorderRadius = 16;
+            this.btnLoginPengepul.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLoginPengepul.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLoginPengepul.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLoginPengepul.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLoginPengepul.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLoginPengepul.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnLoginPengepul.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnLoginPengepul.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnLoginPengepul.ForeColor = System.Drawing.Color.White;
+            this.btnLoginPengepul.Location = new System.Drawing.Point(466, 357);
+            this.btnLoginPengepul.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLoginPengepul.Name = "btnLoginPengepul";
+            this.btnLoginPengepul.Size = new System.Drawing.Size(204, 34);
+            this.btnLoginPengepul.TabIndex = 22;
+            this.btnLoginPengepul.Text = "Login";
+            this.btnLoginPengepul.UseTransparentBackground = true;
+            this.btnLoginPengepul.Click += new System.EventHandler(this.btnLoginPengepul_Click);
             // 
             // guna2PictureBox1
             // 
@@ -152,6 +154,33 @@
             this.guna2PictureBox5.TabStop = false;
             this.guna2PictureBox5.UseTransparentBackground = true;
             // 
+            // btnLogin
+            // 
+            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLogin.Animated = true;
+            this.btnLogin.AutoRoundedCorners = true;
+            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogin.BorderColor = System.Drawing.Color.White;
+            this.btnLogin.BorderRadius = 12;
+            this.btnLogin.BorderThickness = 2;
+            this.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogin.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogin.FillColor = System.Drawing.Color.Transparent;
+            this.btnLogin.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(504, 408);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(127, 27);
+            this.btnLogin.TabIndex = 60;
+            this.btnLogin.Text = "Masuk";
+            this.btnLogin.UseTransparentBackground = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
             // MasukPengepul
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -159,10 +188,11 @@
             this.BackgroundImage = global::Ngupy_NgulakKopy.Properties.Resources.Role;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1128, 592);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.guna2PictureBox5);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.btnLoginPetani);
+            this.Controls.Add(this.btnLoginPengepul);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
@@ -170,6 +200,7 @@
             this.Name = "MasukPengepul";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MasukPengepul";
+            this.Load += new System.EventHandler(this.MasukPengepul_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
@@ -181,9 +212,10 @@
 
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
-        private Guna.UI2.WinForms.Guna2GradientButton btnLoginPetani;
+        private Guna.UI2.WinForms.Guna2GradientButton btnLoginPengepul;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
+        private Guna.UI2.WinForms.Guna2GradientButton btnLogin;
     }
 }

@@ -40,7 +40,7 @@ namespace Ngupy_NgulakKopy.Views.Petani.PengaturanAkunPetani
 
         private void UbahProfilPetani_Click(object sender, EventArgs e)
         {
-            string database = "Host=localhost;Username=postgres;Password=wahyuok234;Database=Ngupy_Database";
+            string database = "Host=localhost;Username=postgres;Password=jember110605;Database=luky_database";
             NpgsqlConnection conn = new NpgsqlConnection(database);
 
             try

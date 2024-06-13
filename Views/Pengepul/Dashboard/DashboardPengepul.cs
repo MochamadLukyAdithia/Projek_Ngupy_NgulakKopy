@@ -161,6 +161,7 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
             hargaPengepul1.Hide();
             transaksiPengpul1.Show();
             riwayatPengepul1.Hide();
+            transaksiPengpul1.DisplayTabel();
 
             pnlBeranda.BackColor = Color.FromArgb(255,243,233) ;
             pnlsideHarga.BackColor = Color.FromArgb(255, 243, 233);
@@ -192,6 +193,7 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
             hargaPengepul1.Hide();
             transaksiPengpul1.Hide();
             riwayatPengepul1.Show();
+            riwayatPengepul1.DisplayRiwayat();
 
             pnlBeranda.BackColor = Color.FromArgb(255, 243, 233);
             pnlsideHarga.BackColor = Color.FromArgb(255, 243, 233);
@@ -381,6 +383,11 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
             this.Hide();
             PilihkaryawanPengepul pilihKaryawanpengepul1 = new PilihkaryawanPengepul();
             pilihKaryawanpengepul1.ShowDialog();
+        }
+
+        private void transaksiPengpul1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

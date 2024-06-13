@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Ngupy_NgulakKopy.Tools;
+using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,15 +10,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
 {
     public partial class brndpngpl : UserControl
     {
-        private Views.Pusat.Dashboard.UpdateHargaPusat UpdateHargaPusat;
-        public brndpngpl(Pusat.Dashboard.UpdateHargaPusat updateHargaPusat)
+        //private Views.Pusat.Dashboard.UpdateHargaPusat UpdateHargaPusat;
+        //public brndpngpl(Pusat.Dashboard.UpdateHargaPusat updateHargaPusat)
+        //{
+        //    InitializeComponent();
+        //    UpdateHargaPusat = updateHargaPusat;
+        //}
+
+        public brndpngpl()
         {
             InitializeComponent();
-            UpdateHargaPusat = updateHargaPusat;
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -29,10 +37,7 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
 
         }
 
-        private void pnlHarga_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
 
         private void pnlKapasitas_Paint(object sender, PaintEventArgs e)
         {

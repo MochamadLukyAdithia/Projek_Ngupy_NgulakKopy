@@ -174,6 +174,7 @@
             this.txtHandphonePusat.SelectedText = "";
             this.txtHandphonePusat.Size = new System.Drawing.Size(222, 32);
             this.txtHandphonePusat.TabIndex = 43;
+            this.txtHandphonePusat.TextChanged += new System.EventHandler(this.txtHandphonePusat_TextChanged);
             // 
             // txtKonfirmasiPasword
             // 
@@ -217,6 +218,7 @@
             this.cbdesa.Name = "cbdesa";
             this.cbdesa.Size = new System.Drawing.Size(222, 36);
             this.cbdesa.TabIndex = 45;
+            this.cbdesa.SelectedIndexChanged += new System.EventHandler(this.cbdesa_SelectedIndexChanged);
             // 
             // cbKec
             // 
@@ -261,6 +263,7 @@
             this.txtNamaPetani.SelectedText = "";
             this.txtNamaPetani.Size = new System.Drawing.Size(222, 36);
             this.txtNamaPetani.TabIndex = 44;
+            this.txtNamaPetani.TextChanged += new System.EventHandler(this.txtNamaPetani_TextChanged);
             // 
             // txtUsernamePusat
             // 
@@ -283,6 +286,7 @@
             this.txtUsernamePusat.SelectedText = "";
             this.txtUsernamePusat.Size = new System.Drawing.Size(222, 40);
             this.txtUsernamePusat.TabIndex = 44;
+            this.txtUsernamePusat.TextChanged += new System.EventHandler(this.txtUsernamePusat_TextChanged);
             // 
             // btnLogin
             // 

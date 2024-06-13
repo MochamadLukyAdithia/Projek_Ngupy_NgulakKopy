@@ -8,7 +8,7 @@ namespace Ngupy_NgulakKopy.Models
 {
     internal class KualitasKopi
     {
-        public int id_kualitasid_kualitas_kopi { get; set; }
+        public int id_kualitas_kopi { get; set; }
         public string kategori_kualitas_kopi { get; set; }
         public int harga_kualitas { get; set; }
         public string keterangan { get; set; }

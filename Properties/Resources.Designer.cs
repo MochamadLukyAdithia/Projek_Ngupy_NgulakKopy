@@ -10,8 +10,9 @@
 
 namespace Ngupy_NgulakKopy.Properties {
     using System;
-    
-    
+    using System.Drawing;
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -31,7 +32,9 @@ namespace Ngupy_NgulakKopy.Properties {
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal Resources() {
         }
-        
+
+        public static Image Subtract { get; internal set; }
+
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -45,7 +48,16 @@ namespace Ngupy_NgulakKopy.Properties {
                 return resourceMan;
             }
         }
-        
+
+        internal static System.Drawing.Bitmap Substract
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("Substract", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.

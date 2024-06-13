@@ -46,7 +46,7 @@
             this.label1.Location = new System.Drawing.Point(17, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 45);
+            this.label1.Size = new System.Drawing.Size(239, 54);
             this.label1.TabIndex = 0;
             this.label1.Text = "Harga Kopi";
             // 
@@ -58,7 +58,7 @@
             this.label4.Location = new System.Drawing.Point(21, 138);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 21);
+            this.label4.Size = new System.Drawing.Size(42, 28);
             this.label4.TabIndex = 0;
             this.label4.Text = "Rp.";
             // 
@@ -70,9 +70,10 @@
             this.label5.Location = new System.Drawing.Point(58, 138);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 21);
+            this.label5.Size = new System.Drawing.Size(72, 28);
             this.label5.TabIndex = 0;
             this.label5.Text = "50000";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -82,7 +83,7 @@
             this.label6.Location = new System.Drawing.Point(149, 138);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(36, 21);
+            this.label6.Size = new System.Drawing.Size(46, 28);
             this.label6.TabIndex = 0;
             this.label6.Text = "/Kg";
             // 
@@ -91,10 +92,10 @@
             this.lblTanggal.AutoSize = true;
             this.lblTanggal.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTanggal.ForeColor = System.Drawing.Color.White;
-            this.lblTanggal.Location = new System.Drawing.Point(21, 84);
+            this.lblTanggal.Location = new System.Drawing.Point(28, 99);
             this.lblTanggal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTanggal.Name = "lblTanggal";
-            this.lblTanggal.Size = new System.Drawing.Size(92, 21);
+            this.lblTanggal.Size = new System.Drawing.Size(112, 28);
             this.lblTanggal.TabIndex = 0;
             this.lblTanggal.Text = "20/05/2024";
             this.lblTanggal.Click += new System.EventHandler(this.lblTanggal_Click);
@@ -140,7 +141,7 @@
             this.Controls.Add(this.pnlHarga);
             this.ForeColor = System.Drawing.Color.Transparent;
             this.Name = "BerandaPusat";
-            this.Size = new System.Drawing.Size(626, 454);
+            this.Size = new System.Drawing.Size(931, 526);
             this.Load += new System.EventHandler(this.BerandaPusat_Load);
             this.pnlHarga.ResumeLayout(false);
             this.pnlHarga.PerformLayout();

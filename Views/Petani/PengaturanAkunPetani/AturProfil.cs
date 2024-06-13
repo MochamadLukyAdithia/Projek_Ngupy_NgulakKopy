@@ -51,7 +51,7 @@ namespace Ngupy_NgulakKopy.Views.Petani.ProfilPetani
             string NoRekening = norekP.Text;
 
         
-            string constr = $"Server=localhost;Username=postgres;Password=wahyuok234;Database=Ngupy_Database;Port=5432;Pooling=true;";
+            string constr = $"Server=localhost;Username=postgres;Password=jember110605;Database=luky_database;Port=5432;Pooling=true;";
             NpgsqlConnection conn = new NpgsqlConnection(constr);
             conn.Open();
 

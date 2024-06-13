@@ -11,12 +11,13 @@ using Npgsql;
 using static Guna.UI2.Native.WinApi;
 using Ngupy_NgulakKopy;
 using Ngupy_NgulakKopy.Views.Pengepul.Dashboard;
+using Ngupy_NgulakKopy.Tools;
 
 namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
 {
     public partial class BerandaPengepul : UserControl
     {
-        string constr = $"Server=localhost;Username=postgres;Password=321;Database=Ngupy;Port=5432;Pooling=True";
+        string constr = $"Server=localhost;Username=postgres;Password=jember110605;Database=luky_database;Port=5432;Pooling=True";
         public BerandaPengepul()
         {
             InitializeComponent();
@@ -24,103 +25,186 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
 
         }
 
-        private void GetTanggal()
+        public void DisplayTanggal()
         {
-            DateTime today = DateTime.Now;
-            string formattedDate = today.ToString("MM/dd/yyyy");
-            lblTanggal.Text = $"{formattedDate}";
+
+            using (var conn = new NpgsqlConnection(Connection.connect))
+            {
+                conn.Open();
+                using (var cmd = new NpgsqlCommand("SELECT update_at FROM harga_kopi order by id_haga desc limit 1", conn))
+                {
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            lblTanggal.Text = $"{reader.GetDateTime(0)}";
+                        }
+                        conn.Close();
+                    }
+                }
+            }
+
         }
 
-        private void GetHargaKopi()
+
+        public void DisplayHargaPusat()
         {
-            string harga = "";
+            
 
-            using (NpgsqlConnection conn = new NpgsqlConnection(constr))
+            using (var conn = new NpgsqlConnection(Connection.connect))
             {
-                try
+                conn.Open();
+                using (var cmd = new NpgsqlCommand("SELECT harga FROM harga_kopi ORDER BY id_haga DESC LIMIT 1", conn))
                 {
-                    conn.Open();
-
-                    string queryHarga = "SELECT harga FROM kualitas_kopi";
-                    NpgsqlCommand cmdHarga = new NpgsqlCommand(queryHarga, conn);
-
-                    using (NpgsqlDataReader reader = cmdHarga.ExecuteReader())
+                    using (var reader = cmd.ExecuteReader())
                     {
-                        if (reader.HasRows)
+                        if (reader.Read())
                         {
-                            while (reader.Read())
+                            int hargaKualitas = reader.IsDBNull(0) ? 0 : reader.GetInt32(0);
+                            if (hargaKualitas > 0)
                             {
-                                harga = reader.GetInt32(0).ToString(); //assuming harga is the first column
-                                break; // Get only the first row (assuming latest price)
+                                label5.Text = hargaKualitas.ToString();
+                                label5.Visible = true;
+                            }
+                            else
+                            {
+                                label5.Text = string.Empty;
+                                label5.Visible = false;
                             }
                         }
                     }
                 }
-                catch (Exception ex)
+            }
+        }
+
+        public void DisplayStokKopi()
+        {
+            
+            using (var conn = new NpgsqlConnection(Connection.connect))
+            {
+                conn.Open();
+                using (var cmd = new NpgsqlCommand("select sum(stok_kopi) from gudang", conn))
                 {
-                    MessageBox.Show($"Error: {ex.Message}");
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            int stokKopi = reader.IsDBNull(0) ? 0 : reader.GetInt32(0);
+                            if (stokKopi > 0)
+                            {
+                                kapasitaslbl.Text = stokKopi.ToString(); ;
+                                kapasitaslbl.Visible = true;
+                            }
+                            else
+                            {
+                                kapasitaslbl.Text = string.Empty;
+                                kapasitaslbl.Visible = false;
+                            }
+                        }
+                    }
                 }
             }
-
-            // Update the label text to display the retrieved harga
-            label5.Text = $"{harga}"; // Format the label text
         }
+
+        //private void GetTanggal()
+        //{
+        //    DateTime today = DateTime.Now;
+        //    string formattedDate = today.ToString("MM/dd/yyyy");
+        //    lblTanggal.Text = $"{formattedDate}";
+        //}
+
+
+
+        //private void GetHargaKopi()
+        //{
+        //    string harga = "";
+
+        //    using (NpgsqlConnection conn = new NpgsqlConnection(constr))
+        //    {
+        //        try
+        //        {
+        //            conn.Open();
+
+        //            string queryHarga = "SELECT harga FROM harga_kopi ORDER BY id_haga DESC LIMIT 1";
+        //            NpgsqlCommand cmdHarga = new NpgsqlCommand(queryHarga, conn);
+
+        //            using (NpgsqlDataReader reader = cmdHarga.ExecuteReader())
+        //            {
+        //                if (reader.HasRows)
+        //                {
+        //                    while (reader.Read())
+        //                    {
+        //                        harga = reader.GetInt32(0).ToString(); //assuming harga is the first column
+        //                        break; // Get only the first row (assuming latest price)
+        //                    }
+        //                }
+        //            }
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            MessageBox.Show($"Error: {ex.Message}");
+        //        }
+        //    }
+
+        //    // Update the label text to display the retrieved harga
+        //    label5.Text = $"{harga}"; // Format the label text
+        //}
 
         private void BerandaPengepul_Load(object sender, EventArgs e)
         {
-            GetHargaKopi();
-            GetTanggal();
-            GetKapasitas();
+            DisplayHargaPusat();
+            DisplayTanggal();
+            DisplayStokKopi();
             GetPetani1();
             GetPetani2();
             GetPetani3();
         }
 
-        private void GetKapasitas()
-        {
-            string kapasitas_gudang = " ";
+        //private void GetKapasitas()
+        //{
+        //    string kapasitas_gudang = " ";
 
-            using (NpgsqlConnection conn = new NpgsqlConnection(constr))
-            {
-                try
-                {
-                    conn.Open();
+        //    using (NpgsqlConnection conn = new NpgsqlConnection(constr))
+        //    {
+        //        try
+        //        {
+        //            conn.Open();
 
-                    string queryKapasitas_gudang = $"SELECT stok_kopi || ' Kg. / ' || kapasitas_gudang || ' ton'\r\nFROM gudang;\r\n";
-                    NpgsqlCommand cmdKapasitas = new NpgsqlCommand(queryKapasitas_gudang, conn);
+        //            string queryKapasitas_gudang = $"SELECT stok_kopi || ' Kg. / ' || kapasitas_gudang || ' ton'\r\nFROM gudang;\r\n";
+        //            NpgsqlCommand cmdKapasitas = new NpgsqlCommand(queryKapasitas_gudang, conn);
 
-                    using (NpgsqlDataReader reader = cmdKapasitas.ExecuteReader())
-                    {
-                        if (reader.HasRows)
-                        {
-                            while (reader.Read())
-                            {
-                                kapasitas_gudang = reader.GetString(0); //assuming harga is the first column
-                                break; // Get only the first row (assuming latest price)
-                            }
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error: {ex.Message}");
-                }
-            }
+        //            using (NpgsqlDataReader reader = cmdKapasitas.ExecuteReader())
+        //            {
+        //                if (reader.HasRows)
+        //                {
+        //                    while (reader.Read())
+        //                    {
+        //                        kapasitas_gudang = reader.GetString(0); //assuming harga is the first column
+        //                        break; // Get only the first row (assuming latest price)
+        //                    }
+        //                }
+        //            }
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            MessageBox.Show($"Error: {ex.Message}");
+        //        }
+        //    }
 
-            // Update the label text to display the retrieved harga
-            label9.Text = $"{kapasitas_gudang}"; 
+        //    // Update the label text to display the retrieved harga
+        //    label9.Text = $"{kapasitas_gudang}"; 
 
 
-        }
+        //}
 
         private void label5_Click(object sender, EventArgs e)
         {
-            GetHargaKopi(); // Call the method to retrieve price on click
-        }
 
+
+        }
         private void lblTanggal_Click(object sender, EventArgs e)
         {
-           GetTanggal();
+           
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -140,7 +224,7 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
 
         private void pnlKapasitas_Paint(object sender, PaintEventArgs e)
         {
-
+            DisplayStokKopi();
         }
 
         private void pnlHarga_Paint(object sender, PaintEventArgs e)
@@ -162,7 +246,7 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
 
         private void label9_Click(object sender, EventArgs e)
         {
-            GetKapasitas();
+            
         }
 
         private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
@@ -382,6 +466,11 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
         {
 
         }

@@ -30,19 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlKapasitas = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.kapasitaslbl = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pnlPenjemptan = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.Petani3 = new System.Windows.Forms.Label();
             this.guna2Panel = new Guna.UI2.WinForms.Guna2Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.Petani2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.Petani1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pnlHarga = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.lblTanggal = new System.Windows.Forms.Label();
@@ -57,11 +60,15 @@
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.npgsqlCommandBuilder2 = new Npgsql.NpgsqlCommandBuilder();
+            this.label17 = new System.Windows.Forms.Label();
             this.pnlKapasitas.SuspendLayout();
             this.pnlPenjemptan.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.guna2Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlHarga.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,7 +76,8 @@
             // 
             this.pnlKapasitas.BackColor = System.Drawing.Color.Transparent;
             this.pnlKapasitas.BorderRadius = 20;
-            this.pnlKapasitas.Controls.Add(this.label9);
+            this.pnlKapasitas.Controls.Add(this.label17);
+            this.pnlKapasitas.Controls.Add(this.kapasitaslbl);
             this.pnlKapasitas.Controls.Add(this.label8);
             this.pnlKapasitas.Controls.Add(this.label3);
             this.pnlKapasitas.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
@@ -83,20 +91,20 @@
             this.pnlKapasitas.TabIndex = 8;
             this.pnlKapasitas.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlKapasitas_Paint);
             // 
-            // label9
+            // kapasitaslbl
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.kapasitaslbl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(35, 278);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(301, 45);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "20000 kg / 50 Ton";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+            this.kapasitaslbl.AutoSize = true;
+            this.kapasitaslbl.Font = new System.Drawing.Font("Segoe UI", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kapasitaslbl.ForeColor = System.Drawing.Color.White;
+            this.kapasitaslbl.Location = new System.Drawing.Point(22, 278);
+            this.kapasitaslbl.Name = "kapasitaslbl";
+            this.kapasitaslbl.Size = new System.Drawing.Size(124, 45);
+            this.kapasitaslbl.TabIndex = 3;
+            this.kapasitaslbl.Text = "20000 ";
+            this.kapasitaslbl.Click += new System.EventHandler(this.label9_Click);
             // 
             // label8
             // 
@@ -151,6 +159,7 @@
             this.guna2Panel3.AutoRoundedCorners = true;
             this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel3.BorderRadius = 31;
+            this.guna2Panel3.Controls.Add(this.pictureBox3);
             this.guna2Panel3.Controls.Add(this.label12);
             this.guna2Panel3.Controls.Add(this.Petani3);
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(233)))));
@@ -159,6 +168,17 @@
             this.guna2Panel3.ShadowDecoration.BorderRadius = 45;
             this.guna2Panel3.Size = new System.Drawing.Size(1170, 65);
             this.guna2Panel3.TabIndex = 5;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Ngupy_NgulakKopy.Properties.Resources.Symbol_menunggu1;
+            this.pictureBox3.Location = new System.Drawing.Point(1101, 13);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(35, 36);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 11;
+            this.pictureBox3.TabStop = false;
             // 
             // label12
             // 
@@ -191,6 +211,7 @@
             this.guna2Panel.BorderRadius = 31;
             this.guna2Panel.Controls.Add(this.label11);
             this.guna2Panel.Controls.Add(this.Petani2);
+            this.guna2Panel.Controls.Add(this.pictureBox1);
             this.guna2Panel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(233)))));
             this.guna2Panel.Location = new System.Drawing.Point(59, 174);
             this.guna2Panel.Name = "guna2Panel";
@@ -222,6 +243,17 @@
             this.Petani2.Text = "Nama Petani";
             this.Petani2.Click += new System.EventHandler(this.Petani2_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Ngupy_NgulakKopy.Properties.Resources.Symbol_menunggu1;
+            this.pictureBox1.Location = new System.Drawing.Point(1101, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 36);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
             // guna2Panel1
             // 
             this.guna2Panel1.AutoRoundedCorners = true;
@@ -229,6 +261,7 @@
             this.guna2Panel1.BorderRadius = 31;
             this.guna2Panel1.Controls.Add(this.label10);
             this.guna2Panel1.Controls.Add(this.Petani1);
+            this.guna2Panel1.Controls.Add(this.pictureBox2);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(233)))));
             this.guna2Panel1.Location = new System.Drawing.Point(59, 85);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -260,6 +293,17 @@
             this.Petani1.TabIndex = 4;
             this.Petani1.Text = "Nama Petani";
             this.Petani1.Click += new System.EventHandler(this.Petani1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Ngupy_NgulakKopy.Properties.Resources.Symbol_menunggu2;
+            this.pictureBox2.Location = new System.Drawing.Point(1101, 14);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(35, 36);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
             // 
             // label7
             // 
@@ -373,9 +417,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(58, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(358, 81);
+            this.label1.Size = new System.Drawing.Size(533, 81);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Harga Kopi";
+            this.label1.Text = "Harga Kopi Pusat";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // npgsqlCommandBuilder1
@@ -387,6 +431,18 @@
             // 
             this.npgsqlCommandBuilder2.QuotePrefix = "\"";
             this.npgsqlCommandBuilder2.QuoteSuffix = "\"";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(144, 280);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(169, 41);
+            this.label17.TabIndex = 11;
+            this.label17.Text = "kg /50 Ton";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // BerandaPengepul
             // 
@@ -407,10 +463,13 @@
             this.pnlPenjemptan.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.guna2Panel.ResumeLayout(false);
             this.guna2Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlHarga.ResumeLayout(false);
             this.pnlHarga.PerformLayout();
             this.ResumeLayout(false);
@@ -431,7 +490,7 @@
         private Npgsql.NpgsqlCommandBuilder npgsqlCommandBuilder1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label kapasitaslbl;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
@@ -450,5 +509,9 @@
         private BerandaPengepul berandaPengepul1;
         private Npgsql.NpgsqlCommandBuilder npgsqlCommandBuilder2;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label17;
     }
 }

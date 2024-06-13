@@ -140,5 +140,25 @@ namespace Ngupy_NgulakKopy.Views.Pusat.Dashboard
         {
             
         }
+
+        private void guna2CustomGradientPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblhrgterbaru_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txthargaPusat_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2CustomGradientPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

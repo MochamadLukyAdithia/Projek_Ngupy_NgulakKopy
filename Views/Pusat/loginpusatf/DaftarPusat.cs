@@ -121,6 +121,26 @@ namespace Ngupy_NgulakKopy.Views.Petani
             Pusat.MasukPusat masukPusat = new Pusat.MasukPusat();
             masukPusat.Show();
         }
+
+        private void txtNamaPetani_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsernamePusat_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbdesa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtHandphonePusat_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

@@ -55,11 +55,11 @@ namespace Ngupy_NgulakKopy.Models
                 {
                     using (NpgsqlConnection con = new NpgsqlConnection(Connection.connect))
                     {
-                        string sql = "SELECT p.jumlah_kopi, (p.jumlah_kopi * hp.harga) AS Total, hp.harga " +
+                        string sql = "SELECT p.id_penjualan, p.jumlah_kopi, (p.jumlah_kopi * hp.harga) AS Total, hp.harga, p.id_user " +
                                      "FROM \"Penjualan\" p " +
                                      "JOIN \"User\" u ON u.id_user = p.id_user " +
-                                     "JOIN harga_kopi hp ON p.id_harga = hp.id_harga " +
-                                     "ORDER BY hp.id_harga DESC LIMIT 1";
+                                     "JOIN harga_kopi hp ON p.id_harga = hp.id_haga " +
+                                     "ORDER BY hp.id_haga DESC LIMIT 1";
 
                         con.Open();
                         using (NpgsqlCommand cmd = new NpgsqlCommand(sql, con))
@@ -71,9 +71,11 @@ namespace Ngupy_NgulakKopy.Models
                                 {
                                     Penjualan penjualan = new Penjualan
                                     {
+                                        id_penjualan = reader.GetInt32(reader.GetOrdinal("id_penjualan")),
                                         jumlah_kopi = reader.GetInt32(reader.GetOrdinal("jumlah_kopi")),
                                         total = reader.GetInt32(reader.GetOrdinal("Total")),
-                                        harga = reader.GetInt32(reader.GetOrdinal("harga"))
+                                        harga = reader.GetInt32(reader.GetOrdinal("harga")),
+                                        id_user = reader.GetInt32(reader.GetOrdinal("id_user"))
                                     };
                                     listPenjualan.Add(penjualan);
                                     isgud = true;
