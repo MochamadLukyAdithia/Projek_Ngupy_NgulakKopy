@@ -1,40 +1,64 @@
-﻿using Ngupy_NgulakKopy.Tools;
+﻿using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Npgsql;
+using Ngupy_NgulakKopy.Tools;
 
 namespace Ngupy_NgulakKopy.Models
 {
-    internal class Gudang
+    public class Gudang
     {
-        public int id_gudang { get; set; }
-        public int kapasitas_kopi { get; set; }
-        public int stok_kopi { get; set; }
+        private int id_gudang { get; set; }
+        private int kapasitas_gudang { get; set; }
+        private int stok_kopi { get; set; }
 
-        private string koneksi = Connection.connect;
-
-        public string get_data_gudang()
+        public void update_stok(int stok_kopi)
         {
-            using (var con = new NpgsqlConnection(koneksi))
+            using (var conn = new NpgsqlConnection(Connection.connect))
             {
-                con.Open();
-                string select_gudang = $"SELECT Stok_Kopi || ' kg / ' || Kapasitas_Gudang || ' kg'  From Gudang";
-                var cmd = new NpgsqlCommand(select_gudang, con);
-                using (var reader = cmd.ExecuteReader()) 
+                conn.Open();
+                string query_update = $"update gudang set stok_kopi = @stok_kopi";
+                var cmd = new NpgsqlCommand(query_update, conn);
+                cmd.Parameters.AddWithValue("stok_kopi", stok_kopi);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+        }
+
+        public int get_stokkopi
+        {
+            get { return stok_kopi; }
+            set { this.stok_kopi = value; }
+        }
+
+        public int Getstok_kopi()
+        {
+            int stok_kopi = 0;
+            using (var conn = new NpgsqlConnection(Connection.connect))
+            {
+                conn.Open();
+                string query_get = $"select stok_kopi from gudang";
+                using (var cmd = new NpgsqlCommand(query_get, conn))
                 {
-                    if (reader.Read())
-                    {
-                        string data_gudang = reader.GetString(0);
-                        return data_gudang;
-                    }
-                    else
-                    {
-                        return null;
-                    }
+                    stok_kopi = Convert.ToInt32(cmd.ExecuteScalar());
                 }
+
+            }
+            return stok_kopi;
+        }
+
+        public void updatestok(int stok_kopi)
+        {
+            using (var conn = new NpgsqlConnection(Connection.connect))
+            {
+                conn.Open();
+                string query = $"update gudang set stok_kopi = @stok_kopi";
+                var cmd = new NpgsqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("stok_kopi", stok_kopi);
+                cmd.ExecuteNonQuery();
+                conn.Close();
             }
         }
     }

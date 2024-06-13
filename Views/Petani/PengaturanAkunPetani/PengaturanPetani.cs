@@ -14,10 +14,11 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard.PengaturanProfilPetani
 {
     public partial class PengaturanPetani : Form
     {
-        string username = LoginPetani.username;
-        public PengaturanPetani()
+        private string username;
+        public PengaturanPetani(string username)
         {
             InitializeComponent();
+            this.username = username;
         }
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
@@ -53,13 +54,13 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard.PengaturanProfilPetani
         private void AturProfilPetani_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AturProfil profil = new AturProfil();
+            AturProfil profil = new AturProfil(username);
             profil.ShowDialog();
         }
 
         private void KeamananAkunPetani_Click(object sender, EventArgs e)
         {
-            KeamananAkunPetani akun = new KeamananAkunPetani();
+            KeamananAkunPetani akun = new KeamananAkunPetani(username);
             akun.Show();
             this.Hide();
         }
@@ -95,8 +96,29 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard.PengaturanProfilPetani
         private void back_Click(object sender, EventArgs e)
         {
             this.Hide();
-            DashboardPetani dashboardPetani = new DashboardPetani(username);
+            Dashboard.DashboardPetani dashboardPetani = new Dashboard.DashboardPetani(username);
+            dashboardPetani.FormClosed += new FormClosedEventHandler(FormClosedRefresh);
             dashboardPetani.ShowDialog();
+        }
+
+        private void FormClosedRefresh(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
+        }
+
+        private void PengaturanPetani_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+
+
+            this.Bounds = Screen.PrimaryScreen.Bounds;
+        }
+
+        private void KebijakanPrivasi_Click(object sender, EventArgs e)
+        {
+            KebijakanPrivasi kebijakan = new KebijakanPrivasi(username);
+            kebijakan.Show();
+            this.Hide();
         }
     }
 }

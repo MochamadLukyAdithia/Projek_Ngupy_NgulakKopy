@@ -20,7 +20,7 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
     public partial class BerandaPetani : UserControl
 
     {
-        private string username;
+        private string username = LoginPetani.username;
         private AkunControllers akunController;
         private KualitasKopiControllers kualitaskopicontroller;
         private HargaKopiControllers hargakopicontrollers;
@@ -56,6 +56,7 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
         {
             //string username = akunController.username_now;
             //readDashboard(username);
+            readDashboard(username);
 
         }
 
@@ -79,7 +80,7 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
                 }
             }
             catch (Exception ex)
-            {
+            {   
                 MessageBox.Show($"Error: {ex.Message}");
             }
 
@@ -94,9 +95,7 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
                 }
                 else
                 {
-                    label1.Text = "-";
-                    label2.Text = "-";
-                    label3.Text = "-";
+                    lblharga.Text = $"-";
                 }
             }
             catch (Exception ex)
@@ -117,7 +116,7 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
 
             try
             {
-                lblkapasitas.Text = gudangcontroller.get_data_gudang();
+                lblkapasitas.Text = gudangcontroller.get_stok() + "Kg / 50 Ton";
             }
 
             catch (Exception ex)

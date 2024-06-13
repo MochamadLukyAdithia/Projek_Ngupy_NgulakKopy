@@ -23,7 +23,8 @@ namespace Ngupy_NgulakKopy.Models
             using (var con = new NpgsqlConnection(koneksi))
             {
                 con.Open();
-                string select_data_penjemputan = $"select u.nama, TO_CHAR(p.waktu_penjemputan, 'dd/mm/yyy') as tanggal_penjemputan, pp.nama_pegawai from \"User\" u join penjemputan p on (p.id_user =  u.id_user) join detail_penjemputan dp on (p.id_penjemputan = dp.id_penjemputan) join pegawai_penjemputan pp on (pp.id_pegawai_penjemputan = dp.id_pegawai_penjemputan) where u.username = '{username}' order by p.waktu_penjemputan desc limit 4";
+                string select_data_penjemputan = $"select u.nama, TO_CHAR(p.waktu_penjemputan, 'dd/mm/yyy') as tanggal_penjemputan, pp.nama_pegawai from \"User\" u join penjemputan p on (p.id_user =  u.id_user) join detail_penjemputan dp on (p.id_penjemputan = dp.id_penjemputan) join pegawai_penjemputan pp on (pp.id_pegawai_penjemputan = dp.id_pegawai_penjemputan) where u.username = '{username}' order by p.waktu_penjemputan desc limit 4" +
+                    $"";
                 var cmd = new NpgsqlCommand(select_data_penjemputan, con);
 
                 using (var reader = cmd.ExecuteReader()) 

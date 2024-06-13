@@ -10,7 +10,13 @@ namespace Ngupy_NgulakKopy.Models
 {
     internal class HargaKopiContext
     {
-       public List<HargaKopi> listHargaKopi = new List<HargaKopi>();
+        public List<HargaKopi> listHargaKopi = new List<HargaKopi>();
+        private HargaKopi hargakopi;
+
+        public HargaKopiContext()
+        {
+            hargakopi = new HargaKopi(); 
+        }
         public bool Insert(HargaKopi newHargaKopi)
         {
             using (NpgsqlConnection con = new NpgsqlConnection(Connection.connect))
@@ -28,6 +34,11 @@ namespace Ngupy_NgulakKopy.Models
             }
 
             return true;
+        }
+
+        public string gethargaterbaru()
+        {
+            return Convert.ToString(hargakopi.get_harga_terbaru());
         }
     }
 }

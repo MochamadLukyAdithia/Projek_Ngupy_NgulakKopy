@@ -31,7 +31,7 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
             using (var conn = new NpgsqlConnection(Connection.connect))
             {
                 conn.Open();
-                using (var cmd = new NpgsqlCommand("SELECT update_at FROM harga_kopi order by id_haga desc limit 1", conn))
+                using (var cmd = new NpgsqlCommand("SELECT update_at FROM harga_kopi order by id_harga desc limit 1", conn))
                 {
                     using (var reader = cmd.ExecuteReader())
                     {
@@ -54,7 +54,7 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
             using (var conn = new NpgsqlConnection(Connection.connect))
             {
                 conn.Open();
-                using (var cmd = new NpgsqlCommand("SELECT harga FROM harga_kopi ORDER BY id_haga DESC LIMIT 1", conn))
+                using (var cmd = new NpgsqlCommand("SELECT harga FROM harga_kopi ORDER BY id_harga DESC LIMIT 1", conn))
                 {
                     using (var reader = cmd.ExecuteReader())
                     {

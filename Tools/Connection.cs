@@ -9,6 +9,6 @@ namespace Ngupy_NgulakKopy.Tools
 {
     internal class Connection
     {
-        public static string connect = $"Server=localhost;Username=postgres;Password=jember110605;Database=luky_database;Port=5432;Pooling=True;";
+        public static string connect = $"Server=localhost;Username=postgres;Password=jember110605;Database=ngupy_database;Port=5432;Pooling=True;";
     }
 }

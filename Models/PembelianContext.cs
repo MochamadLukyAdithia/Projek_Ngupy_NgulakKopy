@@ -57,7 +57,7 @@ namespace Ngupy_NgulakKopy.Models
            DataTable table_pembelian = new DataTable();
                 using (NpgsqlConnection con = new NpgsqlConnection(Connection.connect))
                 {
-                    string sql = "select pp.id_pegawai_penjemputan, pp.nama_pegawai , p.waktu_penjemputan , t.tanggal_transaksi ,t.jumlah_kopi, pm.metode_pembayaran  from pegawai_penjemputan pp join detail_penjemputan dp on(pp.id_pegawai_penjemputan=dp.id_pegawai_penjemputan) join penjemputan p on (dp.id_penjemputan=p.id_penjemputan) join transaksi t on (p.id_penjemputan=t.id_penjemputan) join pembayaran pm on (t.id_pembayaran=pm.id_pembayaran) where t.status = 1 order by t.tanggal_transaksi desc\r\n";
+                    string sql = "select pp.id_pegawai_penjemputan, pp.nama_pegawai , pj.waktu_penjemputan , t.tanggal_transaksi ,p.jumlah_kopi, pm.metode_pembayaran  from pegawai_penjemputan pp join detail_penjemputan dp on(pp.id_pegawai_penjemputan=dp.id_pegawai_penjemputan) join penjemputan pj on (dp.id_penjemputan=pj.id_penjemputan) join transaksi t on (pj.id_penjemputan=t.id_penjemputan) join pembayaran pm on (t.id_pembayaran=pm.id_pembayaran) join \"User\" u on (u.id_user=t.id_user) join \"Penjualan\" p on (u.id_user=p.id_user) where t.status = 1 order by t.id_transaksi desc\r\n";
                     con.Open();
                     using (NpgsqlCommand cmd = new NpgsqlCommand(sql, con))
                     {

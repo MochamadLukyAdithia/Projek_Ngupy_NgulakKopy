@@ -13,6 +13,7 @@ namespace Ngupy_NgulakKopy.Models
         public int id_user { get; set;}
         public int total {  get; set;}
         public int harga { get; set;}
+        public int id_harga { get; set;}
         
     }
 }

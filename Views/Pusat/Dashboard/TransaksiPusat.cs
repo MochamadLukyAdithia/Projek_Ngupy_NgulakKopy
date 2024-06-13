@@ -68,7 +68,7 @@ namespace Ngupy_NgulakKopy.Views.Pusat.Dashboard
             using (var conn = new NpgsqlConnection(Connection.connect))
             {
                 conn.Open();
-                using (var cmd = new NpgsqlCommand("SELECT (p.jumlah_kopi * hp.harga) Total\r\nFROM \"Penjualan\" p\r\nJOIN \"User\" u ON u.id_user = p.id_user \r\nJOIN harga_kopi hp ON p.id_harga = hp.id_haga\r\nORDER BY hp.id_haga desc limit 1", conn))
+                using (var cmd = new NpgsqlCommand("SELECT (p.jumlah_kopi * hp.harga) Total\r\nFROM \"Penjualan\" p\r\nJOIN \"User\" u ON u.id_user = p.id_user \r\nJOIN harga_kopi hp ON p.id_harga = hp.id_harga\r\nORDER BY hp.id_harga desc limit 1", conn))
                 {
                     using (var reader = cmd.ExecuteReader())
                     {

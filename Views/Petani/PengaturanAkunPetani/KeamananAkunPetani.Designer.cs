@@ -132,6 +132,8 @@
             // 
             // SandiSebelum
             // 
+            this.SandiSebelum.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.SandiSebelum.BorderRadius = 20;
             this.SandiSebelum.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.SandiSebelum.DefaultText = "";
@@ -155,8 +157,7 @@
             // 
             // UbahProfilPetani
             // 
-            this.UbahProfilPetani.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.UbahProfilPetani.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.UbahProfilPetani.BorderRadius = 20;
             this.UbahProfilPetani.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.UbahProfilPetani.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -187,6 +188,7 @@
             this.Controls.Add(this.guna2PictureBox1);
             this.Name = "KeamananAkunPetani";
             this.Text = "git";
+            this.Load += new System.EventHandler(this.KeamananAkunPetani_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -19,10 +19,11 @@ namespace Ngupy_NgulakKopy.Models
         public string nomor_rekening { get; set; }
         public string username { get; set; }
         public string password { get; set; }
-        public int id_user {  get; set; }
+        public int id_user { get; set; }
         public int id_peran { get; set; }
         public int id_alamat { get; set; }
         public int id_kualitas_kopi { get; set; }
+
 
         private string koneksi = Connection.connect;
 
@@ -99,7 +100,7 @@ namespace Ngupy_NgulakKopy.Models
             }
         }
 
-        public bool UpdatePassword(string newPassword,string username)
+        public bool UpdatePassword(string newPassword, string username)
         {
             using (var conn = new NpgsqlConnection(koneksi))
             {
@@ -109,7 +110,7 @@ namespace Ngupy_NgulakKopy.Models
                 return cmd.ExecuteNonQuery() > 0;
             }
         }
-        public string GetAlamatId(string username)
+        public int? GetAlamatId(string username)
         {
             using (var conn = new NpgsqlConnection(koneksi))
             {
@@ -122,12 +123,10 @@ namespace Ngupy_NgulakKopy.Models
                     if (reader.HasRows)
                     {
                         reader.Read();
-                        return reader[0].ToString();
+                        int id_alamat = reader.GetInt32(0);
+                        return id_alamat;
                     }
-                    else
-                    {
-                        return null;
-                    }
+                    else { return null; }
                 }
             }
         }
@@ -137,16 +136,27 @@ namespace Ngupy_NgulakKopy.Models
             using (var conn = new NpgsqlConnection(koneksi))
             {
                 conn.Open();
-                using (var transaction = conn.BeginTransaction())
+                using (var execute = conn.BeginTransaction())
                 {
                     try
                     {
-                        if (!string.IsNullOrEmpty(newUsername))
+                        if (!string.IsNullOrEmpty(newUsername) && newUsername.Length > 3)
                         {
-                            var query = $"UPDATE \"User\" SET username = '{newUsername}' WHERE username = '{username}'";
-                            var cmd = new NpgsqlCommand(query, conn);
-                            cmd.ExecuteNonQuery();
+                            bool username_ada = Cek_Username(newUsername);
+                            if (username_ada == true)
+                            {
+                                MessageBox.Show($"Username sudah ada!");
+                                return false;
+                            }
+                            else
+                            {
+                                var query = $"UPDATE \"User\" SET username = '{newUsername}' WHERE username = '{username}'";
+                                var cmd = new NpgsqlCommand(query, conn);
+                                cmd.ExecuteNonQuery();
+                                username = newUsername;
+                            }
                         }
+
 
                         if (!string.IsNullOrEmpty(newNomorHp))
                         {
@@ -155,8 +165,9 @@ namespace Ngupy_NgulakKopy.Models
                             cmd.ExecuteNonQuery();
                         }
 
+
                         var alamatId = GetAlamatId(username);
-                        if (!string.IsNullOrEmpty(alamatId))
+                        if (alamatId != null && alamatId != 0)
                         {
                             if (!string.IsNullOrEmpty(newJalan))
                             {
@@ -174,7 +185,7 @@ namespace Ngupy_NgulakKopy.Models
 
                             if (!string.IsNullOrEmpty(newKecamatan))
                             {
-                                var query = $"UPDATE alamat SET kecamatan = @newKecamatan WHERE id_alamat = {alamatId}";
+                                var query = $"UPDATE alamat SET kecamatan = '{newKecamatan}' WHERE id_alamat = {alamatId}";
                                 var cmd = new NpgsqlCommand(query, conn);
                                 cmd.ExecuteNonQuery();
                             }
@@ -182,21 +193,68 @@ namespace Ngupy_NgulakKopy.Models
 
                         if (!string.IsNullOrEmpty(newNoRekening))
                         {
-                            var query = $"UPDATE \"User\" SET nomor_rekening = @newNoRekening WHERE username = '{username}'";
+                            var query = $"UPDATE \"User\" SET nomor_rekening = '{newNoRekening}' WHERE username = '{username}'";
                             var cmd = new NpgsqlCommand(query, conn);
                             cmd.ExecuteNonQuery();
                         }
 
-                        transaction.Commit();
+                        execute.Commit();
                         return true;
                     }
                     catch (Exception)
                     {
-                        transaction.Rollback();
+                        execute.Rollback();
                         return false;
                     }
                 }
             }
+        }
+
+        public int GetIdbyUsername(string username)
+        {
+            int id_user = 0;
+            using (var conn = new NpgsqlConnection(Connection.connect))
+            {
+                conn.Open();
+                string query_id = $"select id_user from \"User\" where username = @username";
+                using (var cmd = new NpgsqlCommand(query_id, conn))
+                {
+                    cmd.Parameters.AddWithValue("username", username);
+                    using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            id_user = reader.GetInt32(0);
+                        }
+
+                    }
+
+
+                }
+            }
+            return id_user;
+        }
+
+        public string GetnamaByusername(string username)
+        {
+            string nama = null;
+            using (var conn = new NpgsqlConnection(Connection.connect))
+            {
+                conn.Open();
+                string query_nama = $"select nama from \"User\" where username = @username";
+                using (var cmd = new NpgsqlCommand(query_nama, conn))
+                {
+                    cmd.Parameters.AddWithValue("username", username);
+                    using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            nama = reader.GetString(0);
+                        }
+                    }
+                }
+            }
+            return nama;
         }
     }
 }

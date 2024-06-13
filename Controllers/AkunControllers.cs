@@ -62,38 +62,38 @@ namespace Ngupy_NgulakKopy.Controllers
             user.Daftar_Petani(nama, nomor_telepon, username, password, 1, id_alamat, id_kualitas_kopi);
         }
 
-        public string UbahPassword(string username, string currentPassword, string newPassword, string confirmPassword)
-        {
-            var user = new User { username = username };
+        //public string UbahPassword(string username, string currentPassword, string newPassword, string confirmPassword)
+        //{
+        //    var user = new User { username = username };
 
-            if (!user.ValidateCurrentPassword(currentPassword, username))
-            {
-                return "Kata sandi lama anda salah atau user tidak ditemukan";
-            }
+        //    if (!user.ValidateCurrentPassword(currentPassword, username))
+        //    {
+        //        return "Kata sandi lama anda salah atau user tidak ditemukan";
+        //    }
 
-            if (newPassword != confirmPassword)
-            {
-                return "Password baru dan Pasword lama tidak sama";
-            }
+        //    if (newPassword != confirmPassword)
+        //    {
+        //        return "Password baru dan Pasword lama tidak sama";
+        //    }
 
-            if (user.UpdatePassword(newPassword, username))
-            {
-                return "Password Berhasil di ubah";
-            }
-            else
-            {
-                return "Gagal Mengubah Password";
-            }
-        }
-        public string UpdateUserProfile(string currentUsername, string newUsername, string newNomorHp, string newJalan, string newDesa, string newKecamatan, string newNoRekening)
-        {
-            var user = new User
-            {
-                username = currentUsername
-            };
+        //    if (user.UpdatePassword(newPassword, username))
+        //    {
+        //        return "Password Berhasil di ubah";
+        //    }
+        //    else
+        //    {
+        //        return "Gagal Mengubah Password";
+        //    }
+        //}
+        //public string UpdateUserProfile(string currentUsername, string newUsername, string newNomorHp, string newJalan, string newDesa, string newKecamatan, string newNoRekening)
+        //{
+        //    var user = new User
+        //    {
+        //        username = currentUsername
+        //    };
 
-            bool isUpdated = true; /*user.UpdateProfile(newUsername, newNomorHp, newJalan, newDesa, newKecamatan, newNoRekening);*/
-            return isUpdated ? "Profile updated successfully" : "Failed to update profile";
-        }
+        //    bool isUpdated = true; /*user.UpdateProfile(newUsername, newNomorHp, newJalan, newDesa, newKecamatan, newNoRekening);*/
+        //    return isUpdated ? "Profile updated successfully" : "Failed to update profile";
+        //}
     }
 }

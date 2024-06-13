@@ -38,7 +38,7 @@
             this.guna2CustomGradientPanel5 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.lblKuallitas = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.lblhrgterbaru = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -52,7 +52,6 @@
             // 
             // pnlTransaksi
             // 
-            this.pnlTransaksi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlTransaksi.BackColor = System.Drawing.Color.Transparent;
             this.pnlTransaksi.BorderRadius = 20;
             this.pnlTransaksi.Controls.Add(this.guna2Button6);
@@ -66,10 +65,10 @@
             this.pnlTransaksi.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
             this.pnlTransaksi.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
             this.pnlTransaksi.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(60)))), ((int)(((byte)(40)))));
-            this.pnlTransaksi.Location = new System.Drawing.Point(60, 61);
+            this.pnlTransaksi.Location = new System.Drawing.Point(128, 102);
             this.pnlTransaksi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlTransaksi.Name = "pnlTransaksi";
-            this.pnlTransaksi.Size = new System.Drawing.Size(1022, 551);
+            this.pnlTransaksi.Size = new System.Drawing.Size(810, 459);
             this.pnlTransaksi.TabIndex = 7;
             // 
             // guna2Button6
@@ -84,7 +83,7 @@
             this.guna2Button6.FillColor = System.Drawing.Color.Black;
             this.guna2Button6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.guna2Button6.ForeColor = System.Drawing.Color.White;
-            this.guna2Button6.Location = new System.Drawing.Point(313, 356);
+            this.guna2Button6.Location = new System.Drawing.Point(87, 360);
             this.guna2Button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button6.Name = "guna2Button6";
             this.guna2Button6.Size = new System.Drawing.Size(168, 42);
@@ -156,6 +155,7 @@
             this.guna2Button10.TabIndex = 6;
             this.guna2Button10.Text = "Rekening";
             this.guna2Button10.UseTransparentBackground = true;
+            this.guna2Button10.Click += new System.EventHandler(this.guna2Button10_Click);
             // 
             // guna2Button9
             // 
@@ -176,6 +176,7 @@
             this.guna2Button9.TabIndex = 6;
             this.guna2Button9.Text = "Di Tempat";
             this.guna2Button9.UseTransparentBackground = true;
+            this.guna2Button9.Click += new System.EventHandler(this.guna2Button9_Click);
             // 
             // guna2CustomGradientPanel5
             // 
@@ -188,10 +189,10 @@
             this.guna2CustomGradientPanel5.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
             this.guna2CustomGradientPanel5.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
             this.guna2CustomGradientPanel5.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(70)))), ((int)(((byte)(43)))));
-            this.guna2CustomGradientPanel5.Location = new System.Drawing.Point(606, 0);
+            this.guna2CustomGradientPanel5.Location = new System.Drawing.Point(480, 0);
             this.guna2CustomGradientPanel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2CustomGradientPanel5.Name = "guna2CustomGradientPanel5";
-            this.guna2CustomGradientPanel5.Size = new System.Drawing.Size(416, 551);
+            this.guna2CustomGradientPanel5.Size = new System.Drawing.Size(330, 457);
             this.guna2CustomGradientPanel5.TabIndex = 5;
             // 
             // guna2CustomGradientPanel4
@@ -201,7 +202,7 @@
             this.guna2CustomGradientPanel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel4.BorderRadius = 20;
             this.guna2CustomGradientPanel4.Controls.Add(this.label1);
-            this.guna2CustomGradientPanel4.Controls.Add(this.label20);
+            this.guna2CustomGradientPanel4.Controls.Add(this.lblKuallitas);
             this.guna2CustomGradientPanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(154)))));
             this.guna2CustomGradientPanel4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(154)))));
             this.guna2CustomGradientPanel4.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(154)))));
@@ -209,7 +210,7 @@
             this.guna2CustomGradientPanel4.Location = new System.Drawing.Point(36, 250);
             this.guna2CustomGradientPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
-            this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(344, 167);
+            this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(258, 167);
             this.guna2CustomGradientPanel4.TabIndex = 6;
             // 
             // label1
@@ -223,16 +224,16 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Kualitas";
             // 
-            // label20
+            // lblKuallitas
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(28, 85);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(75, 37);
-            this.label20.TabIndex = 13;
-            this.label20.Text = "Baik";
+            this.lblKuallitas.AutoSize = true;
+            this.lblKuallitas.Font = new System.Drawing.Font("Segoe UI", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKuallitas.ForeColor = System.Drawing.Color.White;
+            this.lblKuallitas.Location = new System.Drawing.Point(28, 85);
+            this.lblKuallitas.Name = "lblKuallitas";
+            this.lblKuallitas.Size = new System.Drawing.Size(75, 37);
+            this.lblKuallitas.TabIndex = 13;
+            this.lblKuallitas.Text = "Baik";
             // 
             // guna2CustomGradientPanel3
             // 
@@ -251,7 +252,7 @@
             this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(36, 39);
             this.guna2CustomGradientPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
-            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(344, 156);
+            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(258, 156);
             this.guna2CustomGradientPanel3.TabIndex = 7;
             this.guna2CustomGradientPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel3_Paint);
             // 
@@ -305,9 +306,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.pnlTransaksi);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TransaksiPetani";
-            this.Size = new System.Drawing.Size(1104, 663);
+            this.Size = new System.Drawing.Size(1085, 663);
+            this.Load += new System.EventHandler(this.TransaksiPetani_Load);
             this.pnlTransaksi.ResumeLayout(false);
             this.pnlTransaksi.PerformLayout();
             this.guna2CustomGradientPanel5.ResumeLayout(false);
@@ -330,7 +332,7 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel5;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lblKuallitas;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
         private System.Windows.Forms.Label lblhrgterbaru;
         private System.Windows.Forms.Label label14;

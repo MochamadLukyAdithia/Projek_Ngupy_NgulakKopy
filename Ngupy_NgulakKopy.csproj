@@ -107,10 +107,13 @@
   <ItemGroup>
     <Compile Include="Controllers\AkunControllers.cs" />
     <Compile Include="Controllers\AlamatControllers.cs" />
+    <Compile Include="Controllers\DetailPenjemputanControllers.cs" />
     <Compile Include="Controllers\GudangControllers.cs" />
     <Compile Include="Controllers\HargaKopiControllers.cs" />
     <Compile Include="Controllers\KualitasKopiControllers.cs" />
     <Compile Include="Controllers\PenjemputanControllers.cs" />
+    <Compile Include="Controllers\TransaksiControllers.cs" />
+    <Compile Include="Controllers\UserControllers.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,11 +127,20 @@
     <Compile Include="Models\HargaKopiContext.cs" />
     <Compile Include="Models\KualitasKopi.cs" />
     <Compile Include="Models\KualitasKopiContext.cs" />
+    <Compile Include="Models\PegawaiModels.cs" />
     <Compile Include="Models\Pembelian.cs" />
     <Compile Include="Models\PembelianContext.cs" />
     <Compile Include="Models\Penjemputan.cs" />
     <Compile Include="Models\Penjualan.cs" />
     <Compile Include="Models\PenjualanContext.cs" />
+    <Compile Include="Models\DetailPenjemputan.cs" />
+    <Compile Include="Models\DetailPenjemputanContext.cs" />
+    <Compile Include="Models\GudangContext.cs" />
+    <Compile Include="Models\KualitasKopi.cs" />
+    <Compile Include="Models\PetaniPenjemputan.cs" />
+    <Compile Include="Models\PenjemputanPetaniContext.cs" />
+    <Compile Include="Models\TransaksiModel.cs" />
+    <Compile Include="Models\KeamananAkun.cs" />
     <Compile Include="Models\TransaksiPengepul.cs" />
     <Compile Include="Models\UpdateRekening.cs" />
     <Compile Include="Models\UpdateRekeningContext.cs" />
@@ -275,6 +287,12 @@
     <Compile Include="Views\Petani\PengaturanAkunPetani\KeamananAkunPetani.Designer.cs">
       <DependentUpon>KeamananAkunPetani.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Petani\PengaturanAkunPetani\KebijakanPrivasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Petani\PengaturanAkunPetani\KebijakanPrivasi.Designer.cs">
+      <DependentUpon>KebijakanPrivasi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Petani\PengaturanAkunPetani\PengaturanPetani.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -411,6 +429,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Petani\PengaturanAkunPetani\KeamananAkunPetani.resx">
       <DependentUpon>KeamananAkunPetani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Petani\PengaturanAkunPetani\KebijakanPrivasi.resx">
+      <DependentUpon>KebijakanPrivasi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Petani\PengaturanAkunPetani\PengaturanPetani.resx">
       <DependentUpon>PengaturanPetani.cs</DependentUpon>

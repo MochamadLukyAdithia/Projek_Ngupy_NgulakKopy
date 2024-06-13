@@ -16,9 +16,9 @@ namespace Ngupy_NgulakKopy.Controllers
             gudang = new Gudang();
         }
 
-        public string get_data_gudang()
+        public string get_stok()
         {
-            return gudang.get_data_gudang();
+            return Convert.ToString(gudang.Getstok_kopi());
         }
     }
 }

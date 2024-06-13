@@ -53,7 +53,7 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
             pembelianContext.ReadPembelian();
             PembelianDataGridView1.DataSource = pembelianContext.ReadPembelian();
             penjualanContext.ReadPenjualan();
-            PenjualanDataGridView1.DataSource = penjualanContext.listPenjualan;
+            PenjualanDataGridView1.DataSource = penjualanContext.ReadPenjualan();
 
 
         }

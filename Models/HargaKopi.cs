@@ -22,14 +22,14 @@ namespace Ngupy_NgulakKopy.Models
             using (var con = new NpgsqlConnection(koneksi))
             {
                 con.Open();
-                string query_select = $"select harga from harga_kopi order by update_at desc limit 1";
+                string query_select = $"select harga from harga_kopi order by id_harga desc limit 1";
                 var cmd = new NpgsqlCommand(query_select, con);
                 using (var reader = cmd.ExecuteReader())
                 {
                     if (reader.Read())
                     {
-                        int ID_harga = reader.GetInt32(0);
-                        return ID_harga;
+                        int harga = reader.GetInt32(0);
+                        return harga;
                     }
                     else
                     {
@@ -39,6 +39,25 @@ namespace Ngupy_NgulakKopy.Models
             }
 
            
+        }
+        
+        public int getID_hargaterbaru()
+        {
+            int id_harga = 0;
+            using(var conn = new NpgsqlConnection(Connection.connect))
+            {
+                conn.Open();
+                string query = $"select id_harga from harga_kopi order by id_harga desc limit 1";
+                var cmd = new NpgsqlCommand(query,conn);
+                using(NpgsqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        id_harga = reader.GetInt32(0);
+                    }
+                }
+            }
+            return id_harga;
         }
 
     }
