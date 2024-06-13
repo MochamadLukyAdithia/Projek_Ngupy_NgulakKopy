@@ -13,6 +13,7 @@ using Ngupy_NgulakKopy.Models;
 using Npgsql;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using Ngupy_NgulakKopy.Tools;
+using Ngupy_NgulakKopy.Controllers;
 
 namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
 {
@@ -25,18 +26,24 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
         private int id_user;
         private PenjemputanPetaniContext Pcontext;
         private PetaniPenjemputan penjemputan;
-        private TransaksiContext Tcontext;
         private UserContext Ucontext;
+        private PenjualanContext Penjualan;
+        private HargaKopiControllers hargacontrollers;
         private User user;
+        private TransaksiControllers transaksicontrollers;
+        private KualitasKopiControllers kualitaskopicontrollers;
         
         public TransaksiPetani()
         {
             InitializeComponent();
             Pcontext = new PenjemputanPetaniContext();
             penjemputan = new PetaniPenjemputan(); 
-            Tcontext = new TransaksiContext();
+            transaksicontrollers = new TransaksiControllers();
             Ucontext = new UserContext();
             user = new User();
+            Penjualan = new PenjualanContext();
+            hargacontrollers = new HargaKopiControllers();
+            kualitaskopicontrollers = new KualitasKopiControllers();
         }
 
         private void guna2CustomGradientPanel3_Paint(object sender, PaintEventArgs e)
@@ -51,9 +58,13 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
         {
             penjemputan.Getpenjemputan = Pcontext.Getidpenjemputan(username);
             id_penjemputan = Pcontext.Getidpenjemputan(username);
-            user.GetId = Ucontext.Getid(username);
-            id_user = user.GetId;
-            Tcontext.insert_transaksi(id_penjemputan, id_pembayaran, id_user);
+            user.id_user = Ucontext.Getid(username);
+            id_user = user.id_user;
+            transaksicontrollers.insertTransaksi(id_penjemputan, id_pembayaran, id_user);
+
+            int id_harga = Convert.ToInt32(hargacontrollers.getIDharga());
+            int jumlah_kopi = PenjemputanPetani.jumlah_kopi;
+            Penjualan.tambah_penjualan(jumlah_kopi,id_user,id_harga);
         }
 
         
@@ -61,16 +72,23 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
         private void guna2Button10_Click(object sender, EventArgs e)
         {
             id_pembayaran = 1;
+            guna2Button10.BringToFront();
+            guna2Button10.FillColor = Color.FromArgb(255, 218, 154);
+            guna2Button9.FillColor = Color.FromArgb(255, 255, 255);
         }
 
         private void guna2Button9_Click(object sender, EventArgs e)
         {
             id_pembayaran = 2;
+            guna2Button9.BringToFront();
+            guna2Button9.FillColor = Color.FromArgb(255, 218, 154);
+            guna2Button10.FillColor = Color.FromArgb(255, 255, 255);
         }
 
         private void TransaksiPetani_Load(object sender, EventArgs e)
         {
-
+            lblhrgterbaru.Text = Convert.ToString(hargacontrollers.get_harga_terbaru());
+            lblKuallitas.Text = kualitaskopicontrollers.getkualitas();
         }
     }
 }

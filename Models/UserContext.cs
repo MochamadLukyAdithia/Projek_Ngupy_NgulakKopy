@@ -13,26 +13,21 @@ namespace Ngupy_NgulakKopy.Models
     internal class UserContext
     {
         private User user;
-        private List<TransaksiModel> listtransaksi;
         public UserContext()
         {
             user = new User();
         }
-
-        public List<User> ReadUser()
-        {
-            return user.ReadUser();
-        }
-
         public int Getid(string username)
         {
             return user.GetIdbyUsername(username);
         }
 
-        public string Getnama(string username)
+        public string GetName(string username)
         {
             return user.GetnamaByusername(username);
+
         }
+
         
     }
 }

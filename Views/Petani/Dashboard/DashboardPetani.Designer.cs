@@ -353,7 +353,7 @@
             this.transaksiPetani1.Location = new System.Drawing.Point(264, 58);
             this.transaksiPetani1.Margin = new System.Windows.Forms.Padding(5);
             this.transaksiPetani1.Name = "transaksiPetani1";
-            this.transaksiPetani1.Size = new System.Drawing.Size(1050, 549);
+            this.transaksiPetani1.Size = new System.Drawing.Size(1050, 650);
             this.transaksiPetani1.TabIndex = 10;
             this.transaksiPetani1.Load += new System.EventHandler(this.transaksiPetani1_Load);
             // 

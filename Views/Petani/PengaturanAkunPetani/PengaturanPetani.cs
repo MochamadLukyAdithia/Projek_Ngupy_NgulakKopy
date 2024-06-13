@@ -14,6 +14,7 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard.PengaturanProfilPetani
 {
     public partial class PengaturanPetani : Form
     {
+        string username = LoginPetani.username;
         public PengaturanPetani()
         {
             InitializeComponent();
@@ -94,7 +95,7 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard.PengaturanProfilPetani
         private void back_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Dashboard.DashboardPetani dashboardPetani = new Dashboard.DashboardPetani();
+            DashboardPetani dashboardPetani = new DashboardPetani(username);
             dashboardPetani.ShowDialog();
         }
     }

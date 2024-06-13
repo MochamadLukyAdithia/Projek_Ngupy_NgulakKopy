@@ -24,6 +24,7 @@ namespace Ngupy_NgulakKopy.Models
         public int id_alamat { get; set; }
         public int id_kualitas_kopi { get; set; }
 
+
         private string koneksi = Connection.connect;
 
         public (string username, string password)? login(int id_peran)
@@ -197,6 +198,53 @@ namespace Ngupy_NgulakKopy.Models
                     }
                 }
             }
+        }
+
+        public int GetIdbyUsername(string username)
+        {
+            int id_user = 0;
+            using (var conn = new NpgsqlConnection(Connection.connect))
+            {
+                conn.Open();
+                string query_id = $"select id_user from \"User\" where username = @username";
+                using (var cmd = new NpgsqlCommand(query_id, conn))
+                {
+                    cmd.Parameters.AddWithValue("username", username);
+                    using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            id_user = reader.GetInt32(0);
+                        }
+
+                    }
+
+
+                }
+            }
+            return id_user;
+        }
+
+        public string GetnamaByusername(string username)
+        {
+            string nama = null;
+            using (var conn = new NpgsqlConnection(Connection.connect))
+            {
+                conn.Open();
+                string query_nama = $"select nama from \"User\" where username = @username";
+                using (var cmd = new NpgsqlCommand(query_nama, conn))
+                {
+                    cmd.Parameters.AddWithValue("username", username);
+                    using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            nama = reader.GetString(0);
+                        }
+                    }
+                }
+            }
+            return nama;
         }
     }
 }

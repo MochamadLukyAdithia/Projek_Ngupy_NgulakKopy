@@ -99,7 +99,7 @@ namespace Ngupy_NgulakKopy.Models
 
         public void Penjualan_petani()
         {
-            using(var conn = new NpgsqlConnection(Connection.connect))
+            using (var conn = new NpgsqlConnection(Connection.connect))
             {
                 conn.Open();
 
@@ -113,7 +113,22 @@ namespace Ngupy_NgulakKopy.Models
                     cmd.ExecuteNonQuery();
                 }
             }
+
         }
+
+        public void tambah_penjualan(int jumlah_kopi, int id_user, int id_harga)
+        {
+            using (var conn = new NpgsqlConnection(Connection.connect))
+            {
+                conn.Open();
+                string query = $"insert into \"Penjualan\" (jumlah_kopi,id_user,id_harga) values (@jumlah_kopi,@id_user,@id_harga)";
+                var cmd = new NpgsqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("jumlah_kopi", jumlah_kopi);
+                cmd.Parameters.AddWithValue("id_user", id_user);
+                cmd.Parameters.AddWithValue("id_harga", id_harga);
+                cmd.ExecuteNonQuery();
+            }
         }
     }
+}
 

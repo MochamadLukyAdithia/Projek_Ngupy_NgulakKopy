@@ -73,5 +73,24 @@ namespace Ngupy_NgulakKopy.Models
                 }
             }
         }
+
+        public string getKualitasaja()
+        {
+            string kualitas = null;
+            using (var con = new NpgsqlConnection(Connection.connect))
+            {
+                con.Open();
+                string query = $"select kategori_kualitas_kopi from kualitas_kopi order by id_kualitas_kopi desc limit 1";
+                var cmd = new NpgsqlCommand (query, con);
+                using(NpgsqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        kualitas = reader.GetString(0);
+                    };
+                }
+            }
+            return kualitas;
+        }
     }
 }

@@ -10,18 +10,18 @@ namespace Ngupy_NgulakKopy.Models
 {
     internal class DetailPenjemputan
     {
-        public int id_detail_penjemputan {  get; set; }
-        public string keterangan { get; set; }
-        public int id_pegawai { get; set; }
-        public int id_penjemputan { get; set; }
+        private int id_detail_penjemputan {  get; set; }
+        private string keterangan { get; set; }
+        private int id_pegawai { get; set; }
+        private int id_penjemputan { get; set; }
 
         public string NamapegawaiById(int id_user)
         {
-            string nama_pegawai = null;
+            string nama_pegawai = "";
             using (var conn = new NpgsqlConnection(Connection.connect))
             {
                 conn.Open();
-                string query_id = $"select pp.nama_pegawai from detail_penjemputan dp join pegawai_penjemputan pp on(pp.id_pegawai_penjemputan=dp.id_pegawai_penjemputan) join penjemputan p on(p.id_penjemputan=dp.id_penjemputan) where p.id_user = @id_user";
+                string query_id = $"select pp.nama_pegawai from pegawai_penjemputan pp join detail_penjemputan dp on(pp.id_pegawai_penjemputan=dp.id_pegawai_penjemputan) join penjemputan p on(p.id_penjemputan=dp.id_penjemputan) \r\nwhere p.id_user = @id_user and p.status = 1 order by dp.id_detail_penjemputan desc limit 1";
                 using (var cmd = new NpgsqlCommand(query_id, conn))
                 {
                     cmd.Parameters.AddWithValue("id_user", id_user);
@@ -37,5 +37,7 @@ namespace Ngupy_NgulakKopy.Models
             }
             return nama_pegawai;
         }
+
+        
     }
 }

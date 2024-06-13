@@ -20,6 +20,7 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
         private UserContext Ucontext;
         string username = LoginPetani.username;
         private Gudang Gcontext;
+        static public int jumlah_kopi;
         public PenjemputanPetani()
         {
             InitializeComponent();
@@ -77,25 +78,25 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
             string username = LoginPetani.username;
             PenjemputanPetaniContext addpenjemputan = new PenjemputanPetaniContext();
             User user = new User();
-            int jumlah_kopi = Convert.ToInt32(txtjmlhkopi.Text);
-            user.GetId = Ucontext.Getid(username);
-            int id_user = user.GetId;
+            user.id_user = Ucontext.Getid(username);
+            int id_user = user.id_user;
             addpenjemputan.tambah_penjemputan(id_user);
 
-            int insert_stok = Convert.ToInt32(txtjmlhkopi.Text);
+            jumlah_kopi = Convert.ToInt32(txtjmlhkopi.Text);
             Gcontext.get_stokkopi = Gcontext.Getstok_kopi();
             int current_stok = Gcontext.get_stokkopi;
+            int stok_kopi = jumlah_kopi + current_stok;
 
-            Gcontext.updatestok(current_stok);
+            Gcontext.updatestok(stok_kopi);
 
             MessageBox.Show("Request telah berhasil dikirim");
-
+            
 
         }
 
         private void getnama()
         {
-            string nama = Ucontext.Getnama(username);
+            string nama = Ucontext.GetName(username);
             lblnama.Text = nama;
         }
 

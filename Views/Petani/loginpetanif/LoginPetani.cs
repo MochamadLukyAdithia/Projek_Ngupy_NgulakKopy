@@ -17,6 +17,7 @@ namespace Ngupy_NgulakKopy.Views.Petani
     public partial class LoginPetani : Form
     {
         private AkunControllers akunControllers;
+        static public string username;
         public LoginPetani()
         {
             InitializeComponent();
@@ -37,7 +38,7 @@ namespace Ngupy_NgulakKopy.Views.Petani
 
         private void btnLoginPetani_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text;
+            username = txtUsername.Text;
             string password = txtPassword.Text; 
                   
             string status_login = akunControllers.login(username, password, 1);

@@ -37,5 +37,10 @@ namespace Ngupy_NgulakKopy.Controllers
                 return null;
             }
         }
+
+        public string getkualitas()
+        {
+            return kualitasKopi.getKualitasaja();
+        }
     }
 }

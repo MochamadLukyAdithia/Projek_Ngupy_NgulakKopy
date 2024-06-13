@@ -21,5 +21,10 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
         {
 
         }
+
+        private void guna2Button9_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

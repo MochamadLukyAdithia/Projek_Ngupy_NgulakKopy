@@ -122,7 +122,7 @@
             this.label3.Size = new System.Drawing.Size(277, 54);
             this.label3.TabIndex = 1;
             this.label3.Text = "Kualitas Kopi";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            /*this.label3.Click += new System.EventHandler(this.label3_Click);*/
             // 
             // guna2Shapes1
             // 

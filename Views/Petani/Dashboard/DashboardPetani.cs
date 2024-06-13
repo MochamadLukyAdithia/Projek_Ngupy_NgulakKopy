@@ -26,6 +26,7 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             berandaPetani1.Show();
+            berandaPetani1.readDashboard(username);
             penjemputanPetani1.Hide();
             transaksiPetani1.Hide();
             riwayatPetani1.Hide();
@@ -64,10 +65,11 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
 
         private void btnRiwayat_Click(object sender, EventArgs e)
         {
-            /*berandaPetani1.Hide();
-            penjemputanPetani1.Hide();*/
+            berandaPetani1.Hide();
+            penjemputanPetani1.Hide();
             transaksiPetani1.Hide();
             riwayatPetani1.Show();
+            riwayatPetani1.readriwayat();
             pnlBeranda.BackColor = Color.FromArgb(255, 243, 233);
             pnlsideHarga.BackColor = Color.FromArgb(255, 243, 233);
             pnlSideTransaksi.BackColor = Color.FromArgb(255, 243, 233);

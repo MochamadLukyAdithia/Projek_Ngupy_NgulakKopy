@@ -21,5 +21,9 @@ namespace Ngupy_NgulakKopy.Controllers
             return hargakopi.get_harga_terbaru();
         }
 
+        public int getIDharga()
+        {
+            return hargakopi.getID_hargaterbaru();
+        }
     }
 }
