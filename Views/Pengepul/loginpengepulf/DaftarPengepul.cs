@@ -17,14 +17,14 @@ namespace Ngupy_NgulakKopy.Views.Pengepul
 {
     public partial class DaftarPengepul : Form
     {
-       
+
         public DaftarPengepul()
         {
             InitializeComponent();
-          
+
         }
 
-       
+
 
         private void DaftarPengepul_Load(object sender, EventArgs e)
         {
@@ -79,12 +79,12 @@ namespace Ngupy_NgulakKopy.Views.Pengepul
                 return;
             }
 
-            akunControllers.Daftar(nama, NomorHp, username, password, 2, Convert.ToInt32(id_alamat), 1);
+            //akunControllers.Daftar(nama, NomorHp, username, password, 2, Convert.ToInt32(id_alamat), 1);
 
-            MessageBox.Show($"Data anda berhasil ditambahkan");
-            this.Hide();
-            MasukPengepul lp = new MasukPengepul();
-            lp.ShowDialog();
+            //MessageBox.Show($"Data anda berhasil ditambahkan");
+            //this.Hide();
+            //MasukPengepul lp = new MasukPengepul();
+            //lp.ShowDialog();
         }
     }
 }

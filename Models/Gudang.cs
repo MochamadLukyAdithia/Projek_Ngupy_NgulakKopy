@@ -2,34 +2,33 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
-using Npgsql; 
+using Npgsql;
 
 namespace Ngupy_NgulakKopy.Models
 {
-    internal class HargaKopi
+    internal class Gudang
     {
-        public int id_harga_kopi {  get; set; }
-        public string update_at { get; set; }
-        public int harga {  get; set; }
+        public int id_gudang { get; set; }
+        public int kapasitas_kopi { get; set; }
+        public int stok_kopi { get; set; }
 
         private string koneksi = Connection.connect;
 
-        public int? get_harga_terbaru()
+        public string get_data_gudang()
         {
             using (var con = new NpgsqlConnection(koneksi))
             {
                 con.Open();
-                string query_select = $"select harga from harga_kopi order by update_at desc limit 1";
-                var cmd = new NpgsqlCommand(query_select, con);
-                using (var reader = cmd.ExecuteReader())
+                string select_gudang = $"SELECT Stok_Kopi || ' kg / ' || Kapasitas_Gudang || ' kg'  From Gudang";
+                var cmd = new NpgsqlCommand(select_gudang, con);
+                using (var reader = cmd.ExecuteReader()) 
                 {
                     if (reader.Read())
                     {
-                        int ID_harga = reader.GetInt32(0);
-                        return ID_harga;
+                        string data_gudang = reader.GetString(0);
+                        return data_gudang;
                     }
                     else
                     {
@@ -37,9 +36,6 @@ namespace Ngupy_NgulakKopy.Models
                     }
                 }
             }
-
-           
         }
-
     }
 }
