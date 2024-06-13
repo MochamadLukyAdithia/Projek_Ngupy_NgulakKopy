@@ -413,5 +413,10 @@ namespace Ngupy_NgulakKopy.Views.Pengepul.Dashboard
         {
 
         }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

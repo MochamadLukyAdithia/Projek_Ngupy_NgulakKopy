@@ -458,6 +458,7 @@
             this.label15.Size = new System.Drawing.Size(145, 25);
             this.label15.TabIndex = 17;
             this.label15.Text = "Harga Kualitas";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // label13
             // 
