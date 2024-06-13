@@ -45,7 +45,7 @@ namespace Ngupy_NgulakKopy.Views.Petani
         }
         private bool Insert(Models.Alamat alamat)
         {
-            using (NpgsqlConnection con = new NpgsqlConnection(connection.connect))
+            using (NpgsqlConnection con = new NpgsqlConnection(Connection.connect))
             {
                 string sql = $"insert into alamat(nama_jalan,desa,kecamatan) values(@jalan, @desa, @kecamatan)";
                 con.Open();
