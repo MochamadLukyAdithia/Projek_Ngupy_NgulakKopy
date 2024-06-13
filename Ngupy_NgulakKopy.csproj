@@ -110,6 +110,7 @@
     <Compile Include="Controllers\KualitasKopiControllers.cs" />
     <Compile Include="Controllers\PenjemputanControllers.cs" />
     <Compile Include="Controllers\TransaksiControllers.cs" />
+    <Compile Include="Controllers\UserControllers.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +135,7 @@
     <Compile Include="Models\PetaniPenjemputan.cs" />
     <Compile Include="Models\PenjemputanPetaniContext.cs" />
     <Compile Include="Models\TransaksiModel.cs" />
+    <Compile Include="Models\KeamananAkun.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserContext.cs" />
     <Compile Include="Program.cs" />
@@ -252,6 +254,12 @@
     </Compile>
     <Compile Include="Views\Petani\PengaturanAkunPetani\KeamananAkunPetani.Designer.cs">
       <DependentUpon>KeamananAkunPetani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Petani\PengaturanAkunPetani\KebijakanPrivasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Petani\PengaturanAkunPetani\KebijakanPrivasi.Designer.cs">
+      <DependentUpon>KebijakanPrivasi.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Petani\PengaturanAkunPetani\PengaturanPetani.cs">
       <SubType>Form</SubType>
@@ -376,6 +384,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Petani\PengaturanAkunPetani\KeamananAkunPetani.resx">
       <DependentUpon>KeamananAkunPetani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Petani\PengaturanAkunPetani\KebijakanPrivasi.resx">
+      <DependentUpon>KebijakanPrivasi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Petani\PengaturanAkunPetani\PengaturanPetani.resx">
       <DependentUpon>PengaturanPetani.cs</DependentUpon>

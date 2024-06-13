@@ -33,8 +33,8 @@
             this.KebijakanPrivasi = new Guna.UI2.WinForms.Guna2Button();
             this.LogoutPetani = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.back = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,6 +96,7 @@
             this.KebijakanPrivasi.Size = new System.Drawing.Size(937, 41);
             this.KebijakanPrivasi.TabIndex = 7;
             this.KebijakanPrivasi.Text = "Kebijakan Privasi";
+            this.KebijakanPrivasi.Click += new System.EventHandler(this.KebijakanPrivasi_Click);
             // 
             // LogoutPetani
             // 
@@ -106,7 +107,7 @@
             this.LogoutPetani.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.LogoutPetani.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.LogoutPetani.FillColor = System.Drawing.Color.Red;
-            this.LogoutPetani.Font = new System.Drawing.Font("Segoe UI", 8.793893F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.LogoutPetani.Font = new System.Drawing.Font("Segoe UI", 8.793893F, System.Drawing.FontStyle.Bold);
             this.LogoutPetani.ForeColor = System.Drawing.Color.White;
             this.LogoutPetani.Location = new System.Drawing.Point(516, 516);
             this.LogoutPetani.Name = "LogoutPetani";
@@ -128,19 +129,6 @@
             this.label1.Text = "Pengaturan Akun";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Black;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Black;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(1130, 78);
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // back
             // 
             this.back.BackColor = System.Drawing.Color.Black;
@@ -155,6 +143,19 @@
             this.back.Size = new System.Drawing.Size(64, 54);
             this.back.TabIndex = 13;
             this.back.Click += new System.EventHandler(this.back_Click);
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Black;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Black;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(1130, 78);
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // PengaturanPetani
             // 
@@ -171,6 +172,7 @@
             this.Controls.Add(this.guna2PictureBox1);
             this.Name = "PengaturanPetani";
             this.Text = "PengaturanPetani";
+            this.Load += new System.EventHandler(this.PengaturanPetani_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

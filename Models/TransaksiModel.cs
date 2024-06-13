@@ -8,6 +8,7 @@ using Ngupy_NgulakKopy.Tools;
 using System.Windows.Forms;
 using System.Data;
 using System.Data.Common;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Ngupy_NgulakKopy.Models
 {
@@ -90,6 +91,20 @@ namespace Ngupy_NgulakKopy.Models
                 }
             }
             return dataTable;
+        }
+
+        public void updaterekening(string no_rekening, string username)
+        {
+            using(var conn =  new NpgsqlConnection(Connection.connect))
+            {
+                conn.Open();
+                string query = $"UPDATE \"User\" SET nomor_rekening = @no_rekening WHERE username = @username";
+                var cmd = new NpgsqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("no_rekening", no_rekening);
+                cmd.Parameters.AddWithValue("username", username);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
         }
     }
 }

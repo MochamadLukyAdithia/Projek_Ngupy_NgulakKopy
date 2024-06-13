@@ -1,6 +1,6 @@
 ﻿using Ngupy_NgulakKopy.Views.Petani;
 using Ngupy_NgulakKopy.Views.Petani.Dashboard;
-using Ngupy_NgulakKopy.Views.Pusat.Dashboard;
+using Ngupy_NgulakKopy.Views.Petani.PengaturanAkunPetani;
 using System;
 using System.Collections.Generic;
 using System.Linq;

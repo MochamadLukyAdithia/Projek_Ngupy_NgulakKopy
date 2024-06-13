@@ -80,7 +80,7 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
                 }
             }
             catch (Exception ex)
-            {
+            {   
                 MessageBox.Show($"Error: {ex.Message}");
             }
 
@@ -95,9 +95,7 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
                 }
                 else
                 {
-                    label1.Text = "-";
-                    label2.Text = "-";
-                    label3.Text = "-";
+                    lblharga.Text = $"-";
                 }
             }
             catch (Exception ex)

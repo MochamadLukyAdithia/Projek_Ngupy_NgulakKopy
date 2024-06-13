@@ -8,17 +8,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Ngupy_NgulakKopy.Controllers;
+using Ngupy_NgulakKopy.Tools;
 using Ngupy_NgulakKopy.Views.Petani.Dashboard.PengaturanProfilPetani;
 using Npgsql;
+
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Ngupy_NgulakKopy.Views.Petani.ProfilPetani
 {
     public partial class AturProfil : Form
+
     {
-        public AturProfil()
+        private string username;
+        public AturProfil(string username)
         {
             InitializeComponent();
+            this.username = username;
         }
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
@@ -43,94 +49,43 @@ namespace Ngupy_NgulakKopy.Views.Petani.ProfilPetani
 
         private void UbahProfilPetani_Click(object sender, EventArgs e)
         {
-            
-            string username = usernameP.Text;
-            string NomorHp = nohpP.Text;
-            string Jalan = JalanP.Text;
-            string Desa = desaP.Text;
-            string NoRekening = norekP.Text;
+            string newusername = usernameP.Text;
+            string nomorHp = nohpP.Text;
+            string jalan = JalanP.Text;
+            string desa = desaP.Text;
+            string kecamatan = KecamatanP.Text;
+            string noRekening = norekP.Text;
 
-        
-            string constr = $"Server=localhost;Username=postgres;Password=wahyuok234;Database=Ngupy_Database;Port=5432;Pooling=true;";
-            NpgsqlConnection conn = new NpgsqlConnection(constr);
-            conn.Open();
+            var controller = new UserControllers();
+            string result = controller.UpdateUserProfile(username, newusername, nomorHp, jalan, desa, kecamatan, noRekening);
 
-            string Ambilid = $"Select id_alamat from \"User\" where username = '{LoginPetani.username}'";
-            NpgsqlCommand queryid = new NpgsqlCommand(Ambilid, conn);
-            NpgsqlDataReader id = queryid.ExecuteReader();
-            id.Read();
+            MessageBox.Show(result, result.Contains("successfully") ? "Success" : "Error");
 
-            string id_alamat = id[0].ToString();
-            conn.Close();
+            if (result.Contains("successfully"))
+            {
+                if (!string.IsNullOrEmpty(newusername) && newusername != username)
+                {
+                    username = newusername;
+                }
+
+                DisplayUsernamePetani(username);
+                // Update the current username to the new username
+            }
            
-
-            string query = "UPDATE \"User\" SET ";
-
-            if (!string.IsNullOrEmpty(username))
-            {
-                query += $"username = '{username}' WHERE username = '{LoginPetani.username}'";
-            }
-
-            if (!string.IsNullOrEmpty(NomorHp))
-            {
-                conn.Open();
-                string query_nohp = query += $"nomor_telepon = '{NomorHp}' WHERE username = '{LoginPetani.username}'";
-                NpgsqlCommand up_nohp = new NpgsqlCommand (query_nohp, conn);
-                up_nohp.ExecuteNonQuery();
-                conn.Close();
-            }
-    
-            if (!string.IsNullOrEmpty(Jalan))
-
-            {
-                conn.Open();
-                string UpdateJalan = $"Update alamat set nama_jalan = '{Jalan}' where id_alamat = '{id_alamat}'";
-                NpgsqlCommand upjalan = new NpgsqlCommand(UpdateJalan, conn);
-                upjalan.ExecuteNonQuery();
-                conn.Close();
-
-                // Anda mungkin perlu membuat query tambahan untuk mengupdate alamat pengguna
-                // query += $"alamat = '{Jalan}', ";
-            }
-
-            if (!string.IsNullOrEmpty(Desa))
-            {
-                conn.Open();
-                string UpdateDesa = $"Update alamat set desa = '{Desa}' where id_alamat = '{id_alamat}'";
-                NpgsqlCommand updesa = new NpgsqlCommand(UpdateDesa, conn);
-                updesa.ExecuteNonQuery();
-                conn.Close();
-            }
-
-            if (!string.IsNullOrEmpty(NoRekening))
-            {
-                conn.Open();
-                string query_norek = query += $"nomor_rekening = '{NoRekening}' WHERE username = '{LoginPetani.username}'";
-                NpgsqlCommand up_norek = new NpgsqlCommand(query_norek, conn);
-                up_norek.ExecuteNonQuery();
-                conn.Close();
-            }
-
-            // Hapus koma terakhir jika ada
-           
-/*
-            query += $" WHERE username = '{LoginPetani.username}'";
-
-            NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
-            cmd.ExecuteNonQuery();
-            conn.Close();*/
-         
-
-
-            MessageBox.Show("Data Berhasil Disimpan!", "Sukses", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-
         }
 
         private void back_Click(object sender, EventArgs e)
         {
-            PengaturanPetani profil = new PengaturanPetani();
+            PengaturanPetani profil = new PengaturanPetani(username);
+            profil.FormClosed += new FormClosedEventHandler(FormClosedRefresh);
             profil.Show();
             this.Hide();
+        }
+
+        private void FormClosedRefresh(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
+            DisplayUsernamePetani(username); // Refresh data on this form after coming back
         }
 
         private void norekP_TextChanged(object sender, EventArgs e)
@@ -139,6 +94,93 @@ namespace Ngupy_NgulakKopy.Views.Petani.ProfilPetani
         }
 
         private void Jalan_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AturProfil_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            this.Bounds = Screen.PrimaryScreen.Bounds;
+            DisplayUsernamePetani(username);
+           
+
+
+        }
+        private void refresh_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void DisplayUsernamePetani(string username)
+        {
+
+            using (var conn = new NpgsqlConnection(Connection.connect))
+            {
+                conn.Open();
+                using (var cmd = new NpgsqlCommand($"SELECT u.username, u.nomor_telepon, a.nama_jalan, a.desa, a.kecamatan, u.nomor_rekening FROM alamat a join \"User\" u on (a.id_alamat = u.id_alamat) where u.username = '{username}'", conn))
+                {
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            DisplayUsernameP.Text = reader.GetString(0);
+                            DisplayNoHP.Text = reader.GetString(1);
+                            DisplayJalan.Text = reader.GetString(2);
+                            DisplayDesaP.Text = reader.GetString(3);
+                            DisplayKecamatanP.Text = reader.GetString(4);
+
+                            // Cek jika nomor_rekening null
+                            if (!reader.IsDBNull(5))
+                            {
+                                DisplayNoRek.Text = reader.GetString(5);
+                                //MessageBox.Show($"Data fetched: {reader.GetString(0)}, {reader.GetString(1)}, {reader.GetString(2)}, {reader.GetString(3)}, {reader.GetString(4)}, {reader.GetString(5)}");
+                            }
+                            else
+                            {
+                                DisplayNoRek.Text = "-";
+                                //MessageBox.Show($"Data fetched: {reader.GetString(0)}, {reader.GetString(1)}, {reader.GetString(2)}, {reader.GetString(3)}, {reader.GetString(4)}");
+                            }
+                            
+                        }
+                        conn.Close();
+                    }
+                }
+            }
+
+        }
+
+
+
+
+
+
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void displayusername_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RefreshProfil_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void displayU_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void DisplayNoRek_Click(object sender, EventArgs e)
         {
 
         }

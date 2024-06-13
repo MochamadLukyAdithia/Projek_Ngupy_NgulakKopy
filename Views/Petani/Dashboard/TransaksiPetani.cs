@@ -62,8 +62,10 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
             id_user = user.id_user;
             transaksicontrollers.insertTransaksi(id_penjemputan, id_pembayaran, id_user);
 
+            string no_rekening = txtNoRek.Text;
             int id_harga = Convert.ToInt32(hargacontrollers.getIDharga());
             int jumlah_kopi = PenjemputanPetani.jumlah_kopi;
+            transaksicontrollers.updaterekening(no_rekening,username);
             Penjualan.tambah_penjualan(jumlah_kopi,id_user,id_harga);
         }
 

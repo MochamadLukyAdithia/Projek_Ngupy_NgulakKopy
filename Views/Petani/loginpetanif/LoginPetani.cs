@@ -47,6 +47,7 @@ namespace Ngupy_NgulakKopy.Views.Petani
             {
                 MessageBox.Show($"Berhasil login, Selamat datang, {txtUsername.Text}", "Success");
                 username = txtUsername.Text;
+                //username1 = username;
                 this.Hide();
                 GetStarted getStarted = new GetStarted(username);
                 getStarted.ShowDialog();
@@ -72,6 +73,19 @@ namespace Ngupy_NgulakKopy.Views.Petani
             this.Hide();
             DaftarPetani dp = new DaftarPetani();
             dp.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginPetani_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+
+          
+            this.Bounds = Screen.PrimaryScreen.Bounds;
         }
     }
 }

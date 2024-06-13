@@ -30,5 +30,13 @@ namespace Ngupy_NgulakKopy.Views.Petani
         {
 
         }
+
+        private void GetStarted_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+
+
+            this.Bounds = Screen.PrimaryScreen.Bounds;
+        }
     }
 }

@@ -78,7 +78,7 @@
             this.lblketerangan.ForeColor = System.Drawing.Color.White;
             this.lblketerangan.Location = new System.Drawing.Point(41, 105);
             this.lblketerangan.Name = "lblketerangan";
-            this.lblketerangan.Size = new System.Drawing.Size(115, 28);
+            this.lblketerangan.Size = new System.Drawing.Size(125, 30);
             this.lblketerangan.TabIndex = 1;
             this.lblketerangan.Text = "keterangan";
             // 
@@ -148,7 +148,7 @@
             this.lblusername.Location = new System.Drawing.Point(21, 8);
             this.lblusername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblusername.Name = "lblusername";
-            this.lblusername.Size = new System.Drawing.Size(97, 28);
+            this.lblusername.Size = new System.Drawing.Size(106, 30);
             this.lblusername.TabIndex = 0;
             this.lblusername.Text = "Username";
             // 
@@ -160,7 +160,7 @@
             this.lbltglpenjemputan.Location = new System.Drawing.Point(410, 8);
             this.lbltglpenjemputan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbltglpenjemputan.Name = "lbltglpenjemputan";
-            this.lbltglpenjemputan.Size = new System.Drawing.Size(107, 28);
+            this.lbltglpenjemputan.Size = new System.Drawing.Size(118, 30);
             this.lbltglpenjemputan.TabIndex = 0;
             this.lbltglpenjemputan.Text = "26/05/2024";
             // 
@@ -172,7 +172,7 @@
             this.label13.Location = new System.Drawing.Point(21, 43);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(189, 28);
+            this.label13.Size = new System.Drawing.Size(208, 30);
             this.label13.TabIndex = 18;
             this.label13.Text = "Karyawan Penjemput";
             // 
@@ -221,7 +221,7 @@
             this.lblTanggal.ForeColor = System.Drawing.Color.White;
             this.lblTanggal.Location = new System.Drawing.Point(28, 100);
             this.lblTanggal.Name = "lblTanggal";
-            this.lblTanggal.Size = new System.Drawing.Size(112, 28);
+            this.lblTanggal.Size = new System.Drawing.Size(126, 30);
             this.lblTanggal.TabIndex = 0;
             this.lblTanggal.Text = "20/05/2024";
             // 
@@ -232,9 +232,10 @@
             this.lblharga.ForeColor = System.Drawing.Color.White;
             this.lblharga.Location = new System.Drawing.Point(28, 184);
             this.lblharga.Name = "lblharga";
-            this.lblharga.Size = new System.Drawing.Size(72, 28);
+            this.lblharga.Size = new System.Drawing.Size(78, 30);
             this.lblharga.TabIndex = 0;
             this.lblharga.Text = "50000";
+            //this.lblharga.Click += new System.EventHandler(this.lblharga_Click);
             // 
             // label2
             // 
@@ -243,7 +244,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(28, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 28);
+            this.label2.Size = new System.Drawing.Size(94, 30);
             this.label2.TabIndex = 0;
             this.label2.Text = "Terbaru";
             // 
@@ -254,7 +255,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(24, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(239, 54);
+            this.label1.Size = new System.Drawing.Size(261, 60);
             this.label1.TabIndex = 0;
             this.label1.Text = "Harga Kopi";
             // 
@@ -265,7 +266,7 @@
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(23, 11);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(351, 46);
+            this.label7.Size = new System.Drawing.Size(383, 50);
             this.label7.TabIndex = 0;
             this.label7.Text = "Jadwal penjemputan";
             // 
@@ -277,9 +278,10 @@
             this.lblkapasitas.ForeColor = System.Drawing.Color.White;
             this.lblkapasitas.Location = new System.Drawing.Point(7, 182);
             this.lblkapasitas.Name = "lblkapasitas";
-            this.lblkapasitas.Size = new System.Drawing.Size(234, 38);
+            this.lblkapasitas.Size = new System.Drawing.Size(246, 41);
             this.lblkapasitas.TabIndex = 1;
             this.lblkapasitas.Text = "2000 kg / 50 ton";
+            //this.lblkapasitas.Click += new System.EventHandler(this.lblkapasitas_Click);
             // 
             // label11
             // 
@@ -289,7 +291,7 @@
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(3, 52);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(129, 41);
+            this.label11.Size = new System.Drawing.Size(143, 45);
             this.label11.TabIndex = 5;
             this.label11.Text = "Gudang";
             // 
@@ -301,7 +303,7 @@
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(3, 11);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(157, 41);
+            this.label10.Size = new System.Drawing.Size(171, 45);
             this.label10.TabIndex = 4;
             this.label10.Text = "Kapasitas";
             // 
@@ -341,6 +343,7 @@
             this.pnlHarga.Name = "pnlHarga";
             this.pnlHarga.Size = new System.Drawing.Size(496, 234);
             this.pnlHarga.TabIndex = 23;
+            //this.pnlHarga.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlHarga_Paint);
             // 
             // lblhargaterbaru
             // 

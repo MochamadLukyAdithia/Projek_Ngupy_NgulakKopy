@@ -27,5 +27,10 @@ namespace Ngupy_NgulakKopy.Controllers
         {
             return _transaksiModel.readriwayat(id_user);
         }
+
+        public void updaterekening(string no_rekening, string username)
+        {
+            _transaksiModel.updaterekening(no_rekening, username);
+        }
     }
 }

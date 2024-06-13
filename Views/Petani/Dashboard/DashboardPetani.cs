@@ -77,7 +77,10 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
         }
 
         private void DashboardPetani_Load(object sender, EventArgs e)
+
         {
+            this.WindowState = FormWindowState.Maximized;
+            this.Bounds = Screen.PrimaryScreen.Bounds;
             berandaPetani1.Show();
             berandaPetani1.SetUsername(username);
             penjemputanPetani1.Hide();
@@ -87,11 +90,11 @@ namespace Ngupy_NgulakKopy.Views.Petani.Dashboard
 
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
-            //PengaturanPetani profil = new PengaturanPetani();
-            //profil.Show();
-            //this.Hide();
+            PengaturanPetani profil = new PengaturanPetani(username);
+            profil.Show();
+            this.Hide();
         }
-
+            
         private void riwayatPetani1_Load(object sender, EventArgs e)
         {
 
