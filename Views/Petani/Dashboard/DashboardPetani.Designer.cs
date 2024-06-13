@@ -49,8 +49,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.riwayatPetani1 = new Ngupy_NgulakKopy.Views.Petani.Dashboard.RiwayatPetani();
             this.transaksiPetani1 = new Ngupy_NgulakKopy.Views.Petani.Dashboard.TransaksiPetani();
+            this.penjemputanPetani1 = new Ngupy_NgulakKopy.Views.Petani.Dashboard.PenjemputanPetani();
+            this.berandaPetani1 = new Ngupy_NgulakKopy.Views.Petani.Dashboard.BerandaPetani();
+            this.riwayatPetani1 = new Ngupy_NgulakKopy.Views.Petani.Dashboard.RiwayatPetani();
             this.flowLayoutPanel1.SuspendLayout();
             this.pnlBeranda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -316,6 +318,7 @@
             // 
             // guna2ImageButton1
             // 
+            this.guna2ImageButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ImageButton1.BackColor = System.Drawing.Color.Transparent;
             this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(40, 40);
@@ -344,24 +347,44 @@
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.UseTransparentBackground = true;
             // 
+            // transaksiPetani1
+            // 
+            this.transaksiPetani1.BackColor = System.Drawing.Color.Transparent;
+            this.transaksiPetani1.Location = new System.Drawing.Point(264, 58);
+            this.transaksiPetani1.Margin = new System.Windows.Forms.Padding(5);
+            this.transaksiPetani1.Name = "transaksiPetani1";
+            this.transaksiPetani1.Size = new System.Drawing.Size(1050, 549);
+            this.transaksiPetani1.TabIndex = 10;
+            this.transaksiPetani1.Load += new System.EventHandler(this.transaksiPetani1_Load);
+            // 
+            // penjemputanPetani1
+            // 
+            this.penjemputanPetani1.BackColor = System.Drawing.Color.Transparent;
+            this.penjemputanPetani1.Location = new System.Drawing.Point(287, 63);
+            this.penjemputanPetani1.Margin = new System.Windows.Forms.Padding(5);
+            this.penjemputanPetani1.Name = "penjemputanPetani1";
+            this.penjemputanPetani1.Size = new System.Drawing.Size(1069, 745);
+            this.penjemputanPetani1.TabIndex = 9;
+            // 
+            // berandaPetani1
+            // 
+            this.berandaPetani1.BackColor = System.Drawing.Color.Transparent;
+            this.berandaPetani1.Location = new System.Drawing.Point(264, 35);
+            this.berandaPetani1.Margin = new System.Windows.Forms.Padding(5);
+            this.berandaPetani1.Name = "berandaPetani1";
+            this.berandaPetani1.Size = new System.Drawing.Size(1219, 745);
+            this.berandaPetani1.TabIndex = 8;
+            this.berandaPetani1.Load += new System.EventHandler(this.berandaPetani1_Load);
+            // 
             // riwayatPetani1
             // 
-            this.riwayatPetani1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.riwayatPetani1.BackColor = System.Drawing.Color.Transparent;
-            this.riwayatPetani1.Location = new System.Drawing.Point(264, 60);
+            this.riwayatPetani1.Location = new System.Drawing.Point(271, 60);
             this.riwayatPetani1.Margin = new System.Windows.Forms.Padding(5);
             this.riwayatPetani1.Name = "riwayatPetani1";
             this.riwayatPetani1.Size = new System.Drawing.Size(1201, 720);
             this.riwayatPetani1.TabIndex = 11;
-            // 
-            // transaksiPetani1
-            // 
-            this.transaksiPetani1.BackColor = System.Drawing.Color.Transparent;
-            this.transaksiPetani1.Location = new System.Drawing.Point(264, 60);
-            this.transaksiPetani1.Margin = new System.Windows.Forms.Padding(5);
-            this.transaksiPetani1.Name = "transaksiPetani1";
-            this.transaksiPetani1.Size = new System.Drawing.Size(1104, 663);
-            this.transaksiPetani1.TabIndex = 10;
+            this.riwayatPetani1.Load += new System.EventHandler(this.riwayatPetani1_Load);
             // 
             // DashboardPetani
             // 
@@ -369,10 +392,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(233)))));
             this.ClientSize = new System.Drawing.Size(1540, 811);
-            this.Controls.Add(this.riwayatPetani1);
-            this.Controls.Add(this.transaksiPetani1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.transaksiPetani1);
+            this.Controls.Add(this.penjemputanPetani1);
+            this.Controls.Add(this.berandaPetani1);
+            this.Controls.Add(this.riwayatPetani1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DashboardPetani";
             this.Text = "DashboardPetani";

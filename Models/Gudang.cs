@@ -34,20 +34,20 @@ namespace Ngupy_NgulakKopy.Models
         }
 
         public int Getstok_kopi()
-        {
+            {
             int stok_kopi = 0;
             using (var conn = new NpgsqlConnection(Connection.connect))
-            {
+                {
                 conn.Open();
                 string query_get = $"select stok_kopi from gudang";
                 using (var cmd = new NpgsqlCommand(query_get, conn))
-                {
+                    {
                     stok_kopi = Convert.ToInt32(cmd.ExecuteScalar());
-                }
+                    }
 
-            }
+                    }
             return stok_kopi;
-        }
+                }
 
         public void updatestok(int stok_kopi)
         {

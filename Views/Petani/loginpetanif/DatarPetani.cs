@@ -8,6 +8,8 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Ngupy_NgulakKopy.Controllers;
+using Ngupy_NgulakKopy.Models;
 using Npgsql;
 
 namespace Ngupy_NgulakKopy.Views.Petani
@@ -29,56 +31,98 @@ namespace Ngupy_NgulakKopy.Views.Petani
             string Jalan = txtJalan.Text;
             string Kecamatan = txtKecamatan.SelectedItem.ToString();
             string KonfirPassword = txtKonfirmasiPassword.Text;
-            string connect = $"Server=localhost;Username=postgres;Password=Harsa_05;Database=ngupy_projek;Port=5432;Pooling=True;";
-            string idalamat = $"select id_alamat from alamat where nama_jalan ilike '{Jalan}'";
-            string queryalamat = $"insert into alamat(nama_jalan,desa,kecamatan) values('{Jalan}','{Desa}','{Kecamatan}')";
-            string queryusername = $"select username from \"User\" where username like '{username}'";
-            
-            NpgsqlConnection conn = new NpgsqlConnection(connect);
-            
-            conn.Open();
-            NpgsqlCommand select_username = new NpgsqlCommand(queryusername, conn);
-            NpgsqlDataReader pick_uname = select_username.ExecuteReader();
-            
-            while (pick_uname.Read())
-            {
-                if (KonfirPassword == password)
-                {
-                    string uname = pick_uname[0].ToString();
-                    conn.Close();
-                    if (username == uname)
-                    { 
-                        MessageBox.Show($"Username sudah ada!");
-                    }
-                }
-            }
-            
-            {
-                conn.Close();
-                conn.Open();
-                NpgsqlCommand insertalamat = new NpgsqlCommand(queryalamat, conn);
-                insertalamat.ExecuteNonQuery();
-                conn.Close();
-                conn.Open();
-                NpgsqlCommand ambilid = new NpgsqlCommand(idalamat, conn);
-                NpgsqlDataReader reader = ambilid.ExecuteReader();
 
-                if (reader.Read())
-                {
-                    int ID = reader.GetInt32(0);
-                    conn.Close();
-                    conn.Open();
-                    string queryuser = $"insert into \"User\"(nama,nomor_telepon,username,password,id_peran,id_alamat,id_kualitas_kopi) values ('{nama}','{NomorHp}','{username}','{password}','1',{ID},1)";
-                    NpgsqlCommand insertuser = new NpgsqlCommand(queryuser, conn);
-                    insertuser.Parameters.AddWithValue("desa_id_desa", ID);
-                    insertuser.ExecuteNonQuery();
-                    MessageBox.Show($"Data anda berhasil ditambahkan");
-                    this.Hide();
-                    LoginPetani lp = new LoginPetani();
-                    lp.ShowDialog();
-                }
+            AkunControllers akunControllers = new AkunControllers();
+            AlamatControllers alamatControllers = new AlamatControllers();
+            KualitasKopiControllers kualitaskopicontrollers = new KualitasKopiControllers();
 
+            if (password != KonfirPassword )
+            {
+                MessageBox.Show($"Password tidak sama dengan konfirmasi password");
+                return;
             }
+
+            bool username_ada = akunControllers.Cek_Username(username);
+
+            if (username_ada == true)
+            {
+                MessageBox.Show($"Username sudah ada!");
+                return;
+            }
+
+            int? id_alamat = alamatControllers.insert_alamat(Jalan, Desa, Kecamatan);
+
+            if (id_alamat == null)
+            {
+                MessageBox.Show("Gagal menambahkan alamat.");
+                return;
+            }
+
+            int? id_kualitas_kopi = kualitaskopicontrollers.insert_kualitas();
+
+            if (id_alamat == null)
+            {
+                MessageBox.Show("Gagal menambahkan kualitas kopi");
+                return;
+            }
+
+            akunControllers.Daftar_Petani(nama, NomorHp, username, password, Convert.ToInt32(id_alamat), Convert.ToInt32(id_kualitas_kopi));
+
+            MessageBox.Show($"Data anda berhasil ditambahkan");
+            this.Hide();
+            LoginPetani lp = new LoginPetani();
+            lp.ShowDialog();
+
+            //string connect = $"Server=localhost;Username=postgres;Password=wahyuok234;Database=Ngupy_Database;Port=5432;Pooling=True;";
+            //string idalamat = $"select id_alamat from alamat where nama_jalan ilike '{Jalan}'";
+            //string queryalamat = $"insert into alamat(nama_jalan,desa,kecamatan) values('{Jalan}','{Desa}','{Kecamatan}')";
+            //string queryusername = $"select username from \"User\" where username like '{username}'";
+            
+            //NpgsqlConnection conn = new NpgsqlConnection(connect);
+            
+            //conn.Open();
+            //NpgsqlCommand select_username = new NpgsqlCommand(queryusername, conn);
+            //NpgsqlDataReader pick_uname = select_username.ExecuteReader();
+            
+            //if (pick_uname.Read())
+            //{
+            //    if (KonfirPassword == password)
+            //    {
+            //        string uname = pick_uname[0].ToString();
+            //        conn.Close();
+            //        if (username == uname)
+            //        { 
+            //            MessageBox.Show($"Username sudah ada!");
+            //        }
+            //    }
+            //}
+            //else
+            //{
+            //    conn.Close();
+            //    conn.Open();
+            //    NpgsqlCommand insertalamat = new NpgsqlCommand(queryalamat, conn);
+            //    insertalamat.ExecuteNonQuery();
+            //    conn.Close();
+            //    conn.Open();
+            //    NpgsqlCommand ambilid = new NpgsqlCommand(idalamat, conn);
+            //    NpgsqlDataReader reader = ambilid.ExecuteReader();
+
+            //    if (reader.Read())
+            //    {
+            //        int ID = reader.GetInt32(0);
+            //        conn.Close();
+            //        conn.Open();
+            //        string queryuser = $"insert into \"User\"(nama,nomor_telepon,username,password,id_peran,id_alamat,id_kualitas_kopi) values ('{nama}','{NomorHp}','{username}','{password}','3',{ID},1)";
+            //        NpgsqlCommand insertuser = new NpgsqlCommand(queryuser, conn);
+            //        insertuser.Parameters.AddWithValue("desa_id_desa", ID);
+            //        insertuser.ExecuteNonQuery();
+            //        MessageBox.Show($"Data anda berhasil ditambahkan");
+            //        this.Hide();
+            //        //LoginPetani loginpetani = new LoginPetani();
+            //        //loginpetani.ShowDialog();
+            //    }
+
+            //}
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
