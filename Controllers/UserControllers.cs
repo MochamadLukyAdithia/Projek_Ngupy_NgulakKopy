@@ -13,7 +13,7 @@ namespace Ngupy_NgulakKopy.Controllers
         {
             var user = new User { username = username };
 
-            if (!user.ValidateCurrentPassword(currentPassword))
+            if (!user.ValidateCurrentPassword(currentPassword, username))
             {
                 return "Kata sandi lama anda salah atau user tidak ditemukan";
             }
@@ -23,7 +23,7 @@ namespace Ngupy_NgulakKopy.Controllers
                 return "Password baru dan Pasword lama tidak sama";
             }
 
-            if (user.UpdatePassword(newPassword))
+            if (user.UpdatePassword(newPassword, username))
             {
                 return "Password Berhasil di ubah";
             }
@@ -39,7 +39,7 @@ namespace Ngupy_NgulakKopy.Controllers
                 username = currentUsername
             };
 
-            bool isUpdated = user.UpdateProfile(newUsername, newNomorHp, newJalan, newDesa, newKecamatan, newNoRekening);
+            bool isUpdated = user.UpdateProfile(newUsername, newNomorHp, newJalan, newDesa, newKecamatan, newNoRekening, currentUsername);
             return isUpdated ? "Profile updated successfully" : "Failed to update profile";
         }
     }

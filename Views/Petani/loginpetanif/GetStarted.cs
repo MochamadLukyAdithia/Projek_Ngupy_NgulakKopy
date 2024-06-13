@@ -12,15 +12,17 @@ namespace Ngupy_NgulakKopy.Views.Petani
 {
     public partial class GetStarted : Form
     {
-        public GetStarted()
+        private string username;
+        public GetStarted(string username)
         {
             InitializeComponent();
+            this.username = username;
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Dashboard.DashboardPetani dashboardPetani = new Dashboard.DashboardPetani();
+            Dashboard.DashboardPetani dashboardPetani = new Dashboard.DashboardPetani(username);
             dashboardPetani.ShowDialog();
         }
 

@@ -8,23 +8,21 @@ using System.Threading.Tasks;
 
 namespace Ngupy_NgulakKopy.Models
 {
-    internal class AlamatContext
+    internal class KualitasKopiContext
     {
-        public List<Alamat> listalamat = new List<Alamat>();
-        public bool Insert(Alamat alamat)
+        public List<KualitasKopi> KopiList = new List<KualitasKopi>();
+        public bool Insert(KualitasKopi kualitas)
         {
             using (NpgsqlConnection con = new NpgsqlConnection(Connection.connect))
             {
-                string sql = $"insert into alamat(nama_jalan,desa,kecamatan) values(@jalan, @desa, @kecamatan)";
+                string sql = $"INSERT INTO kualitas_kopi(harga_terbaru) VALUES(@harga_baru)";
                 con.Open();
                 using (NpgsqlCommand cmd = new NpgsqlCommand(sql, con))
                 {
-                    cmd.Parameters.Add(new NpgsqlParameter("jalan", alamat.jalan));
-                    cmd.Parameters.Add(new NpgsqlParameter("desa", alamat.desa));
-                    cmd.Parameters.Add(new NpgsqlParameter("kecamatan", alamat.kecamatan));
+                    cmd.Parameters.Add(new NpgsqlParameter("harga_baru", kualitas.harga_terbaru));
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.ExecuteNonQuery();
-                    this.listalamat.Add(alamat);
+                    this.KopiList.Add(kualitas);
                 }
                 con.Close();
             }
@@ -32,5 +30,4 @@ namespace Ngupy_NgulakKopy.Models
             return true;
         }
     }
-    
 }

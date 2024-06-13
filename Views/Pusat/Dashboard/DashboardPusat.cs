@@ -28,6 +28,8 @@ namespace Ngupy_NgulakKopy.Views.Pusat.Dashboard
 
             pnlSideTransaksi.BackColor = Color.FromArgb(255, 243, 233);
             pnlSideRiwayat.BackColor = Color.FromArgb(255, 243, 233);
+            BerandaPusat berandaPusat = new BerandaPusat();
+            berandaPusat.DisplayLatestPrice();
 
         }
 

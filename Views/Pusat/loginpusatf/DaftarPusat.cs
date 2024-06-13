@@ -29,7 +29,7 @@ namespace Ngupy_NgulakKopy.Views.Petani
         private void btnDaftar_Click(object sender, EventArgs e)
         {
             Models.Alamat newAlamat = GetalamatNew();
-            Insert(newAlamat);
+            alamatContext.Insert(newAlamat);
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
@@ -42,32 +42,11 @@ namespace Ngupy_NgulakKopy.Views.Petani
             newAlamat.desa = cbdesa.SelectedItem.ToString();
             newAlamat.jalan = txtJalan.Text;
             return newAlamat;
-        }
-        private bool Insert(Models.Alamat alamat)
-        {
-            using (NpgsqlConnection con = new NpgsqlConnection(Connection.connect))
-            {
-                string sql = $"insert into alamat(nama_jalan,desa,kecamatan) values(@jalan, @desa, @kecamatan)";
-                con.Open();
-                using (NpgsqlCommand cmd = new NpgsqlCommand(sql, con))
-                {
-                    cmd.Parameters.Add(new NpgsqlParameter("jalan", alamat.jalan));
-                    cmd.Parameters.Add(new NpgsqlParameter("desa", alamat.desa));
-                    cmd.Parameters.Add(new NpgsqlParameter("kecamatan", alamat.kecamatan));
-                    cmd.CommandType = System.Data.CommandType.Text;
-                    cmd.ExecuteNonQuery();
-                    this.alamatContext.listalamat.Add(alamat);
-                }
-                con.Close();
-            }
-
-            return true;
-        }
-
+        }      
         private void btnLoginPetani_Click(object sender, EventArgs e)
         {
             Models.Alamat newAlamat = GetalamatNew();
-            Insert(newAlamat);
+            alamatContext.Insert(newAlamat);
         }
 
 
@@ -136,6 +115,12 @@ namespace Ngupy_NgulakKopy.Views.Petani
 
         }
 
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Pusat.MasukPusat masukPusat = new Pusat.MasukPusat();
+            masukPusat.Show();
+        }
     }
     
 }

@@ -35,14 +35,12 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pnlTransaksi = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtRekening = new Guna.UI2.WinForms.Guna2TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel5.SuspendLayout();
             this.guna2CustomGradientPanel3.SuspendLayout();
             this.pnlTransaksi.SuspendLayout();
@@ -95,6 +93,7 @@
             this.lblhrgterbaru.Size = new System.Drawing.Size(65, 20);
             this.lblhrgterbaru.TabIndex = 7;
             this.lblhrgterbaru.Text = "Terbaru";
+            this.lblhrgterbaru.Click += new System.EventHandler(this.lblhrgterbaru_Click);
             // 
             // label14
             // 
@@ -128,52 +127,31 @@
             this.label9.Location = new System.Drawing.Point(14, 10);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(113, 25);
+            this.label9.Size = new System.Drawing.Size(119, 25);
             this.label9.TabIndex = 7;
-            this.label9.Text = "Harga Kopi";
+            this.label9.Text = "Total Harga";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // pnlTransaksi
             // 
             this.pnlTransaksi.BackColor = System.Drawing.Color.Transparent;
             this.pnlTransaksi.BorderRadius = 20;
-            this.pnlTransaksi.Controls.Add(this.guna2Button6);
             this.pnlTransaksi.Controls.Add(this.textBox1);
-            this.pnlTransaksi.Controls.Add(this.guna2TextBox3);
+            this.pnlTransaksi.Controls.Add(this.txtRekening);
             this.pnlTransaksi.Controls.Add(this.label22);
             this.pnlTransaksi.Controls.Add(this.label21);
             this.pnlTransaksi.Controls.Add(this.label18);
             this.pnlTransaksi.Controls.Add(this.guna2Button10);
-            this.pnlTransaksi.Controls.Add(this.guna2Button9);
             this.pnlTransaksi.Controls.Add(this.guna2CustomGradientPanel5);
             this.pnlTransaksi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
             this.pnlTransaksi.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
             this.pnlTransaksi.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(137)))), ((int)(((byte)(91)))));
             this.pnlTransaksi.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(60)))), ((int)(((byte)(40)))));
-            this.pnlTransaksi.Location = new System.Drawing.Point(76, 92);
+            this.pnlTransaksi.Location = new System.Drawing.Point(2, 2);
             this.pnlTransaksi.Margin = new System.Windows.Forms.Padding(2);
             this.pnlTransaksi.Name = "pnlTransaksi";
             this.pnlTransaksi.Size = new System.Drawing.Size(654, 421);
             this.pnlTransaksi.TabIndex = 8;
-            // 
-            // guna2Button6
-            // 
-            this.guna2Button6.Animated = true;
-            this.guna2Button6.AutoRoundedCorners = true;
-            this.guna2Button6.BorderRadius = 16;
-            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button6.FillColor = System.Drawing.Color.Black;
-            this.guna2Button6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.guna2Button6.ForeColor = System.Drawing.Color.White;
-            this.guna2Button6.Location = new System.Drawing.Point(238, 365);
-            this.guna2Button6.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(126, 34);
-            this.guna2Button6.TabIndex = 12;
-            this.guna2Button6.Text = "Konfirmasi";
-            this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
             // 
             // textBox1
             // 
@@ -184,27 +162,30 @@
             this.textBox1.Size = new System.Drawing.Size(236, 65);
             this.textBox1.TabIndex = 9;
             // 
-            // guna2TextBox3
+            // txtRekening
             // 
-            this.guna2TextBox3.Animated = true;
-            this.guna2TextBox3.AutoRoundedCorners = true;
-            this.guna2TextBox3.BorderRadius = 13;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Location = new System.Drawing.Point(23, 205);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderText = "424362";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(233, 29);
-            this.guna2TextBox3.TabIndex = 8;
+            this.txtRekening.Animated = true;
+            this.txtRekening.AutoRoundedCorners = true;
+            this.txtRekening.BorderRadius = 13;
+            this.txtRekening.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRekening.DefaultText = "";
+            this.txtRekening.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtRekening.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtRekening.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRekening.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRekening.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtRekening.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtRekening.ForeColor = System.Drawing.Color.Black;
+            this.txtRekening.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtRekening.Location = new System.Drawing.Point(23, 205);
+            this.txtRekening.Name = "txtRekening";
+            this.txtRekening.PasswordChar = '\0';
+            this.txtRekening.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.txtRekening.PlaceholderText = "";
+            this.txtRekening.SelectedText = "";
+            this.txtRekening.Size = new System.Drawing.Size(233, 29);
+            this.txtRekening.TabIndex = 8;
+            this.txtRekening.TextChanged += new System.EventHandler(this.guna2TextBox3_TextChanged);
             // 
             // label22
             // 
@@ -226,9 +207,9 @@
             this.label21.Location = new System.Drawing.Point(17, 175);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(182, 21);
+            this.label21.Size = new System.Drawing.Size(187, 21);
             this.label21.TabIndex = 7;
-            this.label21.Text = "Nomor Rekening Anda ";
+            this.label21.Text = "Nomor Rekening Petani";
             // 
             // label18
             // 
@@ -254,33 +235,13 @@
             this.guna2Button10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(154)))));
             this.guna2Button10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button10.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button10.Location = new System.Drawing.Point(23, 125);
+            this.guna2Button10.Location = new System.Drawing.Point(21, 125);
             this.guna2Button10.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button10.Name = "guna2Button10";
-            this.guna2Button10.Size = new System.Drawing.Size(120, 29);
+            this.guna2Button10.Size = new System.Drawing.Size(195, 29);
             this.guna2Button10.TabIndex = 6;
             this.guna2Button10.Text = "Rekening";
             this.guna2Button10.UseTransparentBackground = true;
-            // 
-            // guna2Button9
-            // 
-            this.guna2Button9.Animated = true;
-            this.guna2Button9.AutoRoundedCorners = true;
-            this.guna2Button9.BorderRadius = 13;
-            this.guna2Button9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button9.FillColor = System.Drawing.Color.White;
-            this.guna2Button9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button9.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button9.Location = new System.Drawing.Point(118, 125);
-            this.guna2Button9.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button9.Name = "guna2Button9";
-            this.guna2Button9.Size = new System.Drawing.Size(120, 29);
-            this.guna2Button9.TabIndex = 6;
-            this.guna2Button9.Text = "Di Tempat";
-            this.guna2Button9.UseTransparentBackground = true;
             // 
             // TransaksiPusat
             // 
@@ -289,7 +250,8 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.pnlTransaksi);
             this.Name = "TransaksiPusat";
-            this.Size = new System.Drawing.Size(806, 605);
+            this.Size = new System.Drawing.Size(667, 433);
+            this.Load += new System.EventHandler(this.TransaksiPusat_Load);
             this.guna2CustomGradientPanel5.ResumeLayout(false);
             this.guna2CustomGradientPanel3.ResumeLayout(false);
             this.guna2CustomGradientPanel3.PerformLayout();
@@ -304,17 +266,15 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel5;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel pnlTransaksi;
         private System.Windows.Forms.TextBox textBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2TextBox txtRekening;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label18;
         private Guna.UI2.WinForms.Guna2Button guna2Button10;
-        private Guna.UI2.WinForms.Guna2Button guna2Button9;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
         private System.Windows.Forms.Label lblhrgterbaru;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2Button guna2Button6;
     }
 }

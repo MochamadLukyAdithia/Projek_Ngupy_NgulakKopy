@@ -1,34 +1,35 @@
-﻿using Npgsql;
+﻿using Ngupy_NgulakKopy.Tools;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
-using Ngupy_NgulakKopy.Tools;
+using Npgsql; 
 
 namespace Ngupy_NgulakKopy.Models
 {
-    internal class Alamat
+    internal class HargaKopi
     {
-        public int id_alamat { get; set; }
-        public string jalan { get; set; }
-        public string desa { get; set; }
-        public string kecamatan { get; set; }
+        public int id_harga_kopi {  get; set; }
+        public string update_at { get; set; }
+        public int harga {  get; set; }
 
         private string koneksi = Connection.connect;
 
-        public int? insert_alamat(string jalan, string desa, string kecamatan)
+        public int? get_harga_terbaru()
         {
             using (var con = new NpgsqlConnection(koneksi))
             {
                 con.Open();
-                var cmd = new NpgsqlCommand($"INSERT INTO Alamat (nama_jalan, desa, kecamatan) VALUES ('{jalan}', '{desa}', '{kecamatan}') RETURNING Id_Alamat", con);
+                string query_select = $"select harga from harga_kopi order by update_at desc limit 1";
+                var cmd = new NpgsqlCommand(query_select, con);
                 using (var reader = cmd.ExecuteReader())
                 {
                     if (reader.Read())
                     {
-                        int ID_alamat = reader.GetInt32(0);
-                        return ID_alamat;
+                        int ID_harga = reader.GetInt32(0);
+                        return ID_harga;
                     }
                     else
                     {
@@ -36,6 +37,9 @@ namespace Ngupy_NgulakKopy.Models
                     }
                 }
             }
+
+           
         }
+
     }
 }

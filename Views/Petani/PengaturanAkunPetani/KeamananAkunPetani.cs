@@ -18,14 +18,16 @@ namespace Ngupy_NgulakKopy.Views.Petani.PengaturanAkunPetani
 {
     public partial class KeamananAkunPetani : Form
     {
-        public KeamananAkunPetani()
+        private string username;
+        public KeamananAkunPetani(string username)
         {
             InitializeComponent();
+            this.username = username;   
         }
 
         private void back_Click(object sender, EventArgs e)
         {
-            PengaturanPetani profil = new PengaturanPetani();
+            PengaturanPetani profil = new PengaturanPetani(username);
             profil.Show();
             this.Hide();
         }
@@ -43,7 +45,6 @@ namespace Ngupy_NgulakKopy.Views.Petani.PengaturanAkunPetani
         private void UbahProfilPetani_Click(object sender, EventArgs e)
 
         {
-            string username = LoginPetani.username;
             string currentPassword = SandiSebelum.Text;
             string newPassword = NewPassword.Text;
             string confirmPassword = ConfirmPass.Text;

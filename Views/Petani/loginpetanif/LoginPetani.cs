@@ -1,4 +1,5 @@
-﻿using Npgsql;
+﻿using Ngupy_NgulakKopy.Controllers;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,11 +16,14 @@ namespace Ngupy_NgulakKopy.Views.Petani
 {
     public partial class LoginPetani : Form
     {
-        static public string username;
+        private AkunControllers akunControllers;
+        //public static string username1;
         public LoginPetani()
         {
             InitializeComponent();
             this.ActiveControl = txtUsername;
+            akunControllers = new AkunControllers();
+
         }
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
@@ -34,35 +38,33 @@ namespace Ngupy_NgulakKopy.Views.Petani
 
         private void btnLoginPetani_Click(object sender, EventArgs e)
         {
-            string database = "Host=localhost;Username=postgres;Password=wahyuok234;Database=Ngupy_Database";
-            NpgsqlConnection conn = new NpgsqlConnection(database);
-            string query_username = $"SELECT Username, Password FROM \"User\" Where Username ilike '{txtUsername.Text}' and id_peran = 1";
-            conn.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand(query_username, conn);
-            NpgsqlDataReader reader;
-            reader = cmd.ExecuteReader();
+            string username = txtUsername.Text;
+            string password = txtPassword.Text; 
+                  
+            string status_login = akunControllers.login(username, password, 1);
 
-            if (reader.HasRows)
+            if (status_login == "Login berhasil!")
             {
-                reader.Read();
-
-                if (reader.GetString(1) == txtPassword.Text)
-                {
-                    MessageBox.Show($"Berhasil login, Selamat datang, {txtUsername.Text}", "Success");
-                    username = txtUsername.Text;
-                    conn.Close();
-                    this.Hide();
-                    GetStarted getStarted = new GetStarted();
-                    getStarted.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show($"Password salah", "Warning");
-                }
+                MessageBox.Show($"Berhasil login, Selamat datang, {txtUsername.Text}", "Success");
+                username = txtUsername.Text;
+                //username1 = username;
+                this.Hide();
+                GetStarted getStarted = new GetStarted(username);
+                getStarted.ShowDialog();
             }
-            else
+            else if (status_login == "Password salah.")
+            {
+                MessageBox.Show($"Password salah", "Warning");
+            }
+
+            else if (status_login == "Username tidak ditemukan.")
             {
                 MessageBox.Show("Username tidak dapat ditemukan", "Error");
+            }
+
+            else
+            {
+                MessageBox.Show("Error bjir", "Error");
             }
         }
 

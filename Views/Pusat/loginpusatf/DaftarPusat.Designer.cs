@@ -276,7 +276,7 @@
             this.txtUsernamePusat.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUsernamePusat.ForeColor = System.Drawing.Color.Black;
             this.txtUsernamePusat.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsernamePusat.Location = new System.Drawing.Point(423, 203);
+            this.txtUsernamePusat.Location = new System.Drawing.Point(423, 206);
             this.txtUsernamePusat.Name = "txtUsernamePusat";
             this.txtUsernamePusat.PasswordChar = '\0';
             this.txtUsernamePusat.PlaceholderText = "Username";
@@ -309,6 +309,7 @@
             this.btnLogin.TabIndex = 49;
             this.btnLogin.Text = "Masuk";
             this.btnLogin.UseTransparentBackground = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtJalan
             // 

@@ -13,9 +13,11 @@ namespace Ngupy_NgulakKopy.Views.Petani.PengaturanAkunPetani
 {
     public partial class KebijakanPrivasi : Form
     {
-        public KebijakanPrivasi()
+        private string username;
+        public KebijakanPrivasi(string username)
         {
             InitializeComponent();
+            this.username = username;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -36,7 +38,7 @@ namespace Ngupy_NgulakKopy.Views.Petani.PengaturanAkunPetani
 
         private void back_Click(object sender, EventArgs e)
         {
-            PengaturanPetani profil = new PengaturanPetani();
+            PengaturanPetani profil = new PengaturanPetani(username);
             profil.Show();
             this.Hide();
         }
